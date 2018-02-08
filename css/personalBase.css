@@ -1,0 +1,88 @@
+
+/* 个人页面导航 */
+.personal{
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.footer{
+    margin-top: 260px;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.personal_nav a{
+    font-size:14px;
+}
+.personal_nav{
+    padding-left:30px;
+    float: left;
+}
+.personal_nav li{
+    margin-bottom:25px;
+}
+
+.personal_title h4{
+    font-size: 14px !important;
+}
+.personal_title a{
+    font-size: 14px !important;
+}
+
+.order_null {
+    width: 100%;
+    height: 350px;
+    line-height: 350px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.layui-layer-btn a{
+    background-color: #ff7f27 !important;
+    border-color:#ff7f27 !important;
+    color:#fff !important;
+}
+
+
+.PI_control{
+    min-width: 110px;
+    width: 110px;
+    max-width: 179px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.PI_control a{
+    margin-bottom:10px;
+    display: inline-block;
+}
+
+.PI_confirm_btn{
+    font-size: 14px;
+    padding:4px 6px;
+    color: #fff;
+    border-radius: 2px;
+    background-color:#ff7f27;
+}
+
+.PI_or_btn{
+    display: inline-block;
+    font-size: 14px;
+}
+.PI_confirm_btn {
+    font-size: 14px;
+    padding: 4px 6px;
+    color: #fff;
+    border-radius: 2px;
+    background-color: #ff7f27;
+}
+.PI_or_btn:hover{
+    color:#ff7f27 !important;
+}
+p.PI_or_btn:hover{
+    color:#555;
+}
+

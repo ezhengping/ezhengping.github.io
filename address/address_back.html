@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>填写收获地址</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../css/address.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="main-wrap">
+            <div class="form-box">
+                <div class="item item-title">
+                    <span class="item-label tsl">新增收货地址</span>
+                    <span class="tsl">电话号码、手机号选填一项, 其余均为必填项</span>
+                </div>
+                <form target="address_iframe" id="addressForm">
+                    <div class="item">
+                        <label class="item-label">所在地区
+                            <i>*</i>
+                        </label>
+                        <select class="select" name="province" id="province">
+                            <option value="null" data-val="null">=请选择省份=</option>
+                        </select>
+                        <select class="select" name="city" id="city">
+                            <option value="null" data-val="null">=请选择城市=</option>
+                        </select>
+                        <select class="select" name="area" id="area">
+                            <option value="null" data-val="null">=请选择地区=</option>
+                        </select>
+                        <i class="proAddCityAddArea"></i>
+                    </div>
+                    <div class="item">
+                        <label class="item-label">详细地址
+                            <i>*</i>
+                        </label>
+                        <textarea class="i-text" name="address" maxlength="50" placeholder="建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息，最多50个字符"></textarea>
+                        <i></i>
+                    </div>
+                    <div class="item">
+                        <label class="item-label">邮政编码</label>
+                        <input class="i-text" type="text" maxlength="6" name="postCodes" value="" placeholder="如您不清楚邮递区号，请填写000000">
+                        <i></i>
+                    </div>
+                    <div class="item">
+                        <label class="item-label">收货人姓名
+                            <i>*</i>
+                        </label>
+                        <input class="i-text" type="text" name="name" value="" placeholder="长度不超过25个字符" maxlength="10">
+                        <i></i>
+                    </div>
+                    <div class="item">
+                        <label class="item-label">手机号码
+                            <i>*</i>
+                        </label>
+                        <input class="i-text" type="text" name="phone" value="" maxlength="11" placeholder="请填写收货人手机号码方便快递员联系到您">
+                        <i></i>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" class="i-chk" name="isDefault">
+                        <label>设置为默认收获地址</label>
+                    </div>
+                    <div class="item">
+                        <input class="submit" type="submit" name="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 请求数据三级联动 -->
+    <script type="text/javascript">
+        function City(obj, ajax) {
+            this.boxEle = obj.boxEle //获取盒子
+            // 获取省市区名称
+            this.provinceName = obj.provinceName;
+            this.cityName = obj.cityName;
+            this.areaName = obj.areaName;
+            // 请求地址
+            this.url = ajax.url;
+            this.type = ajax.type;
+            
+            this.ajax = function () {
+                var that = this;
+                $.ajax({
+                        url: that.url,
+                        type: that.type,
+                        dataType: 'json',
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                    })
+                    .done(function (data) {
+
+                        // 此处可能会发生更改   
+                        that.provinceData = data.data.areaJSON;
+                        that.provinceAddData();
+                    })
+                   
+                    
+            }
+            // 装载省
+            this.provinceAddData = function () {
+                var html = '<option value="null" data-val=null>=请选择省份=</option>';
+                var data = this.provinceData;
+                for (var i = 0, len = data.length; i < len; i++) {
+                    html += '<option value="'+data[i].name+'" data-val="'+i+'">'+data[i].name+'</option>';
+                }
+                $(this.boxEle + ' select[name=' + this.provinceName + ']').html(html);
+            }
+
+            this.cityAddData = function (provinceNum) {
+                var html = '<option value="null" data-val=null>=请选择城市=</option>';
+                var data = this.provinceData[provinceNum].provinceChildren
+                for (var i = 0, len = data.length; i < len; i++) {
+                    html += '<option value="'+data[i].name+'" data-val="'+i+'">'+data[i].name+'</option>'
+                }
+                $(this.boxEle + ' select[name=' + this.cityName + ']').html(html);
+            }
+
+            this.areaAddData = function (provinceNum, cityNum) {
+                var html = '<option value="null" data-val=null>=请选择地区=</option>';
+                var data = this.provinceData[provinceNum].provinceChildren[cityNum].cityChildren;
+                for (var i = 0, len = data.length; i < len; i++) {
+                    html +=
+                        '<option value="'+data[i].name+'" data-val="'+i+'" data-areaid='+data[i].areaid+'>'+data[i].name+'</option>'
+                }
+                $(this.boxEle + ' select[name=' + this.areaName + ']').html(html);
+            }
+
+
+            this.eventClick = function () {
+                var that = this;
+                $(this.boxEle).on('change', 'select[name=' + this.provinceName + ']', function () {
+                    var cityEle = that.boxEle + ' select[name=' + that.cityName + ']'
+                    var areaEle = that.boxEle + ' select[name=' + that.areaName + ']'
+                    var cityhtml = '<option value="null" data-val=null>=请选择城市=</option>';
+                    var areahtml = '<option value="null" data-val=null>=请选择地区=</option>';
+                    var provinceNum = $(this).children('option[value=' + $(this).val() + ']').data('val');
+                    if (provinceNum != null) {
+                        provinceNum = parseInt(provinceNum);
+                        $(cityEle).val('null')
+                        $(areaEle).val('null')
+                        that.cityAddData(provinceNum);
+                    } else {
+                        $(cityEle).html(cityhtml);
+                        $(areaEle).html(areahtml);
+                        $(cityEle).val('null')
+                        return;
+                    }
+                })
+                $(this.boxEle).on('change', ' select[name=' + this.cityName + ']', function () {
+                    var html = '<option value="null" data-val="null">=请选择地区=</option>';
+                    var areaEle = that.boxEle + ' select[name=' + that.areaName + ']'
+                    var provinceEle = that.boxEle + ' select[name=' + that.provinceName + ']'
+                    var provinceNum = $(provinceEle).children('option[value=' + $(provinceEle).val() + ']')
+                        .data('val');
+                    var cityNum = $(this).children('option[value=' + $(this).val() + ']').data('val');
+                    if (cityNum != null) {
+                        cityNum = parseInt(cityNum);
+                        $(areaEle).val('null')
+                        that.areaAddData(provinceNum, cityNum);
+                    } else {
+                        $(areaEle).html(html);
+                        $(areaEle).val('null')
+                        return;
+                    }
+                })
+            }
+            this.ajax();
+            this.eventClick();
+        }
+        var c = new City({
+            boxEle: '#addressForm .item:first',
+            provinceName: 'province',
+            cityName: 'city',
+            areaName: 'area',
+        }, {
+            url: 'area.json',
+            type: 'GET',
+        })
+    </script>
+    <!-- 表单验证 -->
+    <script type="text/javascript">
+        // 自定义验证  传入正则表达式进行验证
+        $.validator.addMethod('custom', function (value, element, params) {
+            var reg = params;
+            if (reg.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }, '请输入验证提示信息')
+
+        // 自定义验证  传入字符串进行验证，如果字符串为'null'则返回false 
+        $.validator.addMethod('valueNotNull', function (value, element, params) {
+            return params !== value
+        }, '该选项不能为空')
+        $().ready(function () {
+            $("#addressForm").validate({
+                rules: {
+                    province: {
+                        valueNotNull: 'null',
+                    },
+                    city: {
+                        valueNotNull: 'null',
+                    },
+                    area: {
+                        valueNotNull: 'null',
+                    },
+                    address: {
+                        required: true,
+                        maxlength: 50,
+                    },
+                    postCodes: {
+                        custom: /[0-9]/,
+                    },
+                    name: {
+                        required: true,
+                    },
+                    phone: {
+                        required: true,
+                        custom: /^[1][345678]\d{9}$/,
+                    },
+                },
+                messages: {
+                    province: {
+                        valueNotNull: '该选项不能为空',
+                    },
+                    city: {
+                        valueNotNull: '该选项不能为空',
+                    },
+                    area: {
+                        valueNotNull: '该选项不能为空',
+                    },
+                    address: {
+                        required: "此项为必填项",
+                    },
+                    postCodes: {
+                        custom: '输入字符需要为纯数字',
+                    },
+                    name: {
+                        required: '收货人不能为空',
+                    },
+                    phone: {
+                        required: '手机号不能为空',
+                        custom: '请输入有效是11位手机号',
+                    },
+                },
+                errorPlacement: function (error, element) {
+                    element.siblings('i').html(error)
+                },
+                submitHandler: function (form) {
+                    var areaid = $('#area').find("option:selected").data('areaid');
+                    var param = $('#addressForm').serialize() + '&areaId=' + areaid;
+                    var submitType = $('.submit').data('id');
+                    if (submitType) {
+                        // 修改地址请求
+                        $.ajax({
+                                url: PATH + '/address/addAddress.action',
+                                type: 'POST',
+                                data: param,
+                                xhrFields: {
+                                    withCredentials: true
+                                },
+                                crossDomain: true,
+                            })
+                            .done(function () {
+                                parent.noneAddress();
+                                parent.ajaxAllAddaddress();
+                            })
+                        return;
+                    } else {
+                        // 添加地址请求
+                        $.ajax({
+                                url: PATH + '/address/addAddress.action',
+                                type: 'POST',
+                                data: param,
+                                xhrFields: {
+                                    withCredentials: true
+                                },
+                                crossDomain: true,
+                            })
+                            .done(function () {
+                                parent.noneAddress();
+                                parent.ajaxAllAddaddress();
+                            })
+                    }
+                },
+            })
+        })
+    </script>
+    <!-- 与父级页面进行通信 -->
+    <script type="text/javascript">
+        // function say() {
+        //     console.log('我是子集页面');
+        // }
+
+        // function callFather() {
+        //     parent.say();
+        //     parent.noneAddress();
+        //     parent.window.document.getElementById('button').innerHTML = '调用结束'
+        // }
+    </script>
+    <script type="text/javascript">
+        // 选框获取焦点时改变样式
+
+        function inputStyle() {
+            $('input,textarea,select').not('input[type=submit]').focus(function (event) {
+                $(this).css({
+                    'border-color': '#ff7f26',
+                    'box-shadow': '0 0 5px rgba(255,127,38,.6)'
+                });
+            });
+            $('input,textarea,select').not('input[type=submit]').blur(function (event) {
+                $(this).css({
+                    'border-color': '#afafaf',
+                    'box-shadow': '0 0 5px rgba(255,127,38,0)'
+                });
+            });
+        }
+        inputStyle()
+    </script>
+</body>
+
+</html>

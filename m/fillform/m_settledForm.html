@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no,minimal-ui">
+    <script type="text/javascript">
+    var W = document.documentElement.clientWidth / 10; //获取屏幕的宽度除以10，将屏幕分成10等份
+    document.getElementsByTagName('html')[0].style.fontSize = W + 'px'; //然后把宽度除以10的值，给html字体大小
+    </script>
+    <title>淘味网 - 商家入驻个人信息</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/m_base.css">
+    <link rel="stylesheet" type="text/css" href="../css/m_settledbase.css">
+    <link rel="stylesheet" type="text/css" href="../css/m_settledForm.css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="mhome">
+        <header id="header" class="header">
+            <div class="header_logo">
+                <h1 class="logo">
+                淘味网
+                <a href="../m_index.html">淘味网<img src="/images/logo.png" alt="" style="width: 100%;height: auto;display: block;"></a>
+            </h1>
+            </div>
+            <div class="header_title">
+                <h2>淘味网 商家入驻</h2>
+            </div>
+            <!-- <div class="header_link">
+                <a href="javascript:;">下载APP</   a>
+            </div> -->
+        </header>
+        <!-- 表单列表 -->
+        <section class="section_form">
+            <div class="bgcor">
+                <table>
+                    <tr class="bgcor">
+                        <td>入驻个人信息</td>
+                        <td class="cor_red">入驻人姓名提交后不可更改</td>
+                    </tr>
+                </table>
+            </div>
+            <table>
+                <tr>
+                    <td>入驻人姓名</td>
+                    <td>
+                        <input type="text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>入驻人身份证</td>
+                    <td>
+                        <input type="text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>有效期起始时间</td>
+                    <td>
+                        <input class="startTimeDate" type="text" value="">
+                        <i></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>有效期结束时间</td>
+                    <td>
+                        <input class="endTimeDate" type="text" value="">
+                        <i></i>
+                    </td>
+                </tr>
+            </table>
+            <table class="formImg">
+                <tr>
+                    <td>身份证正面照</td>
+                    <td>示例</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img class="" src="/images/from_card_positivetj.png" alt="">
+                            <input type="file" name="">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="/images/from_card_positive.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>身份证反面照</td>
+                    <td>示例</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img class="" src="/images/from_card_obversetj.png" alt="">
+                            <input type="file" name="">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="/images/from_card_obverse.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>身份证正面照</td>
+                    <td>示例</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img class="" src="/images/from_card_positivetj.png" alt="">
+                            <input type="file" name="">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <img src="/images/from_card_positive.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" id="readbut" name="" value="true">
+                    <label for="readbut" class="radio">我同意将身份证信息交由平台进行身份验证</label></label></td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <a class="form_button" href="m_settledForm.html" title="">下一步</a>
+        </section>
+        <script type="text/javascript" src="../js/jquery.selector-px.js"></script>
+        <script type="text/javascript">
+        var nowYear = new Date().getFullYear();
+        var lastYear = nowYear - 100;
+        // 年月日
+        $.dateSelector({
+            evEle: '.startTimeDate',
+            startYear: lastYear,
+            endYear: nowYear,
+            timeBoo: false,
+            afterAction: function(d1, d2, d3) {
+                $('.startTimeDate').val(d1 + '-' + d2 + '-' + d3);
+            }
+        });
+        // 年月日
+        $.dateSelector({
+            evEle: '.endTimeDate',
+            startYear: lastYear,
+            endYear: nowYear,
+            timeBoo: false,
+            afterAction: function(d1, d2, d3) {
+                $('.endTimeDate').val(d1 + '-' + d2 + '-' + d3);
+            }
+        });
+        </script>
+    </div>
+</body>
+
+</html>

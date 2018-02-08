@@ -1,0 +1,246 @@
+.personal_commodity {
+    width: 1000px;
+    float: right;
+}
+
+.pc_title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 18px;
+    line-height: 50px;
+    height: 50px;
+    border: 1px solid #dee3e6;
+    background-color: #f3fbfe;
+}
+
+.pc_title h4 {
+    float: left;
+}
+
+.pc_title>a {
+    float: right;
+}
+
+.batch_menu {
+    float: right;
+    height: 48px;
+    box-sizing: border-box;
+    line-height: 48px;
+    font-size: 0px;
+}
+
+.pc_title a,
+.pc_title h4,
+.pc_title label {
+    font-size: 16px;
+    line-height: 48px;
+    color: #5a5e5f;
+}
+
+.batch_menu a,
+.batch_menu label {
+    margin: 0 10px;
+    line-height: 48px;
+}
+
+.pc_commodity_menu {
+    margin-top: 20px;
+    height: 622px;
+}
+
+.pc_commodity_item {
+    float: left;
+    width: 240px;
+    height: 298px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #dee2e5;
+    margin-right: 13px;
+    margin-bottom: 13px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pc_commodity_item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.pc_commodity_img {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    ;
+    height: 220px;
+    overflow: hidden;
+}
+
+.pc_commodity_img img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.pc_commodity_text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.pc_commodity_text p:first-of-type {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pc_commodity_text a:last-of-type p,
+.pc_commodity_text a:last-of-type p em {
+    font-weight: 600;
+    color: #242424;
+}
+
+.pc_operate {
+    position: absolute;
+    width: 100%;
+    top: -24px;
+    transition: all .3s;
+    left: 0;
+}
+
+.pc_op_item {
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    height: 24px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+}
+
+.pc_commodity_item:hover>.pc_operate {
+    top: 0;
+}
+.pc_commodity_item:hover{
+    border-color: #ff7f29;
+    box-shadow: 0 0 5px rgba(255, 126, 41, 0.6)
+}
+
+.pc_commodity_check{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+.i-check{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    background: url('/images/personalCommodity_icon_noatv.png') no-repeat center;
+}
+.z-goods-batch .pc_commodity_item:hover{
+    box-shadow: none;   
+}
+.z-goods-batch .pc_commodity_item:hover>.pc_operate{
+    top:-24px;
+}
+.z-goods-batch .pc_commodity_check{
+    display: block;
+}
+.z-item-checked .i-check{
+    background-image: url('/images/personalCommodity_icon_atv.png')
+}
+.z-item-checked{
+    border-color: #ff7f29;
+}
+
+.pc-delete-tip{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, .8);
+    z-index: 6;
+    display:none;
+}
+.tip-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background:url('/images/personalCommodity_icon_say.png') no-repeat center/cover;
+    vertical-align: middle;
+}
+.tip-main{
+    line-height: 30px;
+    font-size: 0;
+    text-align: center;
+    padding-top:100px;
+}
+.tip-main em{
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-left:10px;
+}
+.tip-btnbox{
+    font-size: 0;
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom:0;
+}
+.tip-btnbox a{
+    display:inline-block; 
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+.btn-cancle{
+    background-color: #f6f5f5;
+}
+.btn-sure{
+    background-color: #ff7f29;
+    color:#fff;
+}
+
+
+
+
+
+/* 空状态 */
+.item_null{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.item_text{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-size: 14px;
+    line-height: 28px;
+    padding-left:110px;
+    padding-top:24px;
+    padding-bottom:24px;
+    background: url('/images/personalCommodity_icon_null.png') no-repeat center left;
+}
+.item_text a{
+    color:#ff0035;
+}

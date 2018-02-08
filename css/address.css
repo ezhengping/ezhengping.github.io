@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-12-16 14:00:07
+ * @version $Id$
+ */
+    body{
+        min-width: auto;
+    }
+    .main-wrap {
+        width: 850px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    .form-box {
+        width: 520px;
+        margin-top: 20px;
+    }
+
+    .form-box .item-title {
+        line-height: 26px;
+    }
+
+    .form-box .item {
+        position: relative;
+        padding-left: 105px;
+        padding-bottom: 10px;
+        zoom: 1;
+        text-align: left;
+        z-index: 100;
+    }
+
+
+    .form-box .item .select {
+        display: inline-block;
+        width: 120px;
+        height: 28px;
+        line-height: 18px;
+        padding: 2px;
+    }
+
+    .form-box .item-label {
+        /* display: inline; */
+        float: left;
+        width: 100px;
+        margin-left: -105px;
+        text-align: right;
+        height: 26px;
+        line-height: 26px;
+    }
+
+    .form-box .item-label i {
+        color: red;
+    }
+
+    .form-box .item-title .item-label {
+        color: #fc6210;
+    }
+
+    .form-box .i-text {
+        border: 1px solid #afafaf;
+        padding: 4px;
+        width: 360px;
+        height: 18px;
+        line-height: 18px;
+        vertical-align: middle;
+    }
+
+    .form-box textarea.i-text {
+        height: 100px;
+    }
+
+    .bf-menu-button-dropdown {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        width: 10px;
+        height: 5px;
+        background: url('/images/T1J6x.FkFeXXX_ownc-30-40.png') -10px -25px no-repeat;
+    }
+
+    .submit {
+        height: 25px;
+        line-height: 25px;
+        background: url('http://a.tbcdn.cn/apps/tmall/mui/btn/img/btn.png') repeat-x #ccc 0 -405px;
+        border: 0;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        outline: 0;
+        border-radius: 2px;
+        padding: 0 15px;
+        margin-right: 10px;
+        color: #333;
+    }
+
+    .select {
+        font-size: 12px;
+    }
+
+    .select {
+        border: solid 1px rgb(169, 169, 169);
+    }
+    .item>i{
+        display: block;
+        font-style: normal;
+        color: red;
+        font-size: 12px;
+    }

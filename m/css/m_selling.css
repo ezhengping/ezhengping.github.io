@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-24 09:09:42
+ * @version $v.01$
+ */
+
+body{
+	background-color: #ededed;
+}
+.nav{
+margin-top: 1.413333rem;
+}
+.section__banner{
+	margin-top: 0;
+	
+}

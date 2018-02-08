@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 入驻成功</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/fillbase.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="/css/settledsuccess.css">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/path_config.js?t=20180208"></script>
+    <!-- <script src="/js/head/addhtml.js?t=20180208"></script> -->
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script src="/js/personal/personalBase.js?t=20180208"></script>
+    <script src="/js/from/fillbase.js?t=20180208"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header_mid">
+            <div class="header_logo">
+                <h1 class="header_logo_title">入驻平台
+                <a class="header_logo_link" href="/index.html">
+                    淘味网
+                </a>
+                </h1>
+            </div>
+            <div class="header_icenter">
+                <a href="javascript:;" title="" class="header_icenter_info">11688331010</a>
+                <a href="javascript:;" title="" class="header_icenter_out">
+                    <img src="/images/outlogin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <!-- 表单内容页面 -->
+    <section class="section">
+        <div class="section_mid">
+            <!-- 头部标题 -->
+            <div class="section_title clearfix">
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">1</i>
+                        <h2 class="section_title_item_content_1">个人/企业信息填写</h2>
+                    </div>
+                </div>
+               
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">2</i>
+                        <h2 class="section_title_item_content_1">资质审核</h2>
+                    </div>
+                </div>
+                
+                <div class="section_title_item section_title_active">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon ">3</i>
+                        <h2 class="section_title_item_content_1">入驻成功</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 下部分内容 -->
+            <div class="section_success">
+                <div class="success__text">
+                    恭喜您，您已入驻成功
+                </div>
+                <div class="success_usersinfo">
+                    <!-- <div class="success_usersinfo_box" id="usersInfoBox" style="">
+                        <div class='name'>
+                            店铺账号：<span id="name">taowei</span>
+                        </div>
+                        <div class="password">
+                            初始密码： <span id="password">31234568</span>
+                        </div>
+                    </div> -->
+                    <script type="text/javascript">
+                        var div = $('#usersInfoBox div');
+                        var boxDiv = $('#usersInfoBox');
+                        for (var i=0,len=div.length;i<len-1;i++){
+                            if(div.eq(i).width()<div.eq(i+1).width()){
+                                boxDiv.width(div.eq(i+1).width()+'px');
+                                div.css('display','block');
+                            }else{
+                                boxDiv.width(div.eq(i).width()+'px');
+                                div.css('display','block');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar">
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘味网 - 新品推荐</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/casualsnacks.css?t=20180202">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/ui/jquery.pagination.min.js"></script>
+    <script src="../../js/product/newProduct.js?t=20180202"></script>
+    <base target="_blank">
+    <style>
+        .section__nut_foodlist_item {
+            width: 390px;
+            height: 275px;
+            margin-right: 12px !important;
+        }
+
+        .section__nut_foodlist_item_img {
+            position: relative;
+            width: 350px;
+            height: auto;
+        }
+
+        .section__nut_foodlist_item_img_goods {
+            position: static;
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        .section__nut_foodlist_item_bewrite {
+            width: 350px;
+            margin: 0 auto;
+            height: 40px;
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 18px;
+        }
+        
+        .section__nut_foodlist_item:nth-child(3n) {
+            margin-right: 0 !important;
+        }
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <!-- 导航部分 -->
+    <header class="header" id="head3">
+
+    </header>
+    <div class="header__banner animate" id="banner">
+        <ul class="header__banner__ul clearfix" id="/* banner_ul */">
+            <li class="header__banner__ul_item">
+                <a class="header__banner__ul_item_link" href="javasript:;">
+                    <!-- <img src="/images/casualsnacks_banner.jpg" alt=""> -->
+                </a>
+            </li>
+            <!-- 没有轮播需求注释掉下面的li -->
+            <!-- 
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                 -->
+        </ul>
+        <!-- 轮播控件 -->
+        <!-- 
+            <ol class="header__banner__ol" id="banner_ol">
+                <li class="header__banner__ol_item header__banner__ol_item_active"></li>
+                <li class="header__banner__ol_item"></li>
+                <li class="header__banner__ol_item"></li>
+            </ol>
+            <div class="header__banner__space">
+                <span class="header__banner__space_left animate" id="banner_left">&lt;</span>
+                <span class="header__banner__space_right animate" id="banner_right">&gt;</span>
+            </div> -->
+    </div>
+    <section class="section__nut">
+        <!-- 锚点链接 -->
+        <a name="main"></a>
+        <!-- 商品标题 -->
+        <div class="section__nut_title">
+            <!-- <img class="section__nut_title_img" src="/images/casualsnacks_nut.png" alt=""> -->
+            <h3 class="title_text">新品推荐</h3>
+        </div>
+
+        <!-- 商品容器 -->
+        <div class="section__nut_foodlist">
+            <ul class="section__nut_foodlist_ul clearfix">
+                <!-- 单个商品 -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- 分页插件 -->
+    <div class="section__content_controls">
+        <div id="pagination1" class="page fl" data-value="1">
+
+        </div>
+    </div>
+
+
+    <!-- 侧边栏 -->
+    <div class="sidebar animate" id="sidebar" style="display: block;"></div>
+
+    <!-- 底部导航 -->
+    <footer class="footer" id="footer"></footer>
+</body>
+
+</html>

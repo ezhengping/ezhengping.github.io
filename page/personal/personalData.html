@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人 - 资料</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/personalBase.css?t=20180208">
+    <link rel="stylesheet" href="../../css/personalData.css?t=20180202">
+    <link rel="stylesheet" href="../../js/ui/tapmodo-Jcrop/css/jquery.Jcrop.min.css">
+
+    <script src="../../js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/base.js?t=20180208"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+    <script src="../../js/personal/personsl_Plug-in.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/head/addhtml.js?t=20180208"></script>
+    <script src="../../js/personal/personalBase.js?t=20180208"></script>
+    <script src="../../js/ui/tapmodo-Jcrop/js/jquery.Jcrop.min.js"></script>
+    <script src="../../js/personal/personalData.js?t=20180202"></script>
+</head>
+
+<body>
+    <header class="header" id="head3"></header>
+    <section class="personal clearfix">
+        <div class="w">
+            <div class="personal_nav">
+                <ul>
+                    <li>
+                        <a href="/page/personal/personalHome.html">个人首页</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalAddress.html">我的收获地址管理</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalOrder.html">我的全部订单</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalBeans.html">我的味豆</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCommodity.html">收藏的商品</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalShop.html">关注的店铺</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCoupon.html">我的优惠券</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalSign.html">我的签到</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalData.html" style="color:#ff7e23">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalVip.html">会员中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="personal_data">
+                <div class="pd_title personal_title">
+                    <a class="pd_title_atv pd_Tab" href="javascript:;">基本资料</a>
+                    <a class="pd_Tab" href="javascript:;">头像管理</a>
+                </div>
+                <div class="pd_item clearfix">
+                    <div class="pd_item_left">
+                        <div class="pd_user_data">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <em></em>用户昵称：</td>
+                                    <td>
+                                        <p class="user_name_text">----</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <em></em>性别：
+                                    </td>
+                                    <td class="user_sex">
+                                        <p class="user_sex_text">-</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        生日：
+                                    </td>
+                                    <td class="user_birthday">
+                                        <p class="user_birthday_text">--------</p>
+                                    </td>
+                                </tr>
+
+                                <!-- <tr>
+                                            <td>
+                                                居住地：
+                                            </td>
+                                            <td class="address" id="cityBox">
+                                                <select name="province" id="province">
+                                                    <option value="">省份</option>
+                                                </select>
+            
+                                                <select name="city" id="city">
+                                                    <option value="">城市</option>
+                                                </select>
+            
+                                                <select name="area" id="area">
+                                                    <option value="">区域</option>
+                                                </select>
+                                            </td>
+                                        </tr> -->
+                            </table>
+                        </div>
+                        <div class="pd_user_data" style="display:none">
+                            <form id='user_data'>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <em></em>用户昵称：</td>
+                                        <td>
+                                            <input type="text" maxlength="10" name="userName">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <em></em>性别：
+                                        </td>
+                                        <td class="user_sex">
+                                            <input type="radio" name="sex" value="0">
+                                            <label for="">
+                                                男
+                                            </label>
+                                            <input type="radio" name="sex" value="1">
+                                            <label for="">
+                                                女
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            生日：
+                                        </td>
+                                        <td class="user_birthday">
+                                            <select name="year" id="">
+                                                <option value="">2018</option>
+                                            </select>
+                                            <label for="">
+                                                年
+                                            </label>
+                                            <select name="month" id="">
+                                                <option value="">12</option>
+                                            </select>
+                                            <label for="">
+                                                月
+                                            </label>
+                                            <select name="day" id="">
+                                                <option value="">30</option>
+                                            </select>
+                                            <label for="">
+                                                日
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                                            <td>
+                                                                居住地：
+                                                            </td>
+                                                            <td class="address" id="cityBox">
+                                                                <select name="province" id="province">
+                                                                    <option value="">省份</option>
+                                                                </select>
+                            
+                                                                <select name="city" id="city">
+                                                                    <option value="">城市</option>
+                                                                </select>
+                            
+                                                                <select name="area" id="area">
+                                                                    <option value="">区域</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr> -->
+                                </table>
+
+                        </div>
+                        <div class="modifyUserData_btn_box">
+                            <a class="modifyUserData_btn" href="javascript:;" data-type="0">编辑</a>
+                        </div>
+                        </form>
+
+                    </div>
+                    <div class="pd_item_right">
+                        <div class="pd_user_Img">
+                            <img src="../../images/index_Avatar.png" alt="">
+                        </div>
+                        <div class="pd_user_text">
+                            <h3>用户名：
+                                <em>---</em>
+                            </h3>
+                            <h4>会员：
+                                <em>V1铜牌会员</em>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd_item clearfix">
+                    <div class="pd_item_Img">
+                        <h4>仅支持JPG、GIF、PNG、JPEG、BMP格式，文件大小
+                            <5M.</h4>
+                                <div class="pd_img_box">
+                                    <div></div>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="img_form">
+                                    <input name="picture" type="file">
+                                    <p>
+                                        <i class="ite_img"></i>选中你要上传的图片</p>
+                                </div>
+                                <div class="img_complete">
+                                    完成
+                                </div>
+                    </div>
+                    <div class="pd_item_Img_preview">
+                        <p>
+                            预览效果
+                        </p>
+                        <div class="Img_preview">
+                            <p>没有预览</p>
+                            <img src="" alt="">
+                        </div>
+                        <p>
+                            100*100像素
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+    </footer>
+</body>
+
+</html>

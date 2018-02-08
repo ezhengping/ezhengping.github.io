@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-14 09:28:50
+ * @version $签约$
+ */
+.protocol{
+	padding:0 36px;
+}
+.protocol h4{
+	text-align: center;
+	color:#414141;
+	font-size:20px;
+	height: 20px;
+	line-height: 20px;
+	padding-top:58px;
+	margin-bottom: 30px;
+}
+.protocol_box{
+	padding-bottom:54px;
+	border-bottom:1px solid #bfbfbf; 
+}
+.protocol_box_content{
+	height:450px;
+	overflow: auto;
+}
+.protocol p{
+	line-height: 40px;
+	font-size: 16px;
+	color:#636363;
+	text-align: justify;
+	text-indent:2em;
+}
+.read_protocol_but{
+	margin-top: 32px;
+	position: relative;
+	margin-left:40px;
+}
+.read_protocol_but input{
+	opacity: 0;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+	height:18px;
+	width:18px;
+	cursor: pointer;
+}
+.radio{
+	background: url('/images/read_protocol_noatv.png') no-repeat center left;
+	padding-left:32px;
+	font-size:18px;
+	line-height: 18px;
+	height: 18px;
+	color:#656565;
+}
+.read_protocol_but input:checked + .radio{
+	background-image: url('/images/read_protocol_atv.png');
+}
+.form_but_box{
+	width: 100%;
+	height:490px;
+	position: relative;
+}
+.form_but{
+	position: absolute;
+	border-radius: 6px;
+	top:0;
+	bottom: 0;
+	left:0;
+	right:0;
+	margin: auto;
+	width: 194px;
+	height: 58px;
+	color:#fff;
+	text-align: center;
+	line-height: 58px;
+	background: -webkit-linear-gradient(#ffab27, #ff8027); /* Safari 5.1 - 6.0 */ 
+	background: -o-linear-gradient(#ffab27, #ff8027); /* Opera 11.1 - 12.0 */ 
+	background: -moz-linear-gradient(#ffab27, #ff8027); /* Firefox 3.6 - 15 */ 
+	background: linear-gradient(#ffab27, #ff8027); /* 标准的语法 */ 
+
+}

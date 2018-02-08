@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>淘味网 - 购物车</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+	<link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/shoppingCart.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script src="/js/CryptoJS/rollups/aes.js"></script>
+    <script src="/js/AES.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/product/shoppingCart.js"></script>
+    <script type="text/javascript" src="/js/cart/Cart.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <header id="head3" class="header">
+        
+    </header>
+    <!-- 收获地址 -->
+    <div class="address">
+        <div class="w">
+            <h3 class="switch-cart-item clearfix">
+                <a href="javascript:;" title="">确认收获地址</a>
+                <a href="/page/personal/personalAddress.html">
+                    <span class="management" title="">管理收获地址</span>
+                </a>
+            </h3>
+        </div>
+        <div class="w">
+            <div class="Addaddress">
+                <!-- 为空时显示下方注释内容 -->
+
+                <!-- <div class="address_null">
+                    <span>你还没有收获地址，快去添加吧~~~</span>
+                    <a href="javascript:;" class="add_address" title="">添加收获地址</a>
+                </div> -->
+                <div class="address_num">
+                    <ul class="select_address">
+                        <!-- 选中状态 -->
+                        <!-- <li class="">
+                            <div class="Checked_style">
+                                <i></i>
+                                <span>寄送至</span>
+                            </div>
+                            <div class='address_main'>
+                                <label for="1">
+                                    <input id="1" type="radio" name="address">
+                                    <span class="user_address">
+                                        <span class="user_area">安徽省 合肥市 瑶海区 车站街道</span>
+                                        <span class="user_name">(
+                                            <em>name</em>)</span>
+                                        <span class="user_phone">139564613213</span>
+                                    </span>
+                                </label>
+                                <div class="Del_address">
+                                    <span>删除当前地址</span>
+                                </div>
+                                <div class="default_address">
+                                    <span>已是默认地址</span>
+                                </div>
+                            </div>
+                        </li> -->
+                        <!-- 未选中状态 -->
+                        <!-- <li class="">
+                            <div class='address_main'>
+                                <label for="2">
+                                    <input id="2" type="radio" name="address">
+                                    <span class="user_address">
+                                        <span class="user_area">安徽省 合肥市 瑶海区 车站街道</span>
+                                        <span class="user_name">(
+                                            <em>name</em>)</span>
+                                        <span class="user_phone">139564613213</span>
+                                    </span>
+                                </label>
+                                <div class="Del_address">
+                                    <span>删除当前地址</span>
+                                </div>
+                                <div class="set_default_address">
+                                    <span>设置默认地址</span>
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <div class="add_address_btn">
+                        <a href="javascript:;" class="add_address" title="">添加新地址</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购物车 -->
+    <div class="container">
+        <div class="w">
+            <h3 class="switch-cart-item">
+                <a href="/shoppingCart.html" title="">全部商品</a>
+            </h3>
+        </div>
+        <div class="w">
+            <div class="cart-main cart-main-new">
+                <!-- 全部商品全选 -->
+                <div class="cart-thead">
+                    <div class="column t-checkbox">
+                        <div class="cart-checkbox">
+                            <input type="checkbox" name="toggle-checkboxes" class="checkbox_all">
+                            <label for="">勾选全部商品</label>
+                        </div>
+                        全选
+                    </div>
+                    <div class="column t-goods">商品</div>
+                    <div class="column t-props"></div>
+                    <div class="column t-price">单价</div>
+                    <div class="column t-quantity">数量</div>
+                    <div class="column t-sum">小计</div>
+                    <div class="column t-action">操作</div>
+                </div>
+                <!-- 购物车 -->
+                <div id="cart-list">
+                    <!-- 店铺加上该家店铺的商品 -->
+                </div>
+            </div>
+        </div>
+        <div class="cart-toolbar fixed-bottom">
+            <div class="w">
+                <div class="column t-checkbox">
+                    <div class="cart-checkbox">
+                        <input type="checkbox" name="toggle-checkboxes" class="checkbox_all">
+                        <label for="">勾选全部商品</label>
+                    </div>
+                    全选
+                </div>
+                <div class="operation">
+                    <a href="#none" class="remove-batch">删除选中的商品</a>
+                </div>
+                <div class="toolbar-right">
+                    <div class="normal">
+                        <div class="comm-right">
+                            <div class="btn-area">
+                                <a href="javascript:void(0);">
+                                    去结算
+                                    <b></b>
+                                </a>
+                                <!-- <a href="javascript:void(0);" class="submit-btn submit-btn-disabled">
+                                去结算<b></b></a> -->
+                            </div>
+                            <div class="price-sum">
+                                <div>
+                                    <span class="txt txt-new">总价：</span>
+                                    <span class="price sumPrice">
+                                        <em data-bind="0.00">¥0.00</em>
+                                    </span>
+                                    <b class="ml5 price-tips"></b>
+                                    <br>
+                                    <span class="txt">已节省：</span>
+                                    <span class="price totalRePrice">- ¥0.00</span>
+                                </div>
+                            </div>
+                            <div class="amount-sum">
+                                已选择
+                                <em>0</em>件商品
+                                <b class="up" clstag="clickcart|keycount|xincart|cart_thumbnailOpen"></b>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="new_address" style="display: none">
+            <div class="alert_Masking"></div>
+            <div class='iframe_box'>
+                <div class="iframe_title">
+                    <h3>请仔细填写收获信息</h3>
+                    <span class="iframe_shut">x</span>
+                </div>
+                <div class="iframe_box_item">
+                    <iframe src="/address/address.html" name="address_iframe" scrolling="no" width="600" height="500" style="background-color: #fff;border:0"></iframe>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

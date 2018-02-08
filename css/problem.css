@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-27 16:55:42
+ * @version $Id$
+ */
+body{
+	background-color: #f4f4f4;
+}
+.problem_text_mid{
+	line-height: 30px;
+	font-size: 16px;
+	width: 1200px;
+	background-color: #fff;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 30px 20px;
+
+}
+
+.text_piece{
+	margin-bottom: 30px;
+}
+.text_piece h2{
+	color: red;
+}
+.text_piece_text{
+	margin-bottom: 30px;
+}
+.text_piece_text h3{
+	color: #000;
+}
+.text_piece_text p{
+	color: #878787;
+}

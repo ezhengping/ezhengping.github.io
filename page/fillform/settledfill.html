@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 商家 - 填写入驻信息</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/ui/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/css/ui/icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/fillbase.css?t=20180208">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script src="/js/personal/personalBase.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/personal/personsl_Plug-in.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery.easyui.min.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <!-- <script type="text/javascript" src="/js/settledfill.js?t=20180208"></script> -->
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/from/fillbase.js?t=20180208"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header_mid">
+            <div class="header_logo">
+                <h1 class="header_logo_title">入驻平台
+                    <a class="header_logo_link" href="/index.html">
+                        淘味网
+                    </a>
+                </h1>
+            </div>
+            <div class="header_icenter">
+                <a href="/page/login/login.html" title="" class="header_icenter_info">前往登录</a>
+                <a href="javascript:;" title="" class="header_icenter_out" onclick="logout()">
+                    <img src="/images/outlogin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- /header -->
+    <!-- 表单内容页面 -->
+    <section class="section">
+        <div class="section_mid">
+            <!-- 头部标题 -->
+            <div class="section_title clearfix">
+                <div class="section_title_item">
+                    <div class="section_title_item_content section_title_active">
+                        <i class="section_title_item_content_icon">1</i>
+                        <h2 class="section_title_item_content_1">商家信息填写</h2>
+                    </div>
+                </div>
+                <!--<div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">2</i>
+                        <h2 class="section_title_item_content_1">店铺信息填写</h2>
+                    </div>
+                </div> -->
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">2</i>
+                        <h2 class="section_title_item_content_1">资质审核</h2>
+                    </div>
+                </div>
+                <!-- <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">4</i>
+                        <h2 class="section_title_item_content_1">签约</h2>
+                    </div>
+                </div> -->
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">3</i>
+                        <h2 class="section_title_item_content_1">入驻成功</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 副标题 -->
+            <div class="section_title_subtitle">
+                <h3>店铺入驻基本信息</h3>
+            </div>
+            <!-- 表单开始 -->
+            <form id="form_settled" method="POST">
+                <!-- 掌柜姓名 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>
+                        掌柜姓名:
+                    </label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" maxlength="16" type="text" name="bossName" placeholder="请输入真实姓名">
+                        <p class="base_fill_p">
+                            注：掌柜姓名将会绑定提现账户名，并且不能更改，后期提现将只能提到该掌柜的银行卡内。请确认您掌柜姓名姓名是否填写正确。
+                        </p>
+                    </div>
+                </div>
+                <!-- 手机号码 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>手机号码:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="phone" maxlength="11" placeholder="请输入您的手机号">
+                        <p class="base_fill_p">
+                            注：此手机号为商家首次登陆后台的账号，提现接收验证码的初始手机号。
+                        </p>
+                    </div>
+                </div>
+                <!-- 店铺名称 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>店铺名称:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" maxlength="16" name="storeName" placeholder="请填写店铺名称">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 营业面积 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>营业面积:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" maxlength="16" name="area" placeholder="请填写营业面积">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 店铺地址 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>店铺地址:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <div class="controls-box clearfix">
+                            <div class="control-group">
+                                <!-- <label class="control-label" for="province">省份</label> -->
+                                <select id="province" name="province">
+
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <!-- <label class="control-label" for="city">城市</label> -->
+                                <select id="city" name="city">
+
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <!-- <label class="control-label" for="area">地区</label> -->
+                                <select id="area" name="areas">
+
+                                </select>
+                            </div>
+                            <input type="hidden" name="address">
+                        </div>
+                        <input class="input" type="text" maxlength="100" name="addressDetail" placeholder="店铺详细地址">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 法人姓名 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>法人姓名:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" maxlength="16" name="legalName" placeholder="输入法人姓名">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 营业执照号 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>营业执照号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" maxlength="20" name="licence" placeholder="请输入营业执照号码">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 业务员号码 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>业务员号码:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="salesmanId" maxlength="6" placeholder="请输入业务员号码">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 是否存在第三方平台店铺 -->
+                <!-- <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>是否存在第三方平台店铺:</label>
+                    <div class="base_fill_form">
+                        <i>警告提示</i>
+                        <label for="thirdPartyY" class="radio_label">
+                            <input id="thirdPartyY" checked="true" class="radio_input" type="radio" name="u" value="Yes">是</label>
+                        <label for="thirdPartyN" class="radio_label">
+                            <input id="thirdPartyN" class="radio_input" type="radio" name="u" value="no">否</label>
+                    </div>
+                </div> -->
+                <!-- 第三方店铺链接 -->
+                <!-- <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>第三方店铺链接:</label>
+                    <div class="base_fill_form">
+                        <div class="base_fill_formitem clearfix">
+                            <i>警告提示</i>
+                            <input class="input" type="text" name="" placeholder="请输入第三方店铺链接">
+                            <b class="icon">+</b>
+                            <p class="base_fill_p">
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="section_title_subtitle">
+                    <h3>资质材料上传
+                        <strong>(注：上传的图片大小在2M以内，仅支持图像格式JPG、PNG、JPEG、GIF、BMP格式)</strong>
+                    </h3>
+                </div>
+
+
+                <script type="text/javascript">
+                </script>
+                <!-- 营业执照 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>营业执照:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="licenceUrlor" accept="image/*">
+                            <input type="hidden" name="licenceUrl">
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 门头照 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>门头照:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="doorUrlor" accept="image/*">
+                            <input type="hidden" name="doorUrl">
+
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 身份证有效期 -->
+                <!-- <div class="base_fill clearfix" style="display:none">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>身份证有效期:</label>
+                    <div class="base_fill_form">
+                        <i>警告提示</i>
+                        <div class="startdata">
+                            <input id="startData" class="dateinput" type="text" name="" placeholder="请选择日期">
+                            <div id='cc' style='width:153px;height:180px;position:absolute;display: none;line-height: 18px;top:36px;z-index: 999'></div>
+                        </div>
+                        <span class="startdata settled_span">至</span>
+                        <div class="startdata">
+                            <input id="endData" class="dateinput" type="text" name="" placeholder="请选择日期">
+                            <div id='dd' style='width:153px;height:180px;position:absolute;top:36px;display: none;line-height:18px;z-index: 999'></div> -->
+                <!-- 日期插件 -->
+                <!-- <script type="text/javascript">
+                                (function Day() {
+                                    // 起始日期
+                                    $(document).click(function () {
+                                        $('#cc').hide();
+                                        $('#dd').hide();
+                                    })
+                                    $('#startData').focus(function () {
+                                        $(this).css({
+                                            'box-shadow': '0 0 6px rgba(255,127,38,.5)',
+                                            'border-color': '#ff7f26'
+                                        })
+                                        $('#cc').show();
+                                        $('#dd').hide();
+                                    });
+                                    $("#startData").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $("#cc").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+
+                                    $("#startData").blur(function () {
+                                        $(this).css({
+                                            'box-shadow': 'none',
+                                            'border-color': '#bfbfbf'
+                                        })
+                                    })
+                                    $('#cc').calendar({
+                                        current: new Date(),
+                                        showSeconds: false,
+                                        weeks: ['七', '一', '二', '三', '四', '五', '六'],
+                                        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月',
+                                            '十一月', '十二月'
+                                        ],
+                                        onSelect: function (date) {
+                                            $('#startData').val(date.getFullYear() + "年" + (date.getMonth() +
+                                                1) + "月" + date.getDate() + "日").css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });
+                                            i = false;
+                                            $('#cc').hide();
+                                        }
+                                    });
+
+
+
+                                    // 结束日期
+                                    $('#endData').focus(function () {
+                                        $(this).css({
+                                            'box-shadow': '0 0 6px rgba(255,127,38,.5)',
+                                            'border-color': '#ff7f26'
+                                        })
+                                        $('#dd').show();
+                                        $('#cc').hide();
+                                    });
+                                    $("#endData").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $("#endData").blur(function () {
+                                        $(this).css({
+                                            'box-shadow': 'none',
+                                            'border-color': '#bfbfbf'
+                                        })
+                                    })
+                                    $("#dd").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $('#dd').calendar({
+                                        current: new Date(),
+                                        showSeconds: false,
+                                        weeks: ['七', '一', '二', '三', '四', '五', '六'],
+                                        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月',
+                                            '十一月', '十二月'
+                                        ],
+                                        onSelect: function (date) {
+                                            $('#endData').val(date.getFullYear() + "年" + (date.getMonth() +
+                                                1) + "月" + date.getDate() + "日").css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });
+                                            i = false;
+                                            $('#dd').css('display', 'none');
+                                        }
+                                    });
+                                })()
+                            </script> -->
+                <!-- </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div> -->
+                <!-- 身份证正面 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>身份证正面:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="frontIdor" accept="image/*">
+                            <input type="hidden" name="frontId">
+                        </div>
+                        <div class="settled_example">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idz.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 身份证反面 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>身份证反面:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="backIdor" accept="image/*">
+                            <input type="hidden" name="backId">
+                        </div>
+                        <div class="settled_example">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="submit clearfix">
+                    <!-- <a id="submitUp" href="entryoptions.html" title="">上一步</a> -->
+                    <input id="submitNext" type="submit" value="提交" />
+                    <!-- <a id="submitNext" href="personalshopfill.html" title="">下一步</a> -->
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        // 传入正则表达式验证
+        $.validator.addMethod('custom', function (value, element, params) {
+            var reg = params;
+            if (reg.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }, '请输入验证提示信息')
+        // 自定义验证  传入字符串进行验证，如果字符串为'null'则返回false 
+        $.validator.addMethod('valueNotNull', function (value, element, params) {
+            return params !== value
+        }, '该选项不能为空')
+
+        $.validator.addMethod('fileExtension', function (value, element, params) {
+            var reg = /(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            // console.log(element.files);
+            // console.log($(element).val());
+            var file = element.files[0];
+            if (reg.test(file.name.toLowerCase())) {
+                return true;
+            } else {
+                return false;
+            }
+        }, '请上传图片格式文件')
+
+        $.validator.addMethod('valnoT', function (value, element, params) {
+            return value == params.val() ? false : true;
+        }, '请上传图片格式文件')
+        $.validator.setDefaults({ ignore: ''})
+        $(document).ready(function () {
+            $("#form_settled").validate({
+                rules: {
+                    bossName: {
+                        required: true,
+                        custom: /[\u4e00-\u9fa5]/,
+                        maxlength: 16,
+                    },
+                    phone: {
+                        required: true,
+                        custom: /^[1][345678]\d{9}$/,
+
+                    },
+                    storeName: {
+                        required: true,
+                        custom: /[\u4e00-\u9fa5]/,
+                        maxlength: 16,
+                    },
+                    area: {
+                        required: true,
+                    },
+                    province: {
+                        required: true,
+                        // valueNotNull: 'null',
+
+                    },
+                    city: {
+                        required: true,
+                        // valueNotNull: 'null',
+
+                    },
+                    areas: {
+                        required: true,
+                        // valueNotNull: 'null',
+
+                    },
+                    addressDetail: {
+                        required: true,
+
+                    },
+                    legalName: {
+                        required: true,
+                        custom: /[\u4e00-\u9fa5]/,
+                        maxlength: 16,
+
+                    },
+                    licence: {
+                        required: true,
+
+                    },
+                    salesmanId: {
+                        required: true,
+                        custom: /\d{6}/,
+
+                    },
+                    licenceUrl: {
+                        required: true,
+                        fileExtension: 'null',
+                    },
+                    doorUrl: {
+                        required: true,
+                        fileExtension: 'null',
+
+                    },
+                    frontId: {
+                        required: true,
+                        fileExtension: 'null',
+
+                    },
+                    backId: {
+                        required: true,
+                        fileExtension: 'null',
+
+                    }
+
+                },
+                messages: {
+                    bossName: {
+                        required: '掌柜名称不能为空',
+                        custom: '掌柜名称应该为中文汉字',
+                        maxlength: '最多16个字符'
+                    },
+                    phone: {
+                        required: '手机号码不能为空',
+                        custom: '请输入正确的手机号',
+
+                    },
+                    storeName: {
+                        required: '店铺名称不能为空',
+                        custom: '店铺名称应该为中文汉字',
+                        maxlength: '最多16个字符'
+
+                    },
+                    area: {
+                        required: '店铺面积不能为空',
+
+                    },
+                    province: {
+                        required: '该选项不能为空',
+                        valueNotNull: '省、市、区为必选项,请选择完整',
+
+                    },
+                    city: {
+                        required: '该选项不能为空',
+                        valueNotNull: '省、市、区为必选项,请选择完整',
+
+                    },
+                    areas: {
+                        required: '该选项不能为空',
+                        valueNotNull: '省、市、区为必选项,请选择完整',
+
+                    },
+                    addressDetail: {
+                        required: '详细地址不能为空',
+
+                    },
+                    legalName: {
+                        required: '法人名称不能为空',
+                        custom: '法人名称应该为中文汉字',
+                        maxlength: '最多16个字符'
+
+                    },
+                    licence: {
+                        required: '营业执照号不能为空',
+
+                    },
+                    salesmanId: {
+                        required: '业务员号码不能为空',
+                        custom: '业务员号码应该为6位数字'
+
+                    },
+                    licenceUrl: {
+                        required: '需要上传营业执照(副本)',
+                    },
+                    doorUrl: {
+                        required: '需要上传门头照',
+                    },
+                    frontId: {
+                        required: '身份证正面',
+                    },
+                    backId: {
+                        required: '身份证反面',
+
+                    }
+                },
+                //验证错误时执行的函数
+                errorPlacement: function (error, element) {
+                    element.parents('.base_fill').find('i').html(error)
+                },
+                // 验证正确时
+                success: function (i) {
+                    $(i).html('');
+                },
+
+                submitHandler: function (form) {
+                    var province = $('select[name=province]').val();
+                    var city = $('select[name=city]').val();
+                    var area = $('select[name=areas]').val();
+                    $('input[name=address]').val(province + city + area);
+                    var data = $(form).serialize();
+                    console.log(data);
+                    if (getParam('result') == '6') {
+                        // console.log(data);
+                        data = data + '&id=' + $('#submitNext').data('val');
+                        ajaxModifyData(data);
+                    } else {
+                        ajaxAddDataSettledfill(data);
+                    }
+
+                    // $(form).ajaxSubmit();
+                }
+            })
+
+        })
+
+
+
+        // 修改数据到数据库
+        function ajaxModifyData(data) {
+            $.ajax({
+                    url: PATH + '/user2/updatePersionOccupancy.action',
+                    type: 'POST',
+                    data: data,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                })
+                .done(function (data) {
+                    console.log(data);
+                    if (data == 110) {
+                        layer.open({
+                            title: '温馨提醒',
+                            content: '数据修改成功,我们会在尽快给您答复.',
+                            btn1: function (index, layero) {
+                                location.href =
+                                    '/page/fillform/settledfill.html'
+                                layer.close(index);
+                            },
+                            cancel: function (index, layero) {
+                                location.href =
+                                    '/page/fillform/settledfill.html'
+                                layer.close(index);
+                            }
+                        })
+                    } else if (data == 111) {
+                        layer.open({
+                            title: '温馨提醒',
+                            content: '参数异常,仔细检查是否填写错误.',
+                        })
+                    }
+                })
+        }
+
+
+        // 将数据添加到数据库
+        function ajaxAddDataSettledfill(data) {
+            $.ajax({
+                    url: PATH + '/user2/persionOccupancy.action',
+                    type: 'POST',
+                    data: data,
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                })
+                .done(function (data) {
+                    console.log(data);
+                    if (data == 110) {
+                        layer.open({
+                            title: '温馨提醒',
+                            content: '数据提交成功,我们会在尽快给您答复.',
+                            btn1: function (index, layero) {
+                                location.href =
+                                    '/page/fillform/settledfill.html'
+                                layer.close(index);
+                            },
+                            cancel: function (index, layero) {
+                                location.href =
+                                    '/page/fillform/audit_waiting.html'
+                                layer.close(index);
+                            }
+                        })
+                    } else if (data == 111) {
+                        layer.open({
+                            title: '温馨提醒',
+                            content: '参数异常,仔细检查是否填写错误.',
+                        })
+                    }
+                })
+        }
+
+        // 上传文件表单元素val发送改变时执行上传
+        function uploadChange() {
+            $('input[type=file]').change(function () {
+                // 上传图片
+                var _this = this;
+                upload(_this, function (data) {
+                    console.log(data);
+                    $(_this).parents('.base_fill').find('.img').attr('src', data.URL);
+                    $(_this).siblings('input[type=hidden]').val(data.URL);
+                })
+            })
+        }
+
+        // 公司地址
+        function orAddress() {
+            $('#area').change(function () {
+                var province = $('select[name=province]').val();
+                var city = $('select[name=city]').val();
+                var area = $('select[name=areas]').val();
+                if ($(this).val() != 'null') {
+                    $('input[name=address]').val(province + city + area);
+                } else {
+                    $('input[name=address]').val('');
+                }
+            })
+        }
+
+
+
+
+        function ajaxFillType() {
+            $.ajax({
+                    url: PATH + '/user2/selectPersionOccupancy.action',
+                    type: 'POST',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                })
+                .done(function (data) {
+                    console.log(data);
+                    switch (data.result) {
+                        case 3:
+                            // layer.open({
+                            //     title:'温馨提醒',
+                            //     content:'您已经认证通过了,不需要再次认证,如再次提交,则视为无效.'
+                            // }) 
+                            location.href = '/page/fillform/audit_by.html';
+                            // modifyData(data.itemInfoList);
+                            break;
+                        case 4:
+
+                            break;
+                        case 5:
+                            location.href = '/page/fillform/audit_waiting.html';
+                            // modifyData(data.itemInfoList);
+                            break;
+                        case 6:
+                            if (getParam('result') == '6') {
+                                modifyData(data.itemInfoList);
+                            } else {
+                                localStorage.setItem('fillformD', JSON.stringify(data));
+                                location.href = '/page/fillform/audit_reject.html'
+                            }
+                            break;
+                    }
+                })
+        }
+
+        function modifyData(data) {
+            $('input[name=bossName]').val(data.bossName);
+            $('input[name=phone]').val(data.phone);
+            $('input[name=storeName]').val(data.storeName);
+            $('input[name=area]').val(data.area);
+            $('input[name=addressDetail]').val(data.addressDetail);
+            $('input[name=legalName]').val(data.legalName);
+            $('input[name=licence]').val(data.licence);
+            $('input[name=salesmanId]').val(data.salesmanId);
+            $('input[name=licenceUrl]').val(data.licenceUrl).parents('.base_fill').find('.img').attr('src', data.licenceUrl);
+            $('input[name=doorUrl]').val(data.doorUrl).parents('.base_fill').find('.img').attr('src', data.doorUrl);
+            $('input[name=frontId]').val(data.frontId).parents('.base_fill').find('.img').attr('src', data.frontId);
+            $('input[name=backId]').val(data.backId).parents('.base_fill').find('.img').attr('src', data.backId);
+            $('select').val('null');
+            $('#submitNext').data('val', data.id);
+        }
+
+        $(function () {
+            // 载入地区
+            var city = new City({
+                boxEle: '.controls-box',
+                provinceName: 'province',
+                cityName: 'city',
+                areaName: 'areas',
+                provinceVal: '北京',
+                cityVal: '北京市',
+                areaVal: '东城区'
+            }, {
+                url: '/address/area.json',
+                type: 'GET',
+            })
+            // 选框获取焦点时改变样式
+            // inputStyle()
+
+            // 上传文件
+            // uploadChange();
+
+
+            // 地址整合
+            orAddress();
+
+            // 判断当前用户填写状态
+            ajaxFillType()
+        })
+    </script>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar">
+        <div class="sidebar__mid">
+            <a class="sidebar__mid_item" href="/index.html">首页</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/news.html">热点</a>
+            <a class="sidebar__mid_item" href="/javascript:;">商家</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/APPdownload.html">下载</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/aboutus.html">关于</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/hire.html">招聘</a>
+            <a class="sidebar__mid_item" href="javascript:;"></a>
+        </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+
+</html>

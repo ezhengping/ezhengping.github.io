@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 企业 - 填写入驻信息</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/ui/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/css/ui/icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/settledfill.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/fillbase.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="/css/enterprisesettledfill.css?t=20180208">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <!-- 地址 -->
+    <!-- <script src="assets/js/data.js"></script> -->
+    <!-- <script src="dist/jquery.city.select.min.js"></script> -->
+    <!-- /地址插件 -->
+    <!-- <script src="assets/js/prettify.js"></script> -->
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/personal/personsl_Plug-in.js"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script src="/js/personal/personalBase.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/ui/jquery.easyui.min.js"></script>
+    <!-- <script type="text/javascript" src="/js/enterprisettledfill.js"></script> -->
+    <script src="/js/from/fillbase.js?t=20180208"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header_mid">
+            <div class="header_logo">
+                <h1 class="header_logo_title">入驻平台
+                    <a class="header_logo_link" href="/index.html">
+                        淘味网
+                    </a>
+                </h1>
+            </div>
+            <div class="header_icenter">
+                <a href="/page/login/login.html" title="" class="header_icenter_info">前往登录</a>
+                <a href="javascript:;" title="" class="header_icenter_out" onclick="logout()">
+                    <img src="/images/outlogin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <!-- 表单内容页面 -->
+    <style type="text/css">
+    </style>
+    <section class="section">
+        <div class="section_mid">
+            <!-- 头部标题 -->
+            <div class="section_title clearfix">
+                <div class="section_title_item section_title_active">
+                    <div class="section_title_item_content  ">
+                        <i class="section_title_item_content_icon">1</i>
+                        <h2 class="section_title_item_content_1">个人/企业信息填写</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">2</i>
+                        <h2 class="section_title_item_content_1">店铺信息填写</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">3</i>
+                        <h2 class="section_title_item_content_1">资质审核</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">4</i>
+                        <h2 class="section_title_item_content_1">签约</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">5</i>
+                        <h2 class="section_title_item_content_1">入驻成功</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 副标题 -->
+            <div class="section_title_subtitle">
+                <h3>店铺入驻基本信息</h3>
+            </div>
+            <!-- 表单开始 -->
+            <form id="enterpriseform" method="post">
+                <!-- 管理人姓名 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>管理人姓名:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="managerName" maxlength="16" placeholder="请输入管理人真实姓名">
+                        <p class="base_fill_p">
+                            注：入驻姓名将会绑定提现账户名，并且不能更改，后期提现将只能提到该入驻人的银行卡内。请确认您入驻人姓名是否填写正确。
+                        </p>
+                    </div>
+                </div>
+                <!-- 管理人邮箱 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>入驻人邮箱:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="managerEmail" placeholder="请输入常用邮箱，便于审核信息及后期规则的及时送达">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 管理人手机号 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>管理人手机号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="managerPhone" maxlength="11" placeholder="请输入管理人常用手机号，不支持座机号">
+                        <p class="base_fill_p">
+                            注：此手机号为商家首次登陆后台的账号，提现接收验证码的初始手机号。
+                        </p>
+                    </div>
+                </div>
+                <!-- 再次输入手机号 -->
+                <!-- <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>再次输入管理人手机号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="" placeholder="再次输入管理人手机号">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div> -->
+                <!-- 身份证号 -->
+                <!-- <div class="settled_identity">
+                    <label for="" class="label"><strong class="strong">*</strong>身份证号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="" placeholder="请输入管理人的证件号（身份证、护照、军官证等均可）">
+                        <p class="base_fill_p">
+                            注：请确认您的身份证号码填写无误，该身份证号必须与您上传的身份证照片一致。
+                        </p>
+                    </div>
+                </div> -->
+                <!-- 紧急联系人名称 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>紧急联系人名称:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="emergencyContactName" maxlength="16" placeholder="紧急联系人和管理人不能同为一人">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 紧急联系人手机号 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>紧急联系人手机号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="emergencyContactPhone" maxlength="11" placeholder="紧急联系人手机号不能和管理人手机号相同">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 再次输入紧急联系人手机号 -->
+                <!-- <div class="settled_reurgentphone">
+                    <label for="" class="label"><strong class="strong">*</strong>再次输入紧急联系人手机号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="" placeholder="请再次输入紧急联系人手机号">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div> -->
+                <!-- 选择主要营业类目 -->
+                <!-- <div class="base_fill settled_category clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>主营类目:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="" placeholder="请选择">
+                        <b class="icon"></b>
+                        <p class="base_fill_p">
+                            <strong>注：一个店铺只能选择一个主营类目，且主营类目不可修改</strong>
+                        </p>
+                    </div>
+                    <ul class="category_box">
+                        <li class="category_item" data-value="">请选择</li>
+                        <li class="category_item" data-value="休闲食品">休闲食品</li>
+                        <li class="category_item" data-value="家居家纺">家居家纺</li>
+                        <li class="category_item" data-value="百货市场">百货市场</li>
+                        <li class="category_item" data-value="男装女装">男装女装</li>
+                        <li class="category_item" data-value="母婴用品">母婴用品</li>
+                        <li class="category_item" data-value="鞋类箱包">鞋类箱包</li>
+                    </ul>
+                    <script type="text/javascript">
+                    </script>
+                </div> -->
+                <!-- 是否存在第三方平台店铺 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>是否存在第三方平台店铺:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <label for="thirdPartyY" class="radio_label">
+                            <input id="thirdPartyY" checked="true" class="radio_input" type="radio" name="u" value=true data-val=true>是</label>
+                        <label for="thirdPartyN" class="radio_label">
+                            <input id="thirdPartyN" class="radio_input" type="radio" name="u" value=false data-val=false>否</label>
+                    </div>
+                </div>
+                <!-- 第三方店铺链接 -->
+                <div class="base_fill thirdlink clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>第三方店铺链接:</label>
+                    <div class="base_fill_form">
+                        <div class="base_fill_formitem clearfix">
+                            <i></i>
+                            <input class="input" type="text" name="companyOccupancyThirdLink" placeholder="请输入第三方店铺链接">
+                            <b class="icon" data-type=true>+</b>
+                            <p class="base_fill_p">
+                            </p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="companyOccupancyThirdLinks">
+                </div>
+                <!-- 副标题 -->
+                <div class="section_title_subtitle">
+                    <h3>入驻人基本信息</h3>
+                </div>
+                <!-- 是否是国内企业证件照 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>是否是国内企业证件照:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <label for="licenseY" class="radio_label">
+                            <input id="licenseY" checked="true" class="radio_input" type="radio" name="domesticEnterprises" value=true data-val=true>是</label>
+                        <label for="licenseN" class="radio_label">
+                            <input id="licenseN" class="radio_input" type="radio" name="domesticEnterprises" value=false data-val=false>否</label>
+                    </div>
+                </div>
+                <!-- 是否三证合一 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>是否三证合一:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <label for="combinedY" class="radio_label">
+                            <input id="combinedY" checked="true" class="radio_input" type="radio" name="threeInOne" value=true data-val=true>是</label>
+                        <label for="combinedN" class="radio_label">
+                            <input id="combinedN" class="radio_input" type="radio" name="threeInOne" value=false data-val=false>否</label>
+                    </div>
+                </div>
+                <!-- 企业法人名称 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>企业法人名称:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="legalPersonName" maxlength="16" placeholder="请输入企业法人的真实名称">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 企业法人邮箱 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>企业法人邮箱:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="legalPersonEmail" placeholder="请输入常用邮箱，便于审核信息及后期规则的及时送达">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 企业法人手机号码 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>企业法人手机号码:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="legalPersonPhone" maxlength="11" placeholder="请输入负责人常用手机号，不支持座机号">
+                        <p class="base_fill_p">
+                            注此手机号为商家提现时，接收验证码的初始手机号
+                        </p>
+                    </div>
+                </div>
+                <!-- 再次输入企业法人手机号码 -->
+                <!-- <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>再次输入企业法人手机号码:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="" placeholder="请再次输入手机号码">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div> -->
+                <!-- 企业法人身份证号 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>企业法人身份证号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="legalPersonID" maxlength="18" placeholder="请输入管理人的证件号（身份证、护照、军官证等均可）">
+                        <p class="base_fill_p">
+                            注：请确认您的身份证号码填写无误，该身份证号必须与您上传的身份证照片一致。
+                        </p>
+                    </div>
+                </div>
+                <!-- 请输入公司名称 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>公司名称:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="companyName" placeholder="请输入公司名称">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 公司经营地址 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>公司经营地址:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <div class="controls-box clearfix">
+                            <div class="control-group">
+                                <!-- <label class="control-label" for="province">省份</label> -->
+                                <select id="province" name="companyProvince">
+
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <!-- <label class="control-label" for="city">城市</label> -->
+                                <select id="city" name="companyCity">
+
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <!-- <label class="control-label" for="area">地区</label> -->
+                                <select id="area" name="companyArea">
+
+                                </select>
+                            </div>
+                            <input type="hidden" name="address">
+                        </div>
+                        <input class="input" type="text" name="companyDetail" maxlength="50" placeholder="请输入公司地址:街道/商业区.等详细地址">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 营业执照注册号 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>营业执照注册号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="businessLicenseNumber" maxlength="30" placeholder="请输入15位营业执照注册号">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 组织机构代码 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>组织机构代码:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="organizationNumber" maxlength="30" placeholder="请输入组织机构代码">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 纳税人识别码 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>纳税人识别码:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="taxpayerNumber" maxlength="30" placeholder="请输入纳税人识别码">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 统一社会信用代码 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>统一社会信用代码</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="socialCredit" maxlength="30" placeholder="请输入18位的统一社会信用代码">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <div class="section_title_subtitle">
+                    <h3>资质材料上传
+                        <strong>(注：上传的图片大小在2M以内，仅支持图像格式JPG、PNG、JPEG、GIF、BMP格式)</strong>
+                    </h3>
+                </div>
+                <!-- 法人代表身份证正面 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>法人代表身份证正面:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="legalPersonIDFrontImageor" accept="image/*">
+                            <input type="hidden" name="legalPersonIDFrontImage">
+
+                        </div>
+                        <div class="settled_example">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idz.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 法人代表身份证反面 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>法人代表身份证反面:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="legalPersonIDBackImageor" accept="image/*">
+                            <input type="hidden" name="legalPersonIDBackImage">
+                        </div>
+                        <div class="settled_example">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 身份证有效期 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>身份证有效期:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <div class="startdata">
+                            <input id="startData" readonly class="dateinput" type="text" name="iDStartor" placeholder="请选择日期">
+                            <div id='cc' style='width:153px;height:180px;position:absolute;display: none;line-height: 18px;top:36px;z-index: 999'></div>
+                            <input type="hidden" name="iDStart">
+                        </div>
+                        <span class="startdata settled_span">至</span>
+                        <div class="startdata">
+                            <input id="endData" readonly class="dateinput" type="text" name="iDExpireor" placeholder="请选择日期">
+                            <div id='dd' style='width:153px;height:180px;position:absolute;top:36px;display: none;line-height:18px;z-index: 999'></div>
+                            <input type="hidden" name="iDExpire">
+                            <!-- 日期插件 -->
+                            <script type="text/javascript">
+                                (function () {
+
+                                    // 起始日期
+                                    $(document).click(function () {
+                                        $('#cc').hide();
+                                        $('#dd').hide();
+                                    })
+                                    $('#startData').focus(function () {
+                                        $(this).css({
+                                            'box-shadow': '0 0 6px rgba(255,127,38,.5)',
+                                            'border-color': '#ff7f26'
+                                        })
+                                        $('#cc').show();
+                                        $('#dd').hide();
+                                    });
+                                    $("#startData").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $("#cc").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+
+                                    $("#startData").blur(function () {
+                                        $(this).css({
+                                            'box-shadow': 'none',
+                                            'border-color': '#bfbfbf'
+                                        })
+                                    })
+                                    $('#cc').calendar({
+                                        current: new Date(),
+                                        showSeconds: false,
+                                        weeks: ['七', '一', '二', '三', '四', '五', '六'],
+                                        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月',
+                                            '十一月', '十二月'
+                                        ],
+                                        onSelect: function (date) {
+                                            $('#startData').val(date.getFullYear() + "年" + (date.getMonth() +
+                                                1) + "月" + date.getDate() + "日").css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });
+                                            $('input[name=iDStart]').val(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate());
+                                            i = false;
+                                            $('#cc').hide();
+                                        }
+                                    });
+
+
+
+                                    // 结束日期
+                                    $('#endData').focus(function () {
+                                        $(this).css({
+                                            'box-shadow': '0 0 6px rgba(255,127,38,.5)',
+                                            'border-color': '#ff7f26'
+                                        })
+                                        $('#dd').show();
+                                        $('#cc').hide();
+                                    });
+                                    $("#endData").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $("#endData").blur(function () {
+                                        $(this).css({
+                                            'box-shadow': 'none',
+                                            'border-color': '#bfbfbf'
+                                        })
+                                    })
+                                    $("#dd").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $('#dd').calendar({
+                                        current: new Date(),
+                                        showSeconds: false,
+                                        weeks: ['七', '一', '二', '三', '四', '五', '六'],
+                                        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月',
+                                            '十一月', '十二月'
+                                        ],
+                                        onSelect: function (date) {
+                                            $('#endData').val(date.getFullYear() + "年" + (date.getMonth() +
+                                                1) + "月" + date.getDate() + "日").css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });
+                                            $('input[name=iDExpire]').val(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate());
+                                            i = false;
+                                            $('#dd').css('display', 'none');
+                                        }
+                                    });
+                                })()
+                            </script>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 营业执照 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>营业执照:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="businessLicenseImageor" accept="image/*">
+                            <input type="hidden" name="businessLicenseImage">
+                        </div>
+                        <div class="settled_example" style="display:none">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 开户许可证 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>开户许可证:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="accountPermitImageor" accept="image/*">
+                            <input type="hidden" name="accountPermitImage">
+                        </div>
+                        <div class="settled_example" style="display:none">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 质检报告 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>质检报告:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="inspectionReportImageor" accept="image/*">
+                            <input type="hidden" name="inspectionReportImage">
+                        </div>
+                        <div class="settled_example" style="display:none">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                            注：海淘类商家，经营食品类需在此处上传经营许可证（食品流通许可证）；经营酒类需另行上传酒类流通股许可证或酒类流通备案登记表。
+                        </p>
+                    </div>
+                </div>
+                <!-- 副标题 -->
+                <div class="section_title_subtitle">
+                    <h3>资质材料上传
+                        <strong>(注：上传的图片大小在2M以内，仅支持JPG、PNG格式)</strong>
+                    </h3>
+                </div>
+                <!-- 商标注册号 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>商标注册号:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="trademarkingNumber" maxlength="20" placeholder="商标注册号">
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 商标注册证明 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>商标注册证明:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="tradeMarkPaperImageor" accept="image/*">
+                            <input type="hidden" name="tradeMarkPaperImage">
+                        </div>
+                        <div class="settled_example" style="display:none">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌授权 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>品牌授权:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="brandAuthorizationImageor" accept="image/*">
+                            <input type="hidden" name="brandAuthorizationImage">
+                        </div>
+                        <div class="settled_example" style="display:none">
+                            <div class="settled_example_title">示例</div>
+                            <div class="settled_example_img">
+                                <img src="/images/enterprisesettledfill_idf.png" alt="">
+                            </div>
+                            <div class="settled_example_text">
+                                <div class="settled_example_text_mid">
+
+                                </div>
+                            </div>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <!-- 品牌授权证明有效期 -->
+                <div class="base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>品牌授权有效期:</label>
+                    <div class="base_fill_form">
+                        <i></i>
+                        <div class="startdata">
+                            <input id="BrandstartData" readonly class="dateinput" name="brandAuthorizationStartor" type="text" placeholder="请选择日期">
+                            <div id='ee' style='width:153px;height:180px;position:absolute;display: none;line-height: 18px;top:36px;z-index: 999'></div>
+                            <input type="hidden" name="brandAuthorizationStart">
+                            <!-- 日期插件 -->
+                            <script type="text/javascript">
+                                (function () {
+                                    var i = false;
+                                    $('#BrandstartData').focus(function () {
+                                        $(this).css({
+                                            'box-shadow': '0 0 6px rgba(255,127,38,.5)',
+                                            'border-color': '#ff7f26'
+                                        })
+                                        $('#ee').css('display', 'block');
+                                        $('#ff').css('display', 'none');
+                                    });
+                                    $("#BrandstartData").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $('#ee').click(function (event) {
+                                        event.stopPropagation();
+                                    })
+                                    $('#BrandstartData').blur(function () {
+                                        $('#ee').on('click', function () {
+                                            i = true
+                                        })
+                                        if (i) {
+                                            $('#ee').css('display', 'block');
+                                        } else {
+                                            i = false;
+                                            $(this).css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });
+                                            setTimeout(function () {
+                                                $('#ee').css('display', 'none');
+                                            }, 80)
+                                        }
+
+                                    })
+                                    $('#ee').calendar({
+                                        current: new Date(),
+                                        showSeconds: false,
+                                        weeks: ['七', '一', '二', '三', '四', '五', '六'],
+                                        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月',
+                                            '十一月', '十二月'
+                                        ],
+                                        onSelect: function (date) {
+                                            $('#BrandstartData').val(date.getFullYear() + "年" + (date.getMonth() +
+                                                1) + "月" + date.getDate() + "日").css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });;
+                                            $('input[name=brandAuthorizationStart]').val(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate());
+                                            i = false;
+                                            $('#ee').css('display', 'none');
+                                        }
+                                    });
+                                })()
+                            </script>
+                        </div>
+                        <span class="startdata settled_span">至</span>
+                        <div class="startdata">
+                            <input id="BrandendData" readonly class="dateinput" type="text" name="brandAuthorizationExpireor" placeholder="请选择日期">
+                            <div id='ff' style='width:153px;height:180px;position:absolute;top:36px;display: none;line-height:18px;z-index: 999'></div>
+                            <input type="hidden" name="brandAuthorizationExpire">
+                            <!-- 日期插件 -->
+                            <script type="text/javascript">
+                                (function () {
+                                    var i = false;
+                                    // 起始日期
+                                    $(document).click(function () {
+                                        $('#ee').hide();
+                                        $('#ff').hide();
+                                    })
+                                    $('#BrandendData').focus(function () {
+                                        $(this).css({
+                                            'box-shadow': '0 0 6px rgba(255,127,38,.5)',
+                                            'border-color': '#ff7f26'
+                                        })
+                                        $('#ff').css('display', 'block');
+                                        $('#ee').css('display', 'none');
+                                    });
+                                    $("#BrandendData").click(function (event) {
+                                        event.stopPropagation();
+
+                                    })
+                                    $('#ff').click(function (event) {
+                                        event.stopPropagation();
+                                    })
+                                    $('#BrandendData').blur(function () {
+                                        $('#ff').on('click', function () {
+                                            i = true
+                                        })
+                                        if (i) {
+                                            $('#ff').css('display', 'block');
+                                        } else {
+                                            i = false;
+                                            $(this).css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });
+                                            setTimeout(function () {
+                                                $('#ff').css('display', 'none');
+                                            }, 80)
+                                        }
+
+                                    })
+                                    $('#ff').calendar({
+                                        current: new Date(),
+                                        showSeconds: false,
+                                        weeks: ['七', '一', '二', '三', '四', '五', '六'],
+                                        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月',
+                                            '十一月', '十二月'
+                                        ],
+                                        onSelect: function (date) {
+                                            $('#BrandendData').val(date.getFullYear() + "年" + (date.getMonth() +
+                                                1) + "月" + date.getDate() + "日").css({
+                                                'box-shadow': 'none',
+                                                'border-color': '#bfbfbf'
+                                            });;
+                                            $('input[name=brandAuthorizationExpire]').val(date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate());
+                                            i = false;
+                                            $('#dd').css('display', 'none');
+                                        }
+                                    });
+                                })()
+                            </script>
+                        </div>
+                        <p class="base_fill_p">
+                        </p>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="submit clearfix">
+                    <a id="submitUp" href="/page/business/entryoptions.html" title="">上一步</a>
+                    <input id="submitNext" type="submit" value="下一步" />
+                    <!-- ajax判断是否审核通过 通过audit_by.html   待审核audit_waiting.html 驳回audit_reject.html-->
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        // 传入正则表达式验证
+        $.validator.addMethod('custom', function (value, element, params) {
+            var reg = params;
+            if (reg.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }, '请输入验证提示信息')
+        // 自定义验证  传入字符串进行验证，如果字符串为'null'则返回false 
+        $.validator.addMethod('valueNotNull', function (value, element, params) {
+            return params !== value
+        }, '该选项不能为空')
+
+        $.validator.addMethod('fileExtension', function (value, element, params) {
+            var reg = /(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            // console.log(element.files);
+            // console.log($(element).val());
+            var file = element.files[0];
+            if (reg.test(file.name.toLowerCase())) {
+                return true;
+            } else {
+                return false;
+            }
+        }, '请上传图片格式文件')
+
+        $.validator.addMethod('valnoT', function (value, element, params) {
+            return value == params.val() ? false : true;
+        }, '请上传图片格式文件')
+
+        $.validator.setDefaults({ignore: ''})
+
+        function validate() {
+            $(document).ready(function () {
+                $('#enterpriseform').validate({
+                    rules: {
+                        managerName: {
+                            required: true,
+                            custom: /[\u4e00-\u9fa5]/,
+                            maxlength: 16,
+                        },
+                        managerEmail: {
+                            required: true,
+                            custom:/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/
+                            // email: true,
+                        },
+                        managerPhone: {
+                            required: true,
+                            custom: /^[1][345678]\d{9}$/,
+                        },
+                        emergencyContactName: {
+                            required: true,
+                            custom: /[\u4e00-\u9fa5]/,
+                            maxlength: 16,
+                            valnoT: $('input[name=managerName]'),
+                        },
+                        emergencyContactPhone: {
+                            required: true,
+                            custom: /^[1][345678]\d{9}$/,
+                        },
+                        domesticEnterprises: {
+                            required: true,
+                        },
+                        threeInOne: {
+                            required: true,
+                        },
+                        legalPersonName: {
+                            required: true,
+                            custom: /[\u4e00-\u9fa5]/,
+                            maxlength: 16,
+                        },
+                        legalPersonEmail: {
+                            required: true,
+                            custom:/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,5}$/
+                            // email: true,
+                        },
+                        legalPersonPhone: {
+                            required: true,
+                            custom: /^[1][345678]\d{9}$/,
+                        },
+                        legalPersonID: {
+                            required: true,
+                            custom: /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$|^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/
+                        },
+                        companyName: {
+                            required: true,
+                            maxlength: 30,
+                        },
+                        companyProvince: {
+                            required: true,
+                            valueNotNull: 'null'
+                        },
+                        companyCity: {
+                            required: true,
+                            valueNotNull: 'null'
+                        },
+                        companyArea: {
+                            required: true,
+                            valueNotNull: 'null'
+                        },
+                        companyDetail: {
+                            required: true,
+                            maxlength: 50,
+                        },
+                        businessLicenseNumber: {
+                            required: true,
+                            maxlength: 30,
+                        },
+                        organizationNumber: {
+                            required: true,
+                            maxlength: 30,
+                        },
+                        taxpayerNumber: {
+                            required: true,
+                            maxlength: 30,
+                        },
+                        socialCredit: {
+                            required: true,
+                            maxlength: 30,
+                        },
+                        legalPersonIDFrontImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        legalPersonIDBackImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        iDStartor: {
+                            required: true,
+
+                        },
+                        iDExpireor: {
+                            required: true,
+
+                        },
+                        businessLicenseImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        accountPermitImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        inspectionReportImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        trademarkingNumber: {
+                            required: true,
+                            maxlength: 20,
+                        },
+                        tradeMarkPaperImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        brandAuthorizationImage: {
+                            required: true,
+                            // fileExtension: 'null'
+                        },
+                        brandAuthorizationStart: {
+                            required: true,
+
+                        },
+                        brandAuthorizationExpire: {
+                            required: true,
+                        },
+                        companyOccupancyThirdLink: {
+                            // required: true,
+                            url: true
+                        }
+                    },
+                    messages: {
+                    managerName: {
+                        required: '管理人姓名不能为空',
+                        custom: '管理人姓名需为中文汉字',
+                        maxlength: '管理人姓名长度应为16位字符',
+                    },
+                    managerEmail: {
+                        required: '管理人邮箱不能为空',
+                        custom: '请输入正确的邮箱格式',
+                    },
+                    managerPhone: {
+                        required: '管理人手机号不能为空',
+                        custom: '请输入正确的管理人手机号',
+                    },
+                    emergencyContactName: {
+                        required: '紧急联系人姓名不能为空',
+                        custom: '紧急联系人姓名需为中文汉字',
+                        maxlength: '紧急联系人姓名长度应为16位字符',
+                        valnoT: '紧急联系人和管理人不能为同一人',
+                    },
+                    emergencyContactPhone: {
+                        required: '紧急联系人手机号码不能为空',
+                        custom: '请输入正确的手机号',
+                    },
+                    domesticEnterprises: {
+                        required: '该选项为必选项',
+                    },
+                    threeInOne: {
+                        required: '该选项为必选项',
+                    },
+                    legalPersonName: {
+                        required: '法人姓名不能为空',
+                        custom: '法人姓名应为中文汉字',
+                        maxlength: '法人姓名的字符长度应小于16个字符',
+                    },
+                    legalPersonEmail: {
+                        required: '法人邮箱不能为空',
+                        custom: '请输入正确的法人邮箱',
+                    },
+                    legalPersonPhone: {
+                        required: '法人手机号不能为空',
+                        custom: '请输入正确的手机号',
+                    },
+                    legalPersonID: {
+                        required: '请输入法人身份证号',
+                        custom: '请输入正确的身份证号格式'
+                    },
+                    companyName: {
+                        required: '公司名称不能为空',
+                        maxlength: '公司名称不能超过30个字符',
+                    },
+                    companyProvince: {
+                        required: '公司所在省份不能为空',
+                        valueNotNull: '请选中公司所在省份'
+                    },
+                    companyCity: {
+                        required: '公司所在城市不能为空',
+                        valueNotNull: '请选中公司所在城市'
+                    },
+                    companyArea: {
+                        required: '公司所在地区不能为空',
+                        valueNotNull: '请选中公司所在地区'
+                    },
+                    companyDetail: {
+                        required: '公司所在详细地址不能为空',
+                        maxlength: '公司所在详细地址字符长度不能超过50个字符',
+                    },
+                    businessLicenseNumber: {
+                        required: '营业执照编码不能为空',
+                        maxlength: '营业执照编码字符长度不能超过30个字符',
+                    },
+                    organizationNumber: {
+                        required: '组织机构代码不能为空',
+                        maxlength: '组织机构代码字符长度不能超过30个字符',
+                    },
+                    taxpayerNumber: {
+                        required: '纳税人识别码不能为空',
+                        maxlength: '纳税人识别码字符长度不能超过30个字符',
+                    },
+                    socialCredit: {
+                        required: '社会信用代码不能为空',
+                        maxlength: '社会信用代码字符长度不能超过30个字符',
+                    },
+                    legalPersonIDFrontImage: {
+                        required: '需要上传法人身份证正面照片',
+                        // fileExtension: 'null'
+                    },
+                    legalPersonIDBackImage: {
+                        required: '需要上传法人身份证背面照片',
+                        // fileExtension: 'null'
+                    },
+                    iDStartor: {
+                        required: '身份证起始时间不能为空',
+
+                    },
+                    iDExpireor: {
+                        required: '身份证过期时间不能为空',
+
+                    },
+                    businessLicenseImage: {
+                        required: '需要上传营业执照副本照片',
+                        // fileExtension: 'null'
+                    },
+                    accountPermitImage: {
+                        required: '需要上传开户许可证照片',
+                        // fileExtension: 'null'
+                    },
+                    inspectionReportImage: {
+                        required: '需要上传质捡报告照片',
+                        // fileExtension: 'null'
+                    },
+                    trademarkingNumber: {
+                        required: '商标注册号不能为空',
+                        maxlength: '商标注册号字符长度应为20个字符以内',
+                    },
+                    tradeMarkPaperImage: {
+                        required: '需要上传商标注册证明',
+                        // fileExtension: 'null'
+                    },
+                    brandAuthorizationImage: {
+                        required: '需要上传品牌授权证明',
+                        // fileExtension: 'null'
+                    },
+                    brandAuthorizationStart: {
+                        required: '品牌授权有效期开始时间不能为空',
+
+                    },
+                    brandAuthorizationExpire: {
+                        required: '品牌授权有效期过期时间不能为空',
+                    },
+                    companyOccupancyThirdLink: {
+                        required: '店铺链接不能为空',
+                        url: '请输入合法的店铺链接'
+                    }
+                    },
+                    //验证错误时执行的函数
+                    errorPlacement: function (error, element) {
+                        element.parents('.base_fill_form').find('i').html(error)
+                    },
+                    // 验证正确时
+                    success: function (i) {
+                        $(i).html('');
+                    },
+
+                    submitHandler: function (form) {
+                        localStorageData()
+                    }
+                })
+            })
+        }
+
+
+        // 第三方链接加
+        function thirdLinkClick() {
+            $('.thirdlink').on('click', '.icon', function () {
+                var inputEle = $(this).parents('.base_fill_formitem').find(
+                    'input[name=companyOccupancyThirdLink]');
+                var inputEleType = $("#enterpriseform").validate().element(inputEle);
+                var html = '<div class="base_fill_formitem clearfix">' +
+                    '<i></i>' +
+                    '<input class="input" type="text" name="companyOccupancyThirdLink" placeholder="请输入第三方店铺链接">' +
+                    '<b class="icon" data-type=true>+</b>' +
+                    '<p class="base_fill_p" style="display: block;">' +
+                    '</p>' +
+                    '</div>'
+                if ($(this).data('type') == true) {
+                    if (inputEle.val() != '' && inputEleType == true) {
+                        $(this).parents('.base_fill_formitem').after(html);
+                        $(this).data('type', false).text('-');
+                    } else if (inputEle.val() == '') {
+                        $(this).siblings('i').html('店铺链接不能为空')
+                    } else if (inputEleType != true) {
+                        $(this).siblings('i').html('请输入合法的店铺链接');
+                    }
+                } else {
+                    $(this).parents('.base_fill_formitem').remove();
+                }
+
+            })
+        }
+
+        // 处理提交数据保存本地
+        function localStorageData() {
+            var enterData = JSON.parse(localStorage.getItem('enterprise'))
+            if (enterData.storeType) {
+                var data = enterData;
+                data = processingData(data);
+                localStorage.setItem('enterprise', JSON.stringify(data));
+                location.href = '/page/fillform/enterpriseshopfill.html'
+            } else {
+                var data = {};
+                data = processingData(data);
+                localStorage.setItem('enterprise', JSON.stringify(data));
+                layer.open({
+                    title: '温馨提示',
+                    content: '店铺类型选则数据异常需要返回选择后提交',
+                    btn1: function () {
+                        location.href = '/page/business/entryoptions.html'
+                        layer.close(index);
+                    },
+                    cancel: function () {
+                        location.href = '/page/business/entryoptions.html'
+                        layer.close(index);
+                    }
+                })
+            }
+        }
+
+        // 处理第三方数据
+        function tripartiteLinkData() {
+            if ($('input[name=u]:checked').val() == 'true') {
+                var urlArr = [];
+                $.each($('input[name=companyOccupancyThirdLink]'), function (index, obj) {
+                    var url = {};
+                    if ($(obj).val() != '') {
+                        url['thirdLink'] = $(obj).val()
+                        urlArr.push(url);
+                    }
+                })
+                var urlData = JSON.stringify(urlArr);
+                $('input[name=companyOccupancyThirdLinks]').val(urlData);
+            } else {
+                $('input[name=companyOccupancyThirdLinks]').val('')
+            }
+        }
+
+        // 处理提交数据
+        function processingData(data) {
+            data['managerName'] = $('input[name=managerName]').val();
+            data['managerEmail'] = $('input[name=managerEmail]').val();
+            data['managerPhone'] = $('input[name=managerPhone]').val();
+
+            data['emergencyContactName'] = $('input[name=emergencyContactName]').val();
+            data['emergencyContactPhone'] = $('input[name=emergencyContactPhone]').val();
+
+            data['mainCategory'] = $('input[name=mainCategory]').val();
+
+            data['domesticEnterprises'] = $('input[name=domesticEnterprises]:checked').data('val');
+            data['threeInOne'] = $('input[name=threeInOne]:checked').data('val');
+
+            data['legalPersonName'] = $('input[name=legalPersonName]').val();
+            data['legalPersonEmail'] = $('input[name=legalPersonEmail]').val();
+            data['legalPersonPhone'] = $('input[name=legalPersonPhone]').val();
+            data['legalPersonID'] = $('input[name=legalPersonID]').val();
+
+            data['companyName'] = $('input[name=companyName]').val();
+            data['companyProvince'] = $('select[name=companyProvince]').val();
+            data['companyCity'] = $('select[name=companyCity]').val();
+            data['companyArea'] = $('select[name=companyArea]').val();
+            data['companyDetail'] = $('input[name=companyDetail]').val();
+
+            data['businessLicenseNumber'] = $('input[name=businessLicenseNumber]').val();
+            data['organizationNumber'] = $('input[name=organizationNumber]').val();
+            data['taxpayerNumber'] = $('input[name=taxpayerNumber]').val();
+            data['socialCredit'] = $('input[name=socialCredit]').val();
+
+            data['legalPersonIDFrontImage'] = $('input[name=legalPersonIDFrontImage]').val();
+            data['legalPersonIDBackImage'] = $('input[name=legalPersonIDBackImage]').val();
+
+            data['iDStart'] = $('input[name=iDStart]').val();
+            data['iDExpire'] = $('input[name=iDExpire]').val();
+
+            data['businessLicenseImage'] = $('input[name=businessLicenseImage]').val();
+            data['accountPermitImage'] = $('input[name=accountPermitImage]').val();
+            data['inspectionReportImage'] = $('input[name=inspectionReportImage]').val();
+            data['trademarkingNumber'] = $('input[name=trademarkingNumber]').val();
+            data['tradeMarkPaperImage'] = $('input[name=tradeMarkPaperImage]').val();
+
+            data['brandAuthorizationImage'] = $('input[name=brandAuthorizationImage]').val();
+            data['brandAuthorizationStart'] = $('input[name=brandAuthorizationStart]').val();
+            data['brandAuthorizationExpire'] = $('input[name=brandAuthorizationExpire]').val();
+            data['brandAuthorizationStartor'] = $('input[name=brandAuthorizationStartor]').val();
+            data['brandAuthorizationExpireor'] = $('input[name=brandAuthorizationExpireor]').val();
+            tripartiteLinkData();
+            if ($('input[name=u]:checked').val() == 'true') {
+                if(JSON.parse($('input[name=companyOccupancyThirdLinks]').val()).length){
+                    data['companyOccupancyThirdLinks'] = JSON.parse($('input[name=companyOccupancyThirdLinks]').val());
+                }else{
+                    delete data['companyOccupancyThirdLinks'];
+                }
+            }else{
+                delete data['companyOccupancyThirdLinks'];
+            }
+            return data;
+        }
+
+        // 填写数据
+        function fillData() {
+            if (localStorage.getItem('enterprise')) {
+                var data = JSON.parse(localStorage.getItem('enterprise'))
+                console.log(data);
+                
+                $('input[name=managerName]').val(data['managerName']);
+                $('input[name=managerEmail]').val(data['managerEmail']);
+                $('input[name=managerPhone]').val(data['managerPhone']);
+                $('input[name=emergencyContactName]').val(data['emergencyContactName']);
+                $('input[name=emergencyContactPhone]').val(data['emergencyContactPhone']);
+                $('input[name=mainCategory]').val(data['mainCategory']);
+
+                $.each($('input[name=domesticEnterprises]'), function (index, obj) {
+                    if ($(obj).data('val') == data['domesticEnterprises']) {
+                        $(obj).prop('checked', true);
+                        return;
+                    }
+                })
+                $.each($('input[name=threeInOne]'), function (index, obj) {
+                    if ($(obj).data('val') == data['threeInOne']) {
+                        $(obj).prop('checked', true);
+                        return;
+                    }
+                })
+
+                $('input[name=legalPersonName]').val(data['legalPersonName']);
+                $('input[name=legalPersonEmail]').val(data['legalPersonEmail']);
+                $('input[name=legalPersonPhone]').val(data['legalPersonPhone']);
+                $('input[name=legalPersonID]').val(data['legalPersonID']);
+
+                $('input[name=companyName]').val(data['companyName']);
+                $('select[name=companyProvince]').val(data['companyProvince']);
+                $('select[name=companyCity]').val(data['companyCity']);
+                $('select[name=companyArea]').val(data['companyArea']);
+                $('input[name=companyDetail]').val(data['companyDetail']);
+
+                $('input[name=businessLicenseNumber]').val(data['businessLicenseNumber']);
+                $('input[name=organizationNumber]').val(data['organizationNumber']);
+                $('input[name=taxpayerNumber]').val(data['taxpayerNumber']);
+                $('input[name=socialCredit]').val(data['socialCredit']);
+
+                $('input[name=legalPersonIDFrontImage]').val(data['legalPersonIDFrontImage']);
+                $('input[name=legalPersonIDFrontImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'legalPersonIDFrontImage'])
+                // $('input[name=legalPersonIDFrontImageor]').val('');
+                $('input[name=legalPersonIDBackImage]').val(data['legalPersonIDBackImage']);
+                $('input[name=legalPersonIDBackImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'legalPersonIDBackImage'])
+                // $('input[name=legalPersonIDBackImageor]').val(data['legalPersonIDBackImageor']);
+                function DateInit(time){
+                    var a = new Date(time);
+                    if(a=='Invalid Date'){
+                    var a = new Date(Number(time));
+                    }
+                    return a.getFullYear() +'年'+ a.getMonth()+1 +'月'+a.getDate() +'日';
+                }
+                $('input[name=iDStart]').val(data['iDStart']);
+                $('input[name=iDStartor]').val(DateInit(data['iDStart']));
+                $('input[name=iDExpire]').val(data['iDExpire']);
+                $('input[name=iDExpireor]').val(DateInit(data['iDExpire']));
+
+                $('input[name=businessLicenseImage]').val(data['businessLicenseImage']);
+                $('input[name=businessLicenseImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'businessLicenseImage'])
+                // $('input[name=businessLicenseImageor]').val(data['businessLicenseImage']);
+                $('input[name=accountPermitImage]').val(data['accountPermitImage']);
+                $('input[name=accountPermitImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'accountPermitImage'])
+                // $('input[name=accountPermitImageor]').val(data['accountPermitImage']);
+                $('input[name=inspectionReportImage]').val(data['inspectionReportImage']);
+                $('input[name=inspectionReportImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'inspectionReportImage'])
+                // $('input[name=inspectionReportImageor]').val(data['inspectionReportImage']);
+                $('input[name=trademarkingNumber]').val(data['trademarkingNumber']);
+                $('input[name=tradeMarkPaperImage]').val(data['tradeMarkPaperImage']);
+                $('input[name=tradeMarkPaperImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'tradeMarkPaperImage'])
+
+
+                $('input[name=brandAuthorizationImage]').val(data['brandAuthorizationImage']);
+                $('input[name=brandAuthorizationImage]').parents('.base_fill_form').find('img.img').attr('src', data[
+                    'brandAuthorizationImage'])
+                // $('input[name=brandAuthorizationImageor]').val(data['brandAuthorizationImage']);
+                $('input[name=brandAuthorizationStart]').val(data['brandAuthorizationStart']);
+                $('input[name=brandAuthorizationExpire]').val(data['brandAuthorizationExpire']);
+                $('input[name=brandAuthorizationStartor]').val(DateInit(data['brandAuthorizationStart']));
+                
+                $('input[name=brandAuthorizationExpireor]').val(DateInit(data['brandAuthorizationExpire']));
+
+                var html = '<div class="base_fill_formitem clearfix">' +
+                    '<i></i>' +
+                    '<input class="input" type="text" name="companyOccupancyThirdLink" placeholder="请输入第三方店铺链接">' +
+                    '<b class="icon" data-type="true">+</b>' +
+                    '<p class="base_fill_p" style="display: block;">' +
+                    '</p>' +
+                    '</div>';
+                if (data['companyOccupancyThirdLinks']) {
+                    $.each(data['companyOccupancyThirdLinks'], function (index, obj) {
+                        $('input[name=companyOccupancyThirdLink]').eq(index).val(obj.thirdLink).siblings(
+                            'b.icon').data('type', false).html('-').parents('.base_fill_formitem').after(
+                            html);
+                    })
+                }
+                $('input[name=companyOccupancyThirdLinks]').val(data['companyOccupancyThirdLinks'] );
+            }
+        }
+
+
+        // 是否存在第三方选项卡
+        function ifCompanyLink() {
+            $('input[name=u]').click(function () {
+                var val = $('input[name=u]:checked').val();
+                // console.log(val);
+                if (val == 'true') {
+                    $('.thirdlink').css('display', 'block');
+                } else if (val == 'false') {
+                    $('.thirdlink').css('display', 'none');
+                }
+            })
+        }
+
+        
+
+        $(function () {
+            // 载入地区
+            var city = new City({
+                boxEle: '.controls-box',
+                provinceName: 'companyProvince',
+                cityName: 'companyCity',
+                areaName: 'companyArea',
+                provinceVal: '北京',
+                cityVal: '北京市',
+                areaVal: '东城区'
+            }, {
+                url: '/address/area.json',
+                type: 'GET',
+            })
+
+
+            // 验证
+            validate()
+
+            // 初始化input选中样式
+            // inputStyle();
+
+            // 上传图片
+            // uploadChange()
+
+            // 是否存在第三方链接选项卡
+            ifCompanyLink();
+
+            // 第三方链接 ‘ + ’ 号被点击
+            thirdLinkClick()
+
+            fillData();
+        })
+    </script>
+</body>
+
+</html>

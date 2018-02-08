@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   热门商品模块
+ */
+
+body {
+    background-color: #ededed;
+}
+
+
+
+
+/*热卖品牌*/
+
+.section_1 {
+    height: 224px;
+    text-align: center;
+}
+
+.section_1_title {
+    display: inline-block;
+    padding-left: 52px;
+    line-height: 40px;
+    color: red;
+    font-size: 28px;
+    margin-top: 60px;
+    background: url('');
+}
+
+.section_1_title_en {
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+    font-family: "华文细黑";
+    color: #717171;
+    margin-top: 20px;
+}
+
+.section_2_mid {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section_2_mid_item {
+    float: left;
+    width: 290px;
+    height: 420px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.section_2_mid_item_top {
+    width: 100%;
+    height: 266px;
+    position: relative;
+}
+
+.section_2_mid_item_top_images {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section_2_mid_item_top_images_active {
+    -webkit-transition: top .3s ease-out;
+    -o-transition: top .3s ease-out;
+    transition: top .3s ease-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    top: -100%;
+}
+
+.section_2_mid_item:hover .section_2_mid_item_top_images_active {
+    top: 0;
+}
+
+.section_2_mid_item_top_images_active>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section_2_mid_item_top_images_active span {
+    display: block;
+    font-size: 28px;
+    font-family: FZCY;
+    margin-top: 20px;
+    height: 28px;
+    line-height: 28px;
+    color: #fff;
+}
+
+.section_2_mid_item_top_images_active img {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.section_2_mid_item_description {
+    color: #737373;
+    display: block;
+    line-height: 18px;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.section_2_mid_item_price {
+    width: 100%;
+    text-align: center;
+}
+
+.section_2_mid_item_price span {
+    display: block;
+}
+
+.section_2_mid_item_price_active {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 12px;
+    color: red;
+}
+
+.section_2_mid_item_price_noactive {
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 16px;
+    text-decoration: line-through;
+}
+
+.section_3 {
+    height: 254px;
+    position: relative;
+    text-align: center;
+}
+
+.section_3_mid {
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 0;
+}
+
+/*.section_3_mid_ol {
+    display: inline-block;
+}
+*/
+/*.section_3_mid_left,
+.section_3_mid_right,
+.section_3_mid_item {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    color: #3e3e3e;
+    overflow: hidden;
+    font-size: 18px;
+    margin-right: 10px;
+}
+*/
+/*.section_3_mid_item_active {
+    background-color: #ff5d5e;
+    color: #fff;
+}*/
+
+.ui-pagination-container {
+    height: 100%
+}
+
+.ui-pagination-container .ui-pagination-page-item {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    color: #3e3e3e;
+    overflow: hidden;
+    border-color:#ddd;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.ui-pagination-container .ui-pagination-page-item:hover {
+    border-color: #f29a01;
+    color: #f29a01;
+    text-decoration: none;
+}
+
+.ui-pagination-container .ui-pagination-page-item.active {
+    background: #f29a01;
+    border-color: #fff;
+    color: #fff;
+    cursor: default;
+}

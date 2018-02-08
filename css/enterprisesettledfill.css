@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-14 15:13:48
+ * @version $企业入驻表单填写$
+ */
+
+.section_title_item{
+    width: 20%;
+}
+
+
+
+.icon {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    margin-top: -5px;
+    right: 10px;
+    border: 10px solid #949494;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+/* 
+.category_box {
+    position: relative;
+    overflow: hidden;
+    width: 126px;
+    border: 1px solid #e0e0e0;
+    left: -128px;
+    top: 37px;
+}
+
+.category_item {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 6px;
+}
+
+.category_item:hover {
+    background-color: #989898
+} */
+
+.settled_thirdlink .icon {
+    border: 0;
+    font-style: normal;
+    width: 20px;
+    height: 20px;
+    background-color: #ff7f27;
+    margin-top: -10px;
+    right: 0;
+    margin-right: -30px;
+    cursor: pointer;
+    line-height: 20px;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 50%;
+}
+#submitUp, #submitNext{
+    float: left; 
+    box-sizing: border-box;
+    margin: 0 20px;
+}
+

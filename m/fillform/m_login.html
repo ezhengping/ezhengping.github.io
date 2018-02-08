@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no,minimal-ui">
+    <script type="text/javascript">
+    var W = document.documentElement.clientWidth / 10; //获取屏幕的宽度除以10，将屏幕分成10等份
+    document.getElementsByTagName('html')[0].style.fontSize = W + 'px'; //然后把宽度除以10的值，给html字体大小
+    </script>
+    <title>淘味网 - 登陆</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/m_base.css">
+    <link rel="stylesheet" type="text/css" href="../css/m_iogin.css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" scr="../js/form_validation.js"></script>
+    <style type="text/css" media="screen">
+    .form_Pop-ups {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 6rem;
+        padding: 0.2rem 0.4rem;
+        background-color: #000;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        z-index: 19891014;
+        word-wrap: break-word;
+        word-break: normal;
+        border-radius: 6px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="mhome">
+        <header id="header" class="header">
+            <div class="header_logo">
+                <h1 class="logo">
+                淘味网
+                <a href="../m_index.html">淘味网<img src="/images/logo.png" alt="" style="width: 100%;height: auto;display: block;"></a>
+            </h1>
+            </div>
+            <div class="header_title">
+                <h2>淘味网 商家入驻</h2>
+            </div>
+            <!-- <div class="header_link">
+                <a href="javascript:;">下载APP</   a>
+            </div> -->
+        </header>
+        <section class="login">
+            <form action="" id="">
+                <div class="login_mid">
+                    <div class="phone clearfix">
+                        <p>手机号码</p>
+                        <input id="phone" type="tel" name="phone" maxlength="11" data-validate="phone" data-describedby="phone-description">
+                        <a class="phone_button" href="javascript:;" title=""></a>
+                    </div>
+                    <div class="code clearfix">
+                        <p>验证码</p>
+                        <input type="text" name="" maxlength="4">
+                        <input type="button" class="code_button" value="发送验证码" />
+                    </div>
+                </div>
+                <div class="submit">
+                    <a id="submit" href="javascript:;" title="">登录</a>
+                    <!-- m_oneselfSettled.html -->
+                </div>
+            </form>
+        </section>
+        <script type="text/javascript">
+        </script>
+    </div>
+    <script type="text/javascript">
+
+        // 验证手机函数
+    function phone(pop) {
+        var val = pop.phoneEle.val(); //获取手机输入框号码
+        var reg = /^[1][345678]\d{9}$/;
+        if (reg.test(val)) { //验证手机格式
+            return true;
+        } else if (val == '') {
+            pop.data = "手机号不能为空";
+            addPopups(pop)
+            return false;
+        } else {
+            pop.data ="请输入有效的11位手机号";
+            addPopups(pop)
+            return false;
+        }
+    }
+
+    // 添加弹窗
+    function addPopups(pop) {
+        var html = `<div class="form_Pop-ups">
+                    ${pop.data}
+                    </div>`
+        if (i) {
+            $('body').append(html);
+            i = false;
+            setTimeout(function() {
+                // 逐渐隐藏
+                $(".form_Pop-ups").animate({ "opacity": "0" }, 1000);
+                // 随后删除元素
+                setTimeout(function() {
+                    $(".form_Pop-ups").remove()
+                }, 1000);
+                 // i = true
+                setTimeout(function() {
+                    i = true;
+                }, pop.time);
+            }, pop.time)
+            return;
+        } else {
+            return;
+        }
+
+    }
+
+    var i = true;   //初始化弹窗   设置弹窗锁
+    $("#submit").click(function() {
+        var a = {
+            data: "131231313",    //弹窗所出现的文字
+            time: 2000,             //设置弹窗提示出现是时间最少为1000
+            phoneEle:$("#phone")
+        }
+        phone(a);
+    })
+    $("#phone").
+    $(".phone_button").click(function(){
+        $(this).siblings("input").val("");
+    })
+    </script>
+</body>
+
+</html>

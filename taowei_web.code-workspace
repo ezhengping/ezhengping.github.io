@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"launch": {
+            "version": "0.1.0",
+            "configurations": [
+                {
+                    "name": "服务器调试",
+                    "type": "chrome",
+                    "request": "launch",
+                    "url": "http://localhost",
+                    "webRoot": "${workspaceFolder}"
+                },
+                {
+                    "name": "本地调试",
+                    "type": "chrome",
+                    "request": "launch",
+                    "sourceMaps": false,
+                    "file": "${file}"
+                },
+            ]
+        },
+}

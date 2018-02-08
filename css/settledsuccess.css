@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-14 10:55:34
+ * @version $入驻成功$
+ */
+
+.section_success{
+	width: 1130px;
+	height: 750px;
+	position: relative;
+	text-align: center;
+	font-size: 0;
+	margin: 0 auto;
+}
+.success__text{
+	display: inline-block;
+	font-size: 20px;
+	line-height: 60px;
+	padding-left: 84px;
+	background: url('/images/settled_success.png') no-repeat center left;
+	height: 60px;
+	margin-top: 112px;
+}
+
+.success_usersinfo_box{
+	display:inline-block;
+	text-align: left;
+}
+.success_usersinfo_box div{
+	display: inline;
+	line-height: 40px;
+	color: #636363;
+}
+.success_usersinfo{
+	font-size: 16px;
+	margin-top: 100px;
+}

@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   关于我们模块
+ */
+
+
+/*关于我们相同部分  introduction == 公司介绍   team == 团队概述 */
+
+.section__introduction_mid,
+.section__team_mid,
+.section__plan_mid,
+.section__contactus_mid {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section__introduction_mid_title,
+.section__team_mid_title,
+.section__plan_mid_title,
+.section__contactus_mid_title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    margin-top: 60px;
+    color: #6a6a6a;
+}
+
+.section__introduction_mid_subtitle,
+.section__team_mid_subtitle,
+.section__plan_mid_subtitle,
+.section__contactus_mid_subtitle {
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: '华文细黑';
+    margin-top: 10px;
+}
+
+.section__introduction_mid_text,
+.section__team_mid_text,
+.section__team_mid_tailtext,
+.section__plan_mid_text {
+    line-height: 30px;
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 2em;
+    margin-top: 38px;
+}
+
+.section__introduction_mid_img,
+.section__team_mid_img,
+.section__plan_mid_img {
+    width: 100%;
+    margin-top: 60px;
+}
+
+
+.section__team_mid_title {
+    margin-top: 70px;
+}
+
+.section__team_mid_tailtext {
+    margin-top: 0;
+}
+
+.section__team_mid_img {
+    margin-top: 68px
+}
+
+.section__contactus_mid_Expressway {
+    text-align: center;
+}
+
+.section__contactus_mid_Expressway_Module {
+    width: 33.33%;
+    float: left;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding-top: 56px;
+}
+
+.section__contactus_mid_Expressway_Module_1 {
+    background: url('/images/aboutus_address.png') no-repeat top center;
+}
+
+.section__contactus_mid_Expressway_Module_2 {
+    background: url('/images/aboutus_phone.png') no-repeat top center;
+}
+
+.section__contactus_mid_Expressway_Module_3 {
+    background: url('/images/aboutus_SMS.png') no-repeat top center;
+}
+
+
+.section__contactus_mid_Expressway_Module_span {
+    display: block;
+    font-size: 16px;
+    line-height: 18px;
+    height: 18px;
+    margin-top: 12px;
+    color: #464646;
+}
+
+/* .section__contactus_mid_Expressway_Module_span_3 {
+    height: 56px;
+    line-height: 56px
+} */
+
+.section__map {
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    border: 8px solid #d5d5d5;
+    border-radius: 8px;
+    margin-bottom: 232px;
+    overflow: hidden;
+}

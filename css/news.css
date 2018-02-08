@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   新闻列表模块
+ */
+
+
+/* 多行文本溢出隐藏 */
+p.section__content_entry_item_content{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.section__content {
+    width: 1200px;
+    padding: 0 20px 60px;
+    margin: 0 auto;
+}
+
+.section__content_entry_item {
+    width: 100%;
+    height: 220px;
+    padding: 80px 0;
+    position: relative;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.section__content_entry_item_block {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.section__content_entry_item_imgbox {
+    width: 330px;
+    height: 220px;
+    float: left;
+}
+.section__content_entry_item_img{
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+.section__content_entry_item_img:hover{
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+.section__content_entry_item_title {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 28px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: #393939;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+.section__content_entry_item_title:hover{
+    color:#f29a01;
+}
+
+.section__content_entry_item_content {
+    display: block;
+    height:60px;
+    margin-top: 30px;
+    line-height: 30px;
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+.section__content_entry_item_text {
+    width: 72%;
+    height: 184px;
+    float: left;
+    position: relative;
+}
+
+.section__content_entry_item_button {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: #7e7e7e;
+}
+
+.section__content_entry_item_button:hover {
+    color: #f29a01;
+}
+
+.section__content_controls {
+    font-size: 0;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 164px;
+}
+
+.section__content_controls_ol {
+    display: inline-block;
+}
+
+/*分页属性--1   第一套分页属性*/
+/*
+.section__content_controls_ol a {
+    padding: 6px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #b5b5b5;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #b8b8b8;
+    border-width: 1px;
+}*/
+
+/*.section__content_controls_ol span.els {
+    padding: 6px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #b5b5b5;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #b8b8b8;
+    border-color: transparent;
+}*/
+
+/*.section__content_controls_ol a:hover,
+.section__content_controls_ol span.els:hover {
+    color: #f29a01;
+}
+
+.section__content_controls_item,
+.section__content_controls_left,
+.section__content_controls_right,
+.section__content_controls_last,
+.section__content_controls_omitted {
+    padding: 6px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #b5b5b5;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #b8b8b8;
+    border-width: 1;
+}
+
+.section__content_controls_left {
+    content: "上一页";
+}
+
+.section__content_controls_item:hover,
+.section__content_controls_left:hover,
+.section__content_controls_right:hover,
+.section__content_controls_last:hover {
+    color: #f29a01;
+}
+
+.section__content_controls_item_active,
+.section__content_controls_item_active:hover {
+    color: #fff;
+    background-color: #f29a01;
+    border: none;
+    border: 1px solid #f29a01;
+}*/
+
+
+/*第二套分页属性*/
+.ui-pagination-container {
+    height: 100%
+}
+
+.ui-pagination-container .ui-pagination-page-item {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    color: #3e3e3e;
+    overflow: hidden;
+    font-size: 18px;
+    margin-right: 10px;
+    border-color:#ddd;
+    padding:0;
+}
+
+.ui-pagination-container .ui-pagination-page-item:hover {
+    border-color: #f29a01;
+    color: #f29a01;
+    text-decoration: none;
+}
+
+.ui-pagination-container .ui-pagination-page-item.active {
+    background: #f29a01;
+    border-color: #fff;
+    color: #fff;
+    cursor: default;
+}

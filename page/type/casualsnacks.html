@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 休闲零食</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/casualsnacks.css?t=20180202">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/page/jquery.pagination.min.js"></script>
+    <script type="text/javascript" src="/js/type/casualsnacks.js?t=20180202"></script>
+    <base target="_blank">
+    <style>
+        .subnav__mid_ul li a.atv {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header头部 -->
+    <header class="header" id="head2">
+        <!-- nav菜单导航部分 -->
+        <nav class="nav">
+            <div class="nav__mid">
+                <h1 class="nav__mid__logo">
+                    淘味网
+                    <a href="/index.html" class="nav__mid__logo_link">
+                        淘味网
+                    </a>
+                </h1>
+                <ul class="nav__mid__menu clearfix">
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <span class="nav__mid__menu_item_span"></span>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/news.html">热点资讯</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <span class="nav__mid__menu_item_span"></span>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/settled.html">商家入驻</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <span class="nav__mid__menu_item_span"></span>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/hire.html">招聘人才</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <span class="nav__mid__menu_item_span"></span>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/aboutus.html">关于我们</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <span class="nav__mid__menu_item_span"></span>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/APPdownload.html">下载APP</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <span class="nav__mid__menu_item_span"></span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+     <!-- 副导航 -->
+     <div class="vicnav_box">
+        <div class="vicenav2">
+            <div class="vicenav__mid">
+                <ul class="vicenav__mid_ul clearfix">
+
+                </ul>
+            </div>
+        </div>
+        <div class="subnav">
+
+            <div class="subnav__mid" style="display: none">
+                <ul class="subnav__mid_ul clearfix">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- banner模块 -->
+    <input type="hidden" name="typeId">
+    <div class="header__banner animate" id="banner">
+        <ul class="header__banner__ul clearfix" id="/* banner_ul */">
+            <li class="header__banner__ul_item">
+                <a class="header__banner__ul_item_link" href="javasript:;">
+                    <img src="/images/casualsnacks_banner.jpg" alt="">
+                </a>
+            </li>
+            <!-- 没有轮播需求注释掉下面的li -->
+            <!-- 
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                 -->
+        </ul>
+        <!-- 轮播控件 -->
+        <!-- 
+            <ol class="header__banner__ol" id="banner_ol">
+                <li class="header__banner__ol_item header__banner__ol_item_active"></li>
+                <li class="header__banner__ol_item"></li>
+                <li class="header__banner__ol_item"></li>
+            </ol>
+            <div class="header__banner__space">
+                <span class="header__banner__space_left animate" id="banner_left">&lt;</span>
+                <span class="header__banner__space_right animate" id="banner_right">&gt;</span>
+            </div> -->
+    </div>
+    <!-- 产品内容 -->
+    <section class="section__nut">
+        <a name="main"></a>
+        <div class="section__nut_title">
+            <!-- <img class="section__nut_title_img" src="" alt=""> -->
+            <h3 class="title_text"></h3>
+        </div>
+        <div class="section_product_box">
+            <ul class="sorts clearfix">
+                <li class="sort">
+                    <a href="javascript:;" class="J_Ajax productAtv">综合排序</a>
+                </li>
+                <li class="sort clearfix">
+                    <a href="javascript:;" class="J_Ajax" data-sort="sales_tww">销量</a>
+                </li>
+                <li class="sort clearfix">
+                    <a href="javascript:;" class="J_Ajax" data-sort="price">价格<i class="icon_price_p" style="background-image:url('/images/price_Sort_icon_0.png')"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="section__nut_foodlist">
+            <ul class="section__nut_foodlist_ul clearfix">
+                
+            </ul>
+        </div>
+    </section>
+    <div class="section__content_controls">
+        <div id="pagination3" class="page fl" data-value=1>
+        </div>
+    </div>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar">
+
+    </div>
+    <!-- 页面底部 -->
+    <footer class="footer" id="footer">
+        <div class="footer__mid">
+            <div class="footer__QR clearfix">
+                <div class="footer__QR_left">扫描关注微信公众号</div>
+                <div class="footer__QR_right">扫描二维码下载APP</div>
+            </div>
+            <div class="fonter__cut">
+                <div class="fonter__cut_title">淘味网 ― 天天淘味，美味齐享</div>
+                <div class="fonter__cut_content">
+                    <div class="fonter__cut_content_text">热线：</div>
+                    <div class="fonter__cut_content_tel">
+                        <span>400-669-7188</span>
+                        <span>027-87850755</span>
+                    </div>
+                </div>
+                <div class="fonter__cut_content">地址：湖北省 武汉市 洪山区 关东街道关南园4路35号 东港科技产业园 4号楼 6楼</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

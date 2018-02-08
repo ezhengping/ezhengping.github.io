@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-24 11:29:17
+ * @version $Id$
+ */
+
+.process_text {
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.933333rem;
+}
+
+.process_text h3 {
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #000;
+    position: relative;
+}
+
+@media (min-width: 640px) {
+    .process_text h3 {
+        font-size: 0.5rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+    }
+}
+
+.process_text h3::before {
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #afafaf;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: -100px;
+}
+
+.process_text h3::after {
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background-color: #afafaf;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-right: -100px;
+}
+
+@media (min-width: 640px) {
+    .process_text h3::before {
+        width: 1.333333rem;
+        margin-left: -2.666667rem
+    }
+    .process_text h3::after {
+        width: 1.333333rem;
+        margin-right: -2.666667rem
+    }
+}
+
+.process_text h4 {
+    color: #8e8e8e;
+    font-size: 0.4rem;
+    margin-top: 0.266667rem;
+}
+
+.process_text h4 strong {
+    color: red;
+}
+
+.process_img {
+    overflow: hidden;
+}
+
+.process_img_item {
+    text-align: center;
+    font-size: 0;
+    
+}
+.process_img_item div.img {
+    width: 1.6rem;
+    display: inline-block;
+}
+
+
+.process_img_item h5 {
+    font-size: 14px;
+    margin-top: 0.266667rem
+}
+
+@media (min-width: 640px) {
+    .process_img_item h5 {
+        font-size: 0.32rem;
+    }
+}
+
+.process_di {
+    width: 4px;
+    height: 24px;
+    margin: 0.533333rem auto;
+}
+
+@media (min-width: 640px) {
+    .process_di {
+        width: 0.133333rem;
+    }
+}
+
+.section_process {
+    padding-bottom: 1.6rem;
+}
+
+
+/* 底部固定悬浮 */
+
+.footer {
+    height: 1.2rem;
+    position: fixed;
+    top: 100%;
+    margin-top: -1.2rem;
+    background-color: #fff;
+}
+
+.footer a {
+    display: block;
+    width: 60%;
+    height: 0.8rem;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 0.8rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+    background-color: #ff7f26
+}

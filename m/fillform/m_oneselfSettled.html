@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no,minimal-ui">
+    <script type="text/javascript">
+    var W = document.documentElement.clientWidth / 10; //获取屏幕的宽度除以10，将屏幕分成10等份
+    document.getElementsByTagName('html')[0].style.fontSize = W + 'px'; //然后把宽度除以10的值，给html字体大小
+    </script>
+    <title>淘味网 - 商家入驻</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/m_base.css">
+    <link rel="stylesheet" type="text/css" href="../css/m_settledbase.css">
+    <link rel="stylesheet" type="text/css" href="../css/m_oneselfSettled.css">
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="/js/zepto.min.js"></script> -->
+    <script src="/js/swipeSlide.min.js"></script>
+        <script type="text/javascript" src="/js/run_swipeSlide.js"></script>
+</head>
+
+<body>
+    <div class="mhome">
+        <header id="header" class="header">
+            <div class="header_logo">
+                <h1 class="logo">
+                淘味网
+                <a href="../m_index.html">淘味网<img src="/images/logo.png" alt="" style="width: 100%;height: auto;display: block;"></a>
+            </h1>
+            </div>
+            <div class="header_title">
+                <h2>淘味网 商家入驻</h2>
+            </div>
+            <!-- <div class="header_link">
+                <a href="javascript:;">下载APP</   a>
+            </div> -->
+        </header>
+        <section class="section_form">
+            <div class="bgcor">
+                <table>
+                    <tr class="bgcor">
+                        <td>店铺基本信息</td>
+                        <td class="cor_red">主营类目选择后不可更改</td>
+                    </tr>
+                </table>
+            </div>
+            <table>
+                <tr>
+                    <td>店铺类型</td>
+                    <td>
+                        <input type="text" value="个人" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>店铺名称</td>
+                    <td>
+                        <input type="text" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>主营类目</td>
+                    <td>
+                        <input id="category" type="text" value="">
+                        <i></i>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <a class="form_button" href="m_settledForm.html" title="">下一步</a>
+        </section>
+        <script type="text/javascript" src="../js/jquery.selector-px.js"></script>
+        <script>
+        $(function() {
+            var categoryData = ['休闲食品', '家居家纺', '百货市场', '男装女装', '母婴用品', '鞋类箱包'];
+            $.scrEvent({
+                data: categoryData,
+                evEle: '#category',
+                title: '选择类目',
+                defValue: '休闲食品',
+                afterAction: function(data) {
+                    $("#category").val(data);
+                }
+            });
+        })
+        </script>
+    </div>
+</body>
+
+</html>

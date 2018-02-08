@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微信付款</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" href="../../css/weChatPay.css">
+
+    <script src="../../js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/head/addhtml.js?t=20180208"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <header class="header" id="head3">
+
+    </header>
+    <section class="oInformation">
+        <div class="oInformation_mid">
+            <div class="oI_text">
+                <span>订单提交成功,请尽快付款 |</span>
+                <span class="oI_number">订单号:
+                    <em>------------</em>
+                </span>
+            </div>
+            <div class="pay_box">
+                <h4>
+                    微信支付
+                </h4>
+                <p class="pic">
+                    应付金额
+                    <em>-----</em>元
+                </p>
+                <div class="wc_pay_box">
+                    <img src="" alt="">
+                </div>
+                <div class="wc_pay_EE">
+                    <div>
+                        <p>使用微信扫一扫</p>
+                        <p>扫描付款二维码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function ajaxWeChatPayPic() {
+            var oIArr = JSON.stringify(getParam('orderIds').split(','));
+            var way = getParam('paymentWay');
+            $.ajax({
+                    url: PATH + '/order/getTotalPrice.action',
+                    type: 'POST',
+                    data: {
+                        'json': oIArr,
+                        'paymentWay':way
+                    },
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                })
+                .done(function (data) {
+                    if(data==-1){
+                        alert('参数错误,请前往个人页面继续付款');
+                        return;
+                    }
+                    if(data==0.0){
+                        alert('订单异常');
+                    }
+                    $('.pic em').text(data);
+                })
+        }
+
+        $(function(){
+            ajaxWeChatPayPic()
+            var oI = getParam('orderIds');
+            var payImg = PATH+'/order/getPaymenInfo.action?orderIds='+oI+'&paymentWay=1'
+            $('.wc_pay_box img').attr('src',payImg);
+            $('.oI_number em').text(oI);
+        })
+    </script>
+</body>
+
+</html>

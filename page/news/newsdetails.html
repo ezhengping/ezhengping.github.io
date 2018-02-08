@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 新闻详情</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/newsdetails.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <!-- header头部 -->
+    <header class="header">
+        <!-- 顶部新闻、登录模块 -->
+        <div class="header__top">
+            <div class="header__top__mid">
+                <div class="header__top__mid__news">
+                    <ul id="newsCarousel">
+                        <li class="header__top__mid__news_li">
+                            <a class="header__top__mid__news_link" href="javascript:;">拥有淘味通，生意更轻松</a>
+                        </li>
+                        <li class="header__top__mid__news_li">
+                            <a class="header__top__mid__news_link" href="javascript:;">拥有淘味通，生意更轻松</a>
+                        </li>
+                        <li class="header__top__mid__news_li">
+                            <a class="header__top__mid__news_link" href="javascript:;">拥有淘味通，生意更轻松</a>
+                        </li>
+                    </ul>
+                    <ul id="newsCarouselVector">
+                    </ul>
+                </div>
+                <div class="header__top__mid__Module">
+                    <div class="header__top__mid__Module_signin cur" id='login'>
+                        登录</div>
+                    <div class="header__top__mid__Module_Emb"></div>
+                    <div class="header__top__mid__Module_signup cur" id='login'>
+                        注册</div>
+                </div>
+            </div>
+        </div>
+        <!--        
+        nav菜单导航部分
+        <nav class="nav">
+            <div class="nav__mid">
+                <h1 class="nav__mid__logo">
+                        淘味网
+                    <a href="javascript:;" class="nav__mid__logo_link">
+                        淘味网
+                    </a>
+                </h1>
+                <ul class="nav__mid__menu_left clearfix">
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a nav__mid__menu_item__active" href="/page/indexPage/news.html">热点资讯</a>
+                    </li>
+
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="javascript:;">商家入驻</a>
+                    </li>
+                </ul>
+                <ul class="nav__mid__menu_right clearfix">
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="javascript:;">招聘人才</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/aboutus.html">关于我们</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/APPdownload.html">下载APP</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        banner模块
+        <div class="header__banner animate" id="banner">
+            <ul class="header__banner__ul clearfix" id="banner_ul">
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ol class="header__banner__ol" id="banner_ol">
+                <li class="header__banner__ol_item header__banner__ol_item_active"></li>
+                <li class="header__banner__ol_item"></li>
+                <li class="header__banner__ol_item"></li>
+            </ol>
+            <div class="header__banner__space">
+                <span class="header__banner__space_left animate" id="banner_left">&lt;</span>
+                <span class="header__banner__space_right animate" id="banner_right">&gt;</span>
+            </div>
+        </div>
+        -->
+    </header>
+    <section class="section_crumbs">
+        <div class="section_crumbs_content">
+            <h1 class="section_crumbs_content_logo">
+                淘味网
+                <a href="/index.html">
+                    淘味网
+                </a>
+            </h1>
+            <ul class="section_crumbs_content_list clearfix">
+                <li class="section_crumbs_content_list_item"><a href="/index.html">首页</a></li>
+                <li class="section_crumbs_content_list_item"><span>&gt;</span></li>
+                <li class="section_crumbs_content_list_item"><a href="/index.html">热点资讯</a></li>
+                <li class="section_crumbs_content_list_item"><span>&gt;</span></li>
+                <li class="section_crumbs_content_list_item"><a href="/index.html">资讯列表页</a></li>
+                <li class="section_crumbs_content_list_item"><span>&gt;</span></li>
+                <li class="section_crumbs_content_list_item section_crumbs_content_list_item_active"><a href="/index.html">正文</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="section_news">
+        <div class="section_news_content clearfix">
+            <div class="section_news__content_lef">
+                <h2 class="section_news_content_title">湖北275人参加员额检察官遴选面试 首次面试环节</h2>
+                <time class="section_news_content_time">2017-10-30 07:25</time>
+                <p class="section_news_content_p p-mt">
+                    记者用白色矿泉水瓶取了半瓶水样，可直观地发现，这条以“水黄泥沙多”为标签的大河，在该段已然发生改变，河水较为清澈，未见明显浑浊物沉淀瓶底。
+                </p>
+                <p class="section_news_content_p">
+                    一位在河边散步的老人说，过去这里的河水像糊涂（方言，一种浓稠的粥类）一样，舀一瓢水，里面有半瓢以上是泥沙。“这些年开始逐渐变清了。”
+                </p>
+                <p class="section_news_content_p">
+                    近日，《瞭望》杂志报道称，2000年以来，世界上输沙量最多、含沙量最大的河流——黄河，泥沙含量锐减，悄然出现变清态势。从呼和浩特托克托县河口镇到郑州桃花峪，1200多公里的黄河中游，已然一河清水；直到开封以下，黄河才呈浅黄色。这意味着，连同基本是清水的上游，在非汛期，黄河80％以上的河段是清的。”
+                </p>
+                <p class="section_news_content_p">
+                    水利部黄河水利委员会（下称“黄委会”）原副主任、水文局原局长陈先德在接受《中国新闻周刊》采访时表示，目前，黄河河段变清的比例有多高，还值得探讨。“但整体上呈现出泥沙锐减，水流相对变清的趋势。”
+                </p>
+                <p class="section_news_content_p">
+                    他认为，现在出现的“黄河清”局面，是从1946年开展“人民治黄”至今，几代人不懈努力的成果。
+                </p>
+                <p class="section_news_content_p">
+                    公开资料显示，从公元前602年（周定王五年）到1938年的2500多年中，有记载的黄河决口泛滥年份有543年,决堤次数1590余次，改道26次。因此，黄河也就有了“三年两决口，百年一改道”的说法。
+                </p>
+                <p class="section_news_content_p">
+                    如今，黄河变清，是否意味着这条桀骜不驯的河流已被驯服？
+                </p>
+                <p class="section_news_content_p">
+                    多位受访者在谈论黄河变清的原因上有较多共识，但对该现象能持续多久，是否会恢复原状，以及它产生的利弊影响，还有争论。 泥沙骤降p 地质史专家李鄂荣认为，历史上有记载可查的“黄河清”有43次，最长的一次为1727年，黄河澄清2000余里，持续20多天。
+                </p>
+                <p class="section_news_content_p">
+                    黄河治理专家、黄委会水科院前高级工程师齐璞告诉《中国新闻周刊》，历史上的“黄河清”说不清楚，不可考证，不同于现在。前者是偶然事件，可能都发生在非汛期；后者是治理的必然结果。同时，历史资料的可靠性与目前黄河大量实测资料得出的结论也没法相比。
+                </p>
+                <div class="section_news_content_img">
+                    <img src="/images/APP_bg.jpg" alt="">
+                </div>
+            </div>
+            <div class="section_news_content_right">
+                <h3 class="section_news_content_right_title">头条新闻</h3>
+                <ul class="section_news_content_right_ul">
+                    <li><a class="section_news_content_right_item" href="javascript:;" title="">湖北大学</a></li>
+                    <li><a class="section_news_content_right_item" href="javascript:;" title="">湖北大学</a></li>
+                    <li><a class="section_news_content_right_item" href="javascript:;" title="">湖北大学</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section_news_content_inscribed">
+            编辑：<span>dsadasdsaasd</span>
+        </div>
+    </section>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar">
+        <div class="sidebar__mid">
+            <a class="sidebar__mid_item" href="/index.html">首页</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/news.html">热点</a>
+            <a class="sidebar__mid_item" href="javascript:;">商家</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/APPdownload.html">下载</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/aboutus.html">关于</a>
+            <a class="sidebar__mid_item" href="/page/indexPage/hire.html">招聘</a>
+            <a class="sidebar__mid_item" href="javascript:;"></a>
+        </div>
+    </div>
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="footer_top">淘味网公司淘味网公司</div>
+        <div class="footer_bottom">淘味网公司</div>
+    </footer>
+</body>
+
+</html>

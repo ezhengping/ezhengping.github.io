@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 热卖</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/selling.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/ui/jquery.pagination.min.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <!-- header头部 -->
+    <header class="header">
+        <!-- 顶部新闻、登录模块 -->
+        <div class="header__top">
+            <div class="header__top__mid">
+                <div class="header__top__mid__news">
+                    <ul id="newsCarousel">
+                        <li class="header__top__mid__news_li">
+                            <a class="header__top__mid__news_link" href="javascript:;">拥有淘味通，生意更轻松</a>
+                        </li>
+                        <li class="header__top__mid__news_li">
+                            <a class="header__top__mid__news_link" href="javascript:;">拥有淘味通，生意更轻松</a>
+                        </li>
+                        <li class="header__top__mid__news_li">
+                            <a class="header__top__mid__news_link" href="javascript:;">拥有淘味通，生意更轻松</a>
+                        </li>
+                    </ul>
+                    <ul id="newsCarouselVector">
+                    </ul>
+                </div>
+                <div class="header__top__mid__Module">
+                    <div class="header__top__mid__Module_signin cur" id='login'>
+                        登录</div>
+                    <div class="header__top__mid__Module_Emb"></div>
+                    <div class="header__top__mid__Module_signup cur" id='login'>
+                        注册</div>
+                </div>
+            </div>
+        </div>
+        <!-- nav菜单导航部分 -->
+        <nav class="nav">
+            <div class="nav__mid">
+                <h1 class="nav__mid__logo">
+                        淘味网
+                    <a href="javascript:;" class="nav__mid__logo_link">
+                        淘味网
+                    </a>
+                </h1>
+                <ul class="nav__mid__menu_left clearfix">
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a nav__mid__menu_item__active" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/toNews.actin">热点资讯</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/toSettled.action">商家入驻</a>
+                    </li>
+                </ul>
+                <ul class="nav__mid__menu_right clearfix">
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/toHire.action">招聘人才</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/toAboutus.action">关于我们</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/toAPPdownload.action">下载APP</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- banner模块 -->
+        <div class="header__banner" id="banner">
+            <ul class="header__banner__ul clearfix" id="banner_ul">
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+                <li class="header__banner__ul_item">
+                    <a class="header__banner__ul_item_link" href="javasript:;">
+                        <img src="/images/banner.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ol class="header__banner__ol" id="banner_ol">
+                <li class="header__banner__ol_item header__banner__ol_item_active"></li>
+                <li class="header__banner__ol_item"></li>
+                <li class="header__banner__ol_item"></li>
+            </ol>
+            <div class="header__banner__space">
+                <span class="header__banner__space_left animate" id="banner_left">&lt;</span>
+                <span class="header__banner__space_right animate" id="banner_right">&gt;</span>
+            </div>
+        </div>
+    </header>
+    <section class="section_1">
+        <h2 class="section_1_title">热卖品牌</h2>
+        <h3 class="section_1_title_en">HOT BRANDS</h3>
+    </section>
+    <section class="section_2">
+        <div class="section_2_mid clearfix">
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item mr0">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item mr0">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item mr0">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+            <div class="section_2_mid_item mr0">
+                <div class="section_2_mid_item_top">
+                    <img class="section_2_mid_item_top_images" src="/images/logo.png" alt="">
+                    <div class="section_2_mid_item_top_images_active">
+                        <div>
+                            <img src="/images/logo.png" alt="">
+                            <span>扫码购买</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section_2_mid_item_description">亿龙源小粒黄冰糖古法多晶冰糖老冰糖罐装土冰糖批发包邮1150G</p>
+                <div class="section_2_mid_item_price">
+                    <span class="section_2_mid_item_price_active">￥26.90</span>
+                    <span class="section_2_mid_item_price_noactive">￥58.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_3">
+        <div class="section_3_mid">
+            <div id="pagination2" class="page fl">
+            </div>
+
+            <!-- 分页插件 -->
+            <script src="/js/paging.js" type="text/javascript"></script>
+        </div>
+    </section>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar">
+        <div class="sidebar__mid">
+            <a class="sidebar__mid_item" href="/index.html">首页</a>
+            <a class="sidebar__mid_item" href="/toNews.action">热点</a>
+            <a class="sidebar__mid_item" href="/toSettled.action">商家</a>
+            <a class="sidebar__mid_item" href="/toAPPdownload.action">下载</a>
+            <a class="sidebar__mid_item" href="/toAboutus.action">关于</a>
+            <a class="sidebar__mid_item" href="/toHire.action">招聘</a>
+            <a class="sidebar__mid_item" href="javascript:;"></a>
+        </div>
+    </div>
+    <!-- 页面底部 -->
+    <footer class="footer">
+        <div class="footer__mid">
+            <div class="footer__QR clearfix">
+                <div class="footer__QR_left">扫描关注微信公众号</div>
+                <div class="footer__QR_right">扫描二维码下载APP</div>
+            </div>
+            <div class="fonter__cut">
+                <div class="fonter__cut_title">淘味网 ― 天天淘味，美味齐享</div>
+                <div class="fonter__cut_content">
+                    <div class="fonter__cut_content_text">热线：</div>
+                    <div class="fonter__cut_content_tel">
+                        <span>400-669-7188</span><span>027-87850755</span>
+                    </div>
+                </div>
+                <div class="fonter__cut_content">地址：湖北省 武汉市 洪山区 关东街道关南园4路35号 东港科技产业园 4号楼 6楼</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

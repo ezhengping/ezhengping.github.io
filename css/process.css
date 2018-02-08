@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   入驻流程模块
+ */
+
+
+body{
+	background-color: #f4f4f4;
+}
+.section_process{
+	width: 1200px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding-bottom: 120px;
+}
+.section_process_01,
+.section_process_02,
+.section_process_03,
+.section_process_04,
+.section_process_05,
+.section_process_06{
+	width: 708px;
+	margin: 0 auto;
+	padding-top: 88px;
+    overflow: hidden;
+}
+.section_process_01_say,
+.section_process_02_say,
+.section_process_03_say,
+.section_process_04_say,
+.section_process_05_say,
+.section_process_06_say{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #868686;
+	padding-left: ;
+}
+.section_process_01_say strong,
+.section_process_02_say strong,
+.section_process_03_say strong,
+.section_process_04_say strong,
+.section_process_05_say strong,
+.section_process_06_say strong{
+	color: red;
+	font-style: normal;
+}
+.section_process_01_say i,
+.section_process_02_say i,
+.section_process_03_say i,
+.section_process_04_say i,
+.section_process_05_say i,
+.section_process_06_say i{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-color: #f5764b;
+	border-radius: 50%;
+	color: #fff;
+	text-align: center;
+	font-style: normal;
+	margin-right: 5px;
+}
+.section_process_02_say i{
+	background-color: #56b7d8;
+}
+.section_process_03_say i{
+	background-color: #92d166;
+}
+.section_process_04_say i{
+	background-color: #ffc854;
+}
+.section_process_05_say i{
+	background-color: #c48ec2;
+}
+.section_process_06_say i{
+	background-color: #8ac99c;
+}
+.section_process_01_img,
+.section_process_02_img,
+.section_process_03_img,
+.section_process_04_img,
+.section_process_05_img,
+.section_process_06_img{
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.section_process_01_img img,
+.section_process_02_img img,
+.section_process_03_img img,
+.section_process_04_img img,
+.section_process_05_img img,
+.section_process_06_img img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.section_process_01_content,
+.section_process_02_content,
+.section_process_03_content,
+.section_process_04_content,
+.section_process_05_content,
+.section_process_06_content{
+	padding-left: 35px;
+	font-size: 15px;
+	color: #868686;
+}

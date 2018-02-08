@@ -1,0 +1,293 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-23 14:29:09
+ * @version $v0.1$
+ */
+.heat_1{
+	width: 49.5%;
+	height:5.15625rem;
+	float:left;
+	position: relative;
+	text-align: center;
+	background:linear-gradient(to bottom right,#f4f4f4,#e0e2e4);
+	font-size:0;
+}
+.heat_1_item_text{
+	width: 2.41875rem;
+	margin:0 auto;
+}
+.heat_1_item_text_title,.heat_2_item_text_title{
+	font-family: FZCY;
+	display: inline-block;
+	font-size: 0.390625rem;
+	line-height: 0.515625rem;
+	padding-left:0.725rem;
+	margin-top: 0.546875rem;
+}
+.heat_2_item_text_title{
+	margin-top: 1.15625rem;
+}
+.heat_1_item_text_icon_1{
+	background:url('/images/selling_icon.png') no-repeat center left/contain;
+}
+.heat_1_item_text_icon_2{
+	background:url('/images/new_icon.png') no-repeat center left/contain;
+}
+.heat_2_item_text_icon_3{
+	background:url('/images/product_icon.png') no-repeat center left/contain;
+}
+.heat_2_item_text_icon_4{
+	background:url('/images/snapped_icon.png') no-repeat center left/contain;
+}
+.heat_1_item_text_des,.heat_2_item_text_des{
+	display: inline-block;
+	margin-top: 0.424375rem;
+	border-bottom:1px solid #b0b0b0;
+	font-size:12px;
+	line-height: 16px;
+}
+@media (min-width: 750px) {
+   .heat_1_item_text_des,.heat_2_item_text_des{
+        font-size: 0.1875rem;
+        line-height: 0.375rem;
+    }
+}
+.heat_2_item_text_des{
+	margin-top: 0.390625rem;
+}
+.heat_1_item_img{
+ 	display: block;
+    height: 3rem;
+    width: 100%;
+    position: relative;
+}
+.heat_1_item_img>img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: auto;
+    height: 2.6rem;
+}
+.heat_1:last-child{
+	float: right;
+}
+.heat_2::before{
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.heat_2{
+	width: 100%;
+	height: 3.515625rem;
+	margin-top: 1%;
+	font-size: 0;
+	text-align: center;
+	background:linear-gradient(to bottom right,#f4f4f4,#e0e2e4);
+
+
+}
+.heat_2_item_text{
+	float: left;
+	width: 2.6rem;
+	margin-left:1.085938rem;
+}
+.heat_2_item_img{
+	float:right;
+	width: 5.140625rem;
+	height: 100%;
+	position:relative;
+}
+.heat_2_item_img>img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: auto;
+    height: 80%;
+}
+
+/* 休闲零食 */
+.section_title{
+	height: 1.046875rem;
+	font-size: 0;
+	width: 94%;
+	margin: 0 auto;
+}
+.section_title_link,.section_title_text{
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1.046875rem;
+	height: 1.046875rem;
+    padding: 0 0.234375rem;
+}
+@media (min-width: 750px) {
+   .section_title_link,.section_title_text{
+        font-size: 0.375rem;
+    }
+}
+.section_title_text{
+	font-weight: bold;
+}
+.section_title_link{
+	float: right;
+}
+.section_2_banner,
+.section_3_banner,
+.section_4_banner,
+.section_5_banner,
+.section_6_banner,
+.section_7_banner{
+	overflow: hidden;
+    position: relative;    
+}
+.section__square{
+	padding: 0.078125rem 0.2125rem;
+}
+@media (min-width: 1200px) {
+.section__square{
+	padding: 0.078125rem 0.17rem;
+}
+
+}
+.section__square_item{
+	float: left;
+	width: 4.609375rem;
+	height: 4.640625rem;
+	background-color: #f4f4f4;
+	position: relative;
+	margin: 0.078125rem;
+}
+.square_text{
+	margin-top: 0.6875rem;
+	margin-left: 0.390625rem;
+	margin-right: 0.390625rem;
+	font-size: 14px;
+	line-height: 20px;
+	color: #4b4b4b;
+}
+@media (min-width: 750px) {
+   .square_text{
+        font-size: 0.28125rem;
+        line-height: 0.421875rem
+    }
+}
+.square_text span{
+	display: block;
+	color: #ff91bc;
+}
+.square_img{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3.703125rem;
+	height:3.0rem;
+	    float: right;
+}
+.square_img img{
+	position: absolute;
+	bottom: 0.3rem;
+	right: 0.3rem;
+	height: auto;
+	width: 60%;
+}
+
+/* 粗油速食 */
+.section_square_one div.square_text{
+	float: right;
+}
+.section_square_one p{
+	display: inline-block;
+
+}
+.section_square_one .square_img{
+	left: 0;
+	right: auto;
+
+}
+.section_square_one .square_img img{
+	left: 0.3rem;
+	right: auto;
+	height: auto;
+}
+
+/* 饼干糕点 */
+.section__square_two div.square_text{
+	position: absolute;
+	margin-top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0.578125rem;
+
+}
+.section__square_two{
+	text-align: center;
+
+}
+.section__square_two p{
+	display: inline;
+
+}
+.section__square_two span{
+	display: inline;
+	color: #a7745f;
+	margin-left: 4px;
+}
+.section__square_two .square_img{
+	left: 0;
+	right: 0;
+	bottom: auto;
+	margin: auto;
+
+}
+.section__square_two .square_img img{
+	left: 0;
+	right: 0;
+	bottom: 0.3rem;
+	margin: auto;
+	height: auto;
+}
+/* 茶水饮料 */
+.section__square_three div.square_text{
+	position: absolute;
+	margin-top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0.578125rem;
+
+}
+.section__square_three{
+	text-align: center;
+
+}
+.section__square_three p{
+	display: inline;
+
+}
+.section__square_three span{
+	display: inline;
+	color: #a7745f;
+	margin-left: 4px;
+}
+.section__square_three .square_img{
+	left: 0;
+	right: 0;
+	bottom: auto;
+	margin: auto;
+
+}
+.section__square_three .square_img img{
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	height: auto;
+}

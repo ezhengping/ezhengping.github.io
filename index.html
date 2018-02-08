@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // (function () {
+        //     var sUserAgent = navigator.userAgent;
+        //     if (sUserAgent.indexOf('Android') > -1 || sUserAgent.indexOf('iPhone') > -1 || sUserAgent.indexOf(
+        //             'iPad') > -1 || sUserAgent.indexOf('iPod') > -1 || sUserAgent.indexOf('Symbian') > -1) {
+        //         location.href = 'm/m_index.html';
+        //     } else {}
+        // })();
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网络技术（武汉）有限公司 - 官网</title>
+    <!--淘味网-天天淘味网，美味齐分享-->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/index.css?t=20180202">
+    <script type="text/javascript" src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/CryptoJS/rollups/aes.js"></script>
+    <script src="/js/AES.js"></script>
+    <script type="text/javascript" src="/js/personal/personalBase.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/ui/prototype.js"></script>
+    <script type="text/javascript" src="/js/diamond/diamond.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/notOpen.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <!-- header头部 -->
+    <header class="header" id="head1">
+        <div class="head_top clearfix">
+            <div class="head_top_mid">
+                <div class="head_top_left">
+                    <a href="javascript:;" class="collection" onclick="AddFavorite('淘味网 - 天天淘味网，美味齐分享','www.taoweiw.com')">
+                        <i></i>收藏本站</a>
+                    <a>淘味网 欢迎您！</a>
+                </div>
+                <div class="head_top_right">
+                    <div class="user_name">
+                        <a href="/page/login/login.html">淘味网 请登录
+                            <i class="vip_level_icon" style="background-image:url()"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/page/personal/personalHome.html">个人首页</a>
+                    </div>
+                    <div>
+                        <a href="/page/cart/shoppingCart.html">购物车
+                            <i class="cart_icon"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="javascript:;" onclick="logout()">退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="nav__mid">
+                <h1 class="nav__mid__logo">淘味网
+                    <a href="/index.html" class="nav__mid__logo_link">淘味网
+                        <img src="/images/index_logo.png">
+                    </a>
+                </h1>
+                <ul class="nav__mid__menu clearfix">
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/index.html">首页</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/news.html">热点资讯</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/settled.html">商家入驻</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/hire.html">招聘人才</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/aboutus.html">关于我们</a>
+                    </li>
+                    <li class="nav__mid__menu_item">
+                        <a class="nav__mid__menu_item_a" href="/page/indexPage/APPdownload.html">下载APP</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- header下 商品分类 搜索 联系电话模块 -->
+    <div class="section_sort">
+        <div class="section_sort_mid clearfix">
+            <h3>商品分类</h3>
+            <div class="taowei_search clearfix" style="display:none">
+                <form>
+                    <div class="search_form clearfix">
+                        <input type="text" name="">
+                    </div>
+                    <div class="submit_box">
+                        <input type="submit" name="" value="搜索">
+                    </div>
+                </form>
+            </div>
+            <div class="sort_phone">
+                招商热线：400-669-7188/027-87003988
+            </div>
+        </div>
+    </div>
+    <section class="section__banner">
+        <div class="section__banner_mid clearfix">
+            <div class="pagingMenu">
+                <ul class="pagingMenu_ul" style="width:226px">
+                </ul>
+                <div class="pagingMenu_detail">
+
+                </div>
+            </div>
+            <div class="banner" id="J_index_ban1" style="width: 750px;height: 400px;">
+                <ul id="banner_index_ul" style="width:750px">
+                    <!-- <li style="opacity: 0; z-index: 0;"><a href="/diamond/queryDiamondObject.action?diamondId=" +71+"&type="+4+" "=""><img src="http://192.168.1.103/group1/M00/00/03/wKiOD1omNmuAFgwdAAH_xPQEFJA548.jpg" alt="广告图"></a></li> -->
+                </ul>
+                <div class="indicator" id="J_index_indicator1">
+                </div>
+                <div class="ban-btn clearfloat" id="J_index_btn1">
+                    <a class="next-btn" href="javascript:">&gt;</a>
+                    <a class="prev-btn" href="javascript:">&lt;</a>
+                </div>
+            </div>
+            <div class="user">
+
+            </div>
+        </div>
+    </section>
+    <!-- section_1区域模块化 -->
+    <section class="section_goold">
+        <div class="section_goold_mid clearfix">
+
+        </div>
+    </section>
+    <section class="section_brand">
+        <div class="section_brand_mid clearfix">
+
+        </div>
+    </section>
+    <!-- 产品科目__休闲零食 -->
+    <section class="section_2" id="section2">
+    </section>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar"></div>
+    <!-- 页面底部 -->
+    <footer class="footer" id="footer"> </footer>
+</body>
+
+</html>

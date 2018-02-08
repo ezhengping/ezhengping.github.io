@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 新闻资讯</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/ui/jquery.pagination.css">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/news.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+   	<script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/ui/jquery.pagination.min.js"></script>
+    <script type="text/javascript" src="/js/news/news.js"></script>
+    <!-- <base target="_blank"> -->
+</head>
+
+<body>
+    <!-- header头部 -->
+    <header class="header header_main" id="head3">
+    </header>
+    <div class="header__banner animate" id="banner">
+            <ul class="header__banner__ul clearfix" id="banner_ul">
+                    <li class="header__banner__ul_item">
+                        <a class="header__banner__ul_item_link" href="javasript:;">
+                            <img src="/images/news_banner.jpg" alt="">
+                        </a>
+                    </li>
+            </ul>
+            <!-- <ol class="header__banner__ol" id="banner_ol">
+                <li class="header__banner__ol_item header__banner__ol_item_active"></li>
+                <li class="header__banner__ol_item"></li>
+                <li class="header__banner__ol_item"></li>
+            </ol> -->
+            <!-- <div class="header__banner__space">
+                <span class="header__banner__space_left animate" id="banner_left">&lt;</span>
+                <span class="header__banner__space_right animate" id="banner_right">&gt;</span>
+            </div> -->
+        </div>
+    <!-- 新闻资讯内容 -->
+    <section class="section__content">
+        <!-- 分页数据 -->
+        <ul class="section__content_entry_entry">
+            <li class="section__content_entry_item">
+                <div class="section__content_entry_item_block" href="javascript:;">
+                    <div class="section__content_entry_item_imgbox">
+                        <a class="section__content_entry_item_img" href="${data[i].fileUrl}" title="" style="background-image:url('')">
+                        </a>
+                    </div>
+                    <div class="section__content_entry_item_text">
+                        <a href="${data[i].fileUrl}" title=""><h2 class="section__content_entry_item_title">${data[i].fileName}</h2></a>
+                        <p class="section__content_entry_item_content">${data[i].fileName}</p>
+                        <a class="section__content_entry_item_button" href="${data[i].fileUrl}">&gt;&gt;更多内容</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- 分页UI -->
+        <div class="section__content_controls">
+            <div id="pagination1" class="page fl">
+            </div>
+        </div>
+    </section>
+    <!-- 页面侧边栏 -->
+    <div class="sidebar animate" id="sidebar">
+    </div>
+    <!-- 页面底部 -->
+    <footer class="footer" id="footer">
+    </footer>
+</body>
+
+</html>

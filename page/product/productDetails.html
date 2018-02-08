@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>淘味网 - 商品详情页</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/productDetails.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/CryptoJS/rollups/aes.js"></script>
+    <script src="/js/AES.js"></script>
+    <script type="text/javascript" src="/js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/product/jquery.imagezoom.min.js"></script>
+    <script type="text/javascript" src="/js/product/shoppingCart.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <header id="head3" class="header">
+
+    </header>
+    <!-- /header -->
+    <!-- 商品放大镜 -->
+    <script type="text/javascript">
+    </script>
+    <main class="main clearfix">
+        <div class="main_mid clearfix">
+
+            <div class="commodity_main">
+                <div class="commodity_main_left">
+                    <div class="commodity_left">
+                        <!-- 产品图片放大 -->
+                        <div class="clearfix tb-booth tb-pic tb-s310" id="image">
+
+                        </div>
+                        <!-- 产品图片列表 -->
+                        <ul class="commodity_small_img" id="thumblist">
+
+                        </ul>
+                        <!-- 分享和收藏 -->
+                        <div class='commodity_Collection'>
+                            <!-- <span class="share" data-url="">分享</span> -->
+                            <span class="Collection false_Collection">收藏（
+                                <i>---</i>人气）</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 产品信息 -->
+                <div class="commodity_main_right">
+                    <div class="commodity_hd">
+
+                    </div>
+                    <div class="commodity_panel">
+                        <dl class="dl-price">
+                            <dt>价格</dt>
+                            <dd>
+                                <div class="or-price">
+
+                                </div>
+                                <div class="price">
+
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="commodity_info">
+
+                    </div>
+                    <div class="commodity_Stock">
+
+                    </div>
+                    <div class="commodity_Cart">
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="commodity_main_Show">
+                <h3>同类商品</h3>
+                <div class="Show_content">
+                    <ul>
+                        <li>
+                            <div class="Show_content_item">
+                                <a href="javascript:void(0)" title="">
+                                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                                </a>
+                            </div>
+                            <p><a href="javascript:void(0)" title="">亿龙源400g老土冰糖</a></p>
+                        </li>
+                        <li>
+                            <div class="Show_content_item">
+                                <a href="javascript:void(0)" title="">
+                                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                                </a>
+                            </div>
+                            <p><a href="javascript:void(0)" title="">亿龙源400g老土冰糖</a></p>
+                        </li>
+                        <li>
+                            <div class="Show_content_item">
+                                <a href="javascript:void(0)" title="">
+                                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                                </a>
+                            </div>
+                            <p><a href="javascript:void(0)" title="">亿龙源400g老土冰糖</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+
+
+            <div class="commodity_main_shop">
+
+            </div>
+        </div>
+    </main>
+    <section class="section">
+        <div class="section_main clearfix">
+            <!-- <div class="section_commodity">
+                <a href="javascript:void(0)" title="">
+                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                </a>
+                <a href="javascript:void(0)" title="">
+                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                </a>
+                <a href="javascript:void(0)" title="">
+                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                </a>
+                <a href="javascript:void(0)" title="">
+                    <img src="/images/product/58afe9f5Ncf43acca.png" alt="">
+                </a>
+            </div> -->
+            <div class="section_Tab">
+                <ul class="J_TabBar clearfix">
+                    <li>
+                        <a href="javascript:void(0)" title="">商品详情</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" title="">累计评价</a>
+                    </li>
+                </ul>
+                <div class="commodity_Details J_commodity" style="display: none">
+
+                </div>
+                <div class="commodity_comment J_commodity">
+                    <ul class="comment_ul">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="carSidebar">
+        <div class="toolbar">
+            <div class="toolbar-tabs">
+                <div class="toolbar-tab tbar-tab-cart">
+                    <a href="/page/cart/shoppingCart.html" title="">
+                        <i class="tab-ico"></i>
+                        <span>购物车</span>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="toolbar-panels">
+                <div class="toolbar-panel tbar-panel-cart">
+                    <h3 class="toolbar-panel-header">
+                        <a href="javascript:void(0)" title="">
+                            <i></i>
+                            <em class="title">购物车</em>
+                        </a>
+                        <span class="close-panel"></span>
+                    </h3>
+                    <div class="tbar-cart-list">
+                        <div class="tbar-cart-item" data-type="sku">
+                            <div class="item-goods"> 
+                                <span class="p-img">            
+                                    <a href="//item.jd.com/876229.html" target="_blank">
+                                        <img src="/images/product/57fc6ae7Nafc10cee.png" width="50" height="50" alt="">            
+                                    </a>        
+                                </span>
+                                <div class="p-name"> 
+                                    <a href="//item.jd.com/876229.html" title="" target="_blank">长城（GreatWall）额定500W HOPE-6000DS 电源 （70cm超长背板走线/主动式PFC/12cm静音风扇/宽幅）
+                                    </a>
+                                </div>
+                                <div class="p-price">
+                                    <strong>¥259.00</strong>×1</div> 
+                                    <a href="#none" clstag="h|keycount|cebianlan_h_cart|del" class="p-del J-del" data-cid="876229|1" data-action="RemoveProduct">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- 承载加入购物车物品动画 -->
+    <div class="cart_add">
+
+    </div>
+    <script src="../../js/product/productDetails.js?t=20180202"></script>
+    <footer id="footer" class="footer">
+    </footer>
+    <div class="layer_img">
+            <img src="" alt="">
+    </div>
+</body>
+</html>

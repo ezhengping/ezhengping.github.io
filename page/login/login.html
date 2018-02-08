@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 注册登录页面</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/loginRegbase.css">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
+    <script type="text/javascript" src="/js/com.js"></script>
+    <script type="text/javascript" src="/js/RSA.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/login/login.js"></script>
+    <base target="_blank">
+    <style type="text/css" media="screen">
+           .submit{
+               margin-top: 40px;
+               cursor:pointer;
+           }
+           .signUp{
+               text-align: center;
+               margin-top: 44px;
+           }
+           .signUp a{
+               line-height: 14px;
+               font-size: 14px;
+               color: #860001;
+           }
+           .logo_link{
+               background-image: url('/images/logo_baiback.png')
+           }
+
+     </style>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="header_mid">
+            <div class="header__logo">
+                <h1 class="logo_ht">
+                        淘味网
+                    <a href="/index.html" class="logo_link">
+                        淘味网
+                    </a>
+                </h1>
+                <h2>欢迎登陆</h2>
+            </div>
+            <div class="header_phone">
+                <span>招商热线：400-669-7188</span>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <section class="banner" style="background-image: url('/images/login_banner.png');">
+        <div class="banner_mid">
+            <div class="login">
+                <div class="login__Tab clearfix">
+                    <a href="javascript:;" class="phone_login form_way_atv" data-Tab="phone">手机登录</a>
+                    <a href="javascript:;" class="uesr_login" data-Tab="name">账号登录</a>
+                </div>
+                <div class="login_phone_form login_form">
+                    <div class="phone_form">
+                        <i id="phone"></i>
+                        <span></span>
+                        <input class="phone_input" type="text" name="phone" value="" maxlength="11" placeholder="请输入手机号">
+                        <a class="btn_shut" href="javascript:;" title="" style="display:none"></a>
+                    </div>
+                    <div class="code_form">
+                        <i id="code"></i>
+                        <span></span>
+                        <input class="code_input" type="text" name="code" value="" maxlength="6" placeholder="请输入验证码">
+                        <input type="button" class="code_btn" onclick="sendCode()" title="" value="发送验证码"></input>
+                    </div>
+                </div>
+                <div class="login_user_form login_form">
+                	<input type="hidden" name="flag">
+                    <div class="username_form">
+                        <i id="username"></i>
+                        <span></span>
+                        <input class="username_input" type="text" name="username" value="" maxlength="" placeholder="请输入手机号码">
+                        <a class="btn_shut" href="javascript:;" title="" style="display:none"></a>
+                    </div>
+                    <div class="password_form">
+                        <i></i>
+                        <span></span>
+                        <input class="password_input" type="password" name="password" value="" placeholder="请输入密码">
+                    </div>
+                </div>
+                <a class="submit" onclick="login()">登录</a>
+                <div class="signUp">
+                    <a href="regist.html" title="">你还没有注册&gt;&gt;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_mid">
+            <a href="/page/indexPage/aboutus.html">关于我们</a>
+            <a href="/javascript:;">联系我们</a>
+            <a href="/page/indexPage/hire.html">人才招聘</a>
+            <a href="/page/indexPage/settled.html">商家入驻</a>
+            <a href="/page/indexPage/APPdownload.html">下载APP</a>
+        </div>
+    </footer>
+</body>
+</html>

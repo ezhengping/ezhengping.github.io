@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 企业 - 店铺信息填写</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/fillbase.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="/css/enterprisesettledfill.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="/css/shopfill.css?t=20180208">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/path_config.js?t=20180208"></script>
+    <!-- <script type="text/javascript" src="/js/shopfill.js"></script> -->
+    <script src="/js/personal/personsl_Plug-in.js"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script src="/js/personal/personalBase.js?t=20180208"></script>
+    <script src="/js/from/fillbase.js?t=20180208"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header_mid">
+            <div class="header_logo">
+                <h1 class="header_logo_title">入驻平台
+                    <a class="header_logo_link" href="/index.html">
+                        淘味网
+                    </a>
+                </h1>
+            </div>
+            <div class="header_icenter">
+                <a href="/page/login/login.html" title="" class="header_icenter_info">前往登录</a>
+                <a href="javascript:;" title="" class="header_icenter_out" onclick="logout()">
+                    <img src="/images/outlogin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <!-- 表单内容页面 -->
+    <section class="section">
+        <div class="section_mid">
+            <!-- 头部标题 -->
+            <div class="section_title clearfix">
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">1</i>
+                        <h2 class="section_title_item_content_1">个人/企业信息填写</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content section_title_active">
+                        <i class="section_title_item_content_icon">2</i>
+                        <h2 class="section_title_item_content_1">店铺信息填写</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">3</i>
+                        <h2 class="section_title_item_content_1">资质审核</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">4</i>
+                        <h2 class="section_title_item_content_1">签约</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">5</i>
+                        <h2 class="section_title_item_content_1">入驻成功</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 副标题 -->
+            <div class="">
+                <div class="section_title_subtitle">
+                    <h3>店铺入驻基本信息</h3>
+                </div>
+            </div>
+            <form id="shopfillform" method="post">
+                <!-- 店铺名称 -->
+                <div class=" shop_name base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>店铺名称:</label>
+                    <div class="settled_form base_fill_form">
+                        <i></i>
+                        <input class="input" type="text" name="storeName" maxlength="16" placeholder="请输入店铺名称">
+                        <p class="settled_p">
+                            <!--    注：个人店铺名称禁止出现<strong>旗舰、专卖、专营、官方、直营、官、官方认证、官方授权、商城、商店、企业、特卖、折扣</strong>等关键词否则入驻会被驳回。 -->
+                        </p>
+                    </div>
+                </div>
+                <!-- 店铺logo -->
+                <div class="shop_logo base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>店铺logo:</label>
+                    <div class="settled_form base_fill_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="base_fill_file">
+                            <input class="imginput" type="file" name="storeLogoor">
+                            <input type="hidden" name="storeLogo">
+                        </div>
+                        <p class="settled_p">
+                            注：正方形图片（尺寸为80*80），大小不超过100K,请务必使用自己的店铺logo,出现一下几类logo,审核将会被驳回:</p>
+                        <p class="settled_p">
+                            <strong>1、内容上直接使用实物图照片2、网上下载未经处理的图片3、出现广告语4、使用未经授权的他人品牌5、出现第三方电商平台信息</strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- 店铺名称 -->
+                <div class="shop_name base_fill clearfix">
+                    <label for="" class="label">
+                        <strong class="strong">*</strong>店铺特色:</label>
+                    <div class="settled_form base_fill_form">
+                        <i></i>
+                        <textarea class="textarea" maxlength="100" placeholder="介绍此店铺专营类目及特色" name="storeDescription" placeholder="介绍此店铺专营类目及特色"></textarea>
+                        <p class="settled_p">
+                            1、店铺不能出现
+                            <strong>厂家直销、直销、批发零售、涉及品牌、个人联系方式或者第三方平台的信息</strong>
+                        </p>
+                        <p class="settled_p">
+                            2、企业店铺不能出现
+                            <strong>批发零售、个人联系方式或者第三方平台的信息</strong>
+                        </p>
+                        <p class="settled_p">
+                            3、详情不超过
+                            <strong>200字</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="submit clearfix">
+                    <a id="submitUp" href="/page/fillform/enterprisesettledfill.html" title="">上一步</a>
+                    <input id="submitNext" type="submit" value="下一步" />
+                    <!-- ajax判断是否审核通过 通过audit_by.html   待审核audit_waiting.html 驳回audit_reject.html-->
+                </div>
+            </form>
+
+            <script>
+                // 传入正则表达式验证
+                $.validator.addMethod('custom', function (value, element, params) {
+                    var reg = params;
+                    if (reg.test(value)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }, '请输入验证提示信息')
+
+
+                $.validator.setDefaults({
+                    ignore: ''
+                })
+
+                function shopFillValidate() {
+                    $(document).ready(function () {
+                        $('#shopfillform').validate({
+                            rules: {
+                                storeName: {
+                                    required: true,
+                                    custom: /[\u4e00-\u9fa5]/,
+                                    maxlength: 16,
+                                },
+                                storeLogo: {
+                                    required: true,
+                                    // fileExtension: 'null'
+                                },
+                                storeDescription: {
+                                    maxlength: 100,
+                                }
+
+                            },
+                            messages: {
+                                storeName: {
+                                    required: '店铺名称不能为空',
+                                    custom: '店铺名称应该为汉字',
+                                    maxlength: '店铺名称不能超过16个字符长度',
+                                },
+                                storeLogo: {
+                                    required: '需要上传店铺logo图片',
+                                    // fileExtension: '请上传图片格式'
+                                },
+                                storeDescription: {
+                                    maxlength: '店铺特点描述需要在100个字符以内',
+                                }
+                            },
+                            //验证错误时执行的函数
+                            errorPlacement: function (error, element) {
+                                element.parents('.base_fill_form').find('i').html(error)
+                            },
+                            // 验证正确时
+                            success: function (i) {
+                                $(i).html('');
+                            },
+                            submitHandler: function (form) {
+                                var data = JSON.parse(localStorage.getItem('enterprise'));
+                                if (!data.storeType) {
+                                    layer.open({
+                                        title: '温馨提示',
+                                        content: '店铺类型选则数据异常需要返回选择后提交',
+                                        btn1: function () {
+                                            location.href =
+                                                '/page/business/entryoptions.html'
+                                            layer.close(index);
+                                        },
+                                        cancel: function () {
+                                            location.href =
+                                                '/page/business/entryoptions.html'
+                                            layer.close(index);
+                                        }
+                                    })
+                                } else if (!data.managerName) {
+                                    layer.open({
+                                        title: '温馨提示',
+                                        content: '管理人名称不能为空，请返回上一步行修改',
+                                        btn1: function () {
+                                            location.href =
+                                                '/page/fillform/enterprisesettledfill.html'
+                                            layer.close(index);
+                                        },
+                                        cancel: function () {
+                                            location.href =
+                                                '/page/fillform/enterprisesettledfill.html'
+                                            layer.close(index);
+                                        }
+                                    })
+                                }
+                                data['storeName'] = $('input[name=storeName]').val();
+                                data['storeLogo'] = $('input[name=storeLogo]').val();
+                                data['storeDescription'] = $('textarea[name=storeDescription]').val();
+                                // console.log(data);
+                                ajaxGetSelectCompanyType(function (GetTypeData) {
+                                    switch (GetTypeData.result) {
+                                        case 3:
+                                            layer.open({
+                                                titel: '温馨提醒',
+                                                content: '您已经认证通过，无需再次验证'
+                                            })
+                                            break;
+                                        case 4:
+                                            upSelectData(data, function (updata) {
+                                                window.location.href =
+                                                    "/page/fillform/enterAudit_waiting.html";
+                                            });
+                                            break;
+                                        case 5:
+                                            layer.open({
+                                                titel: '温馨提醒',
+                                                content: '您已经有一条入驻提交记录，需要等待该记录审核，不可以重复提交哟。',
+                                                btn1: function () {
+                                                    window.location.href =
+                                                        "/page/fillform/enterAudit_waiting.html";
+                                                }
+                                            })
+                                            break;
+                                        case 6:
+                                            upModifySelectData(data, function (updata) {
+                                                // window.location.href ="/page/fillform/enterAudit_waiting.html";
+                                            })
+                                            break;
+                                        default:
+                                            upSelectData(data, function (updata) {
+                                                window.location.href =
+                                                    "/page/fillform/enterAudit_waiting.html";
+                                            });
+                                            break;
+                                    }
+                                })
+                            }
+
+                        })
+                    })
+                }
+                // 上传提交数据
+                function upSelectData(obj, callback) {
+                    $.ajax({
+                            url: PATH + '/user2/addCompanyOccupancy.action',
+                            type: 'POST',
+                            data: {
+                                josnObject: JSON.stringify(obj)
+                            },
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            crossDomain: true,
+                        })
+                        .done(function (data) {
+                            if (data == 110) {
+                                if (callback) {
+                                    callback();
+                                }
+                            } else {
+                                layer.open({
+                                    title: '温馨提醒',
+                                    content: '参数异常请刷新后重试'
+                                })
+                            }
+                        })
+                }
+                // 修改提交数据
+                function upModifySelectData(obj, callback) {
+                    $.ajax({
+                            url: PATH + '/user2/updateCompanyOccupancy.action',
+                            type: 'POST',
+                            data: {
+                                josnObject: JSON.stringify(obj)
+                            },
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            crossDomain: true,
+                        })
+                        .done(function (data) {
+                            if (data == 110) {
+                                if (callback) {
+                                    callback();
+                                }
+                            } else {
+                                layer.open({
+                                    title: '温馨提醒',
+                                    content: '参数异常请刷新后重试'
+                                })
+                            }
+                        })
+                }
+                // 数据回显
+                function fillData(){
+                    if(localStorage.getItem('enterprise')){
+                        var data =  JSON.parse(localStorage.getItem('enterprise'));
+                        $('input[name=storeName]').val(data.storeName)
+                        $('input[name=storeLogo]').val(data.storeLogo).parents('.base_fill_form').find('img.img').attr('src',data.storeLogo)
+                        $('textarea[name=storeDescription]').val(data.storeDescription)
+                    }else{
+                        return;
+                    }
+                    
+                }
+
+                $(function () {
+                    // 验证表单数据
+                    shopFillValidate();
+                    
+                    // 数据回显
+                    fillData()
+                })
+            </script>
+        </div>
+    </section>
+</body>
+
+</html>

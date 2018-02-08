@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>淘味网 - 个人 - 店铺信息填写</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="/css/fillbase.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="/css/shopfill.css?t=20180208">
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/shopfill.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header_mid">
+            <div class="header_logo">
+                <h1 class="header_logo_title">入驻平台
+                <a class="header_logo_link" href="/index.html">
+                    淘味网
+                </a>
+                </h1>
+            </div>
+            <div class="header_icenter">
+                <a href="javascript:;" title="" class="header_icenter_info">11688331010</a>
+                <a href="javascript:;" title="" class="header_icenter_out">
+                    <img src="/images/outlogin.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <!-- 表单内容页面 -->
+    <section class="section">
+        <div class="section_mid">
+            <!-- 头部标题 -->
+            <div class="section_title clearfix">
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">1</i>
+                        <h2 class="section_title_item_content_1">个人/企业信息填写</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon section_title_active">2</i>
+                        <h2 class="section_title_item_content_1">店铺信息填写</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">3</i>
+                        <h2 class="section_title_item_content_1">资质审核</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">4</i>
+                        <h2 class="section_title_item_content_1">签约</h2>
+                    </div>
+                </div>
+                <div class="section_title_item">
+                    <div class="section_title_item_content">
+                        <i class="section_title_item_content_icon">5</i>
+                        <h2 class="section_title_item_content_1">入驻成功</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- 副标题 -->
+            <div class="section_title_subtitle">
+                    <h3>店铺入驻基本信息</h3>
+            </div>
+            <form action="">
+                <!-- 店铺名称 -->
+                <div class="shop_name clearfix">
+                    <label for="" class="label"><strong class="strong">*</strong>店铺名称:</label>
+                    <div class="settled_form">
+                        <i></i>
+                        <input class="input" type="text" name="" placeholder="请输入店铺名称">
+                        <p class="settled_p">
+                            注：个人店铺名称禁止出现<strong>旗舰、专卖、专营、官方、直营、官、官方认证、官方授权、商城、商店、企业、特卖、折扣</strong>等关键词否则入驻会被驳回。
+                        </p>
+                    </div>
+                </div>
+                <!-- 店铺logo -->
+                <div class="shop_logo clearfix">
+                    <label for="" class="label"><strong class="strong">*</strong>店铺logo:</label>
+                    <div class="settled_form">
+                        <i></i>
+                        <img class="img" src="" alt="">
+                        <div class="settled_form_input">
+                            <input class="imginput" type="file" name="">
+                        </div>
+                        <p class="settled_p">
+                            注：正方形图片（尺寸为80*80），大小不超过100K,请务必使用自己的店铺logo,出现一下几类logo,审核将会被驳回:</p>
+                        <p class="settled_p">
+                            <strong>1、内容上直接使用实物图照片2、网上下载未经处理的图片3、出现广告语4、使用未经授权的他人品牌5、出现第三方电商平台信息</strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- 店铺名称 -->
+                <div class="shop_name clearfix">
+                    <label for="" class="label"><strong class="strong">*</strong>店铺名称:</label>
+                    <div class="settled_form">
+                        <textarea class="textarea" cols="30" rows="10" placeholder="介绍此店铺专营类目及特色"  maxlength="199"></textarea>
+                        <p class="settled_p">
+                            注：个人店铺名称禁止出现<strong>旗舰、专卖、专营、官方、直营、官、官方认证、官方授权、商城、商店、企业、特卖、折扣</strong>等关键词否则入驻会被驳回。
+                        </p>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="submit clearfix">
+                    <a id="submitUp" href="settledfill.html" title="">上一步</a>
+                    <a id="submitNext" href="audit_by.html" title="">下一步</a>
+                     <!-- ajax判断是否审核通过 通过audit_by.html   待审核audit_waiting.html 驳回audit_reject.html-->
+                </div>
+                <script type="text/javascript">
+                    $(function($){
+                        var next = $('#submitNext');
+                        next.no('click',function(){
+                            $.ajax({
+                                url:'01.php'  //请求地址
+                                
+                            })
+                        })
+                    })
+                </script>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.ui-pagination-container {
+	height: 34px;
+	line-height: 34px;
+}
+
+.ui-pagination-container .ui-pagination-page-item {
+	font-size: 14px;
+	padding: 6px;
+	background: #fff;
+	border: 1px solid #b5b5b5;
+	color: #b5b5b5;
+	margin: 0 10px;
+	text-decoration: none;
+}
+
+.ui-pagination-container .ui-pagination-page-item:hover {
+	border-color: #f29a01;
+	color: #f29a01;
+	text-decoration: none;
+}
+
+.ui-pagination-container .ui-pagination-page-item.active {
+	background: #f29a01;
+	border-color: #f29a01;
+	color: #fff;
+	cursor: default;
+}

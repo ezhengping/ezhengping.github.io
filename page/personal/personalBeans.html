@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人 - 我的味豆</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/personalBase.css?t=20180208">
+    <link rel="stylesheet" href="../../css/personalBeans.css?t=20180202">
+    <link rel="stylesheet" href="../../css/page_ui.css">
+
+    <script src="../../js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/base.js?t=20180208"></script>
+    <script src="../../js/personal/personsl_Plug-in.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/ui/jquery.pagination.min.js"></script>
+    <script src="../../js/personal/personalBase.js?t=20180208"></script>
+    <script src="../../js/personal/personalBeans.js"></script>
+
+</head>
+
+<body>
+    <header class="header" id="head3"></header>
+    <section class="personal clearfix">
+        <div class="w">
+            <div class="personal_nav">
+                <ul>
+                    <li>
+                        <a href="/page/personal/personalHome.html">个人首页</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalAddress.html">我的收获地址管理</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalOrder.html">我的全部订单</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalBeans.html" style="color:#ff7e23">我的味豆</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCommodity.html">收藏的商品</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalShop.html">关注的店铺</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCoupon.html">我的优惠券</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalSign.html">我的签到</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalData.html">个人资料</a>
+
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalVip.html">会员中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="personal_beans">
+                <div class="pb_title personal_title">
+                    <a class="pb_Tab pb_title_atv" href="javascript:;">我的味豆</a>
+                    <a class="pb_Tab" href="javascript:;">味豆明细</a>
+                    <a class="pb_Tab" href="javascript:;">味豆说明</a>
+                </div>
+                <div class="pb_beans_menu">
+                    <div class="pb_item">
+                        <div class="pb_totalNumber">
+                            <div class="pb_toN">
+                                <div class="beans_icon">
+                                    <img src="/images/Beans_dou_icon.png" alt="">
+                                </div>
+                                <h5>当前味豆</h5>
+                                <h3>---</h3>
+                            </div>
+                        </div>
+                        <div class="pb_obtainB">
+                            <div class="pb_signin">
+                                <div class="pb_SI">
+                                    <div class="pb_SI_title">
+                                        每日签到
+                                    </div>
+                                    <div class="pb_SI_t">
+                                        连续签到免费领取味豆
+                                    </div>
+                                    <a href="/page/personal/personalSign.html">去签到&gt;</a>
+                                    <div class="pb_SI_img">
+                                        <img src="/images/Beans_signin_icon.png" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="pb_evaluation">
+                                <div class="pb_Ev">
+                                    <div class="pb_Ev_title">
+                                        评价商品
+                                    </div>
+                                    <div class="pb_Ev_t">
+                                        评价商品免费领取味豆
+                                    </div>
+                                    <a href="/page/personal/personalOrder.html?inde=5">去评价&gt;</a>
+                                    <div class="pb_Ev_img">
+                                        <img src="/images/Beans_comment_icon.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb_item">
+                        <div class="pb_details">
+                            <div class="pb_details_title">
+                                <table>
+                                    <tr>
+                                        <td>时间</td>
+                                        <td>收入/支出</td>
+                                        <td>详细说明</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="pb_details_item">
+                                <table>
+                                    
+                                </table>
+                                <div class="page_pb" id="page_pb" style="position:absolute;right:10px;bottom:10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb_item">
+                        <div class="pb_description">
+                            <h3 class="pb_description_title">味豆如何获得？</h3>
+                            <div class="pb_description_text">
+                                <p>
+                                    一、购物：
+                                </p>
+                                <p>
+                                    当单件商品实际支付金额大于等于50元即可享受味豆回馈，味豆回馈值为实际支付金额数值的10%（具体比例按会员等级），如用户实际支付50元将享受5个味豆的回馈。同时，实际支付金额将取10的整数倍进行计算。订单完成后，在符合以下情形时，将按订单金额参考下表视用户订单情况发放味豆。
+                                </p>
+                                <p>1. 必须是购买实物产品订单，（邮价补差不算）。</p>
+                                <p>2. 订单金额是指用户实际以支付宝支付/微信支付（以公司转账不回馈京豆）</p>
+                                <p>3. 订单完成是指：订单已显示完成且未办理退货手续。味豆会在订单完成后回馈到用户的个人中心。</p>
+                            </div>
+                            <div class="pb_description_text">
+                                <p>
+                                    二、商品评价：
+                                </p>
+                                <p>
+                                    使用商品评价功能，我们将在您评价成功后给予相应的味豆回馈（用户只能评价该用户名下购买过的商品）。
+                                    <br /> 会员评价获得味豆的数量：商品售价高于或等于200元时，用户在订单完成3个月内对商品进行有效评价（用户评价字数须应在10个以上）将享受200个味豆回馈。其中，商品售价高于等于20元且低于200元，用户评价成功后回馈100个京豆。
+                                </p>
+                                <p>1. 您只能对在30天内该用户名下购买的商品进行评价；</p>
+                                <p>2. 购买时间相差超过15日的不同订单中的相同商品，可以分别评价并有资格获得味豆；同一订单或相隔15日内不同订单中的相同商品，只能评价一次并且获得味豆；</p>
+                                <p>3. 退换货订单产生的商品评价将会被删除，同时也扣除该评价已获得的味豆，若用户味豆数量不够抵扣，用户个人中心味豆数量将显示为负值；</p>
+                            </div>
+                            <div class="pb_description_text">
+                                <p>
+                                    三、签到： （单位个）
+                                </p>
+                                <p>
+                                    <table border="1px" cellspacing="0" style="border-collapse:collapse">
+                                        <tr>
+                                            <td>连续天数</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>赠送味豆</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>20</td>
+                                            <td>20</td>
+                                            <td>30</td>
+                                            <td>40</td>
+                                            <td>50</td>
+                                        </tr>
+                                    </table>
+                                </p>
+                                <p style="color:red">注：付款成功之后，30天内没有确认收货，系统会默认确认收货，系统默认收货不回馈味豆，确认收货成功后，30天内没有对订单进行评价，系统默认给予好评，系统默认给予好评不回馈味豆。</p>
+                            </div>
+                            <div class="pb_description_text">
+                                <h3 class="pb_description_title">味豆的兑换比例是多少？</h3>
+                                <p>味豆和人民币兑换比例是100:1，即100个味豆相当于人民币1元。</p>
+                            </div>
+                            <div class="pb_description_text">
+                                <h3 class="pb_description_title">如何使用味豆？</h3>
+                                <p>味豆可直接用于支付订单，味豆和现金抵扣的比例为100:1，味豆支付不得超过每笔订单结算金额的50%，可使用味豆数量为1000的整数倍，如1000、2000、3000等味豆数。</p>
+                                <p>结算金额是100元，50%就是50元，那结算时最多只能用5000个味豆支付；如果拥有的味豆数小于1000个，则不可在结算页使用味豆支付。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+    </footer>
+</body>
+
+</html>

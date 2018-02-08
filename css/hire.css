@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   招聘人才模块
+ */
+
+.section_hire {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 
+.section_hire_title {
+    margin-left: 56px;
+    line-height: 28px;
+    font-size: 28px;
+    color: #d75a08;
+    font-weight: bold;
+    margin-top: 62px;
+    margin-bottom: 32px;
+}
+
+.section_hire_mid_item {
+    margin-left: 56px;
+}
+
+.section_hire_mid_item_Job_title {
+    font-size: 20px;
+    line-height: 20px;
+    color: #ff8326;
+}
+
+.section_hire_mid_item_Job_duty {
+    font-size: 20px;
+    line-height: 20px;
+    color: #ff8326;
+    margin-top: 32px;
+    margin-bottom: 36px;
+}
+
+.section_hire_mid_item_skill::before {
+    content: " ";
+    display: block;
+    overflow: auto;
+}
+
+.section_hire_mid_item_Job_item,
+.section_hire_mid_item_skill_item {
+    font-size: 20px;
+    line-height: 45px;
+    color: #575757;
+}
+
+.section_hire_mid_item_skill_title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 98px;
+    margin-bottom: 34px;
+    color: #ff8326;
+}
+
+.section_hire_mid_item {
+    padding-bottom: 80px;
+    border-bottom: 1px solid #848484;
+    margin-bottom: 90px;
+}
+ */
+
+.animate{
+    
+}
+
+
+/* 内容部分 */
+
+.section_hire {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.table_hader table tr {
+    background-color: #ff7f26;
+    color: #fff;
+}
+
+.section_hire table td {
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+.table_item table tr {
+    cursor: pointer;
+}
+
+.table_item table td span.icon {
+    transition:all ease .5s;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    margin-top: -7px;
+    transform-origin:center center;
+    left: 30px;
+    background: url('/images/hire_icon.png') no-repeat center left;
+}
+
+.table_item_text {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #e9e9e9;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 22px;
+    overflow: hidden;
+}
+
+.table_item_text h3 {
+    font-size: 16px;
+    line-height: 34px;
+}
+
+.des_text {
+    margin-bottom: 30px;
+}
+
+.des_text li {
+    list-style-type: decimal;
+    margin-left: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.des_text .olStyle{
+    list-style-type:none;
+}
+
+/* 职位申请 */
+.hireApply a{
+    display: inline-block;
+    width:70px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #391800;
+    box-shadow: 0 2px 4px rgba(200, 150,0,.6);
+    background: url('/images/hireApply.png') no-repeat center;
+    z-index: 9999
+}

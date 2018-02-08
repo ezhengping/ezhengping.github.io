@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘味网 - 个人</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/personalBase.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="../../css/personalHome.css?t=20180208">
+    <script src="../../js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/js/base.js?t=20180208"></script>
+    <script src="../../js/CryptoJS/rollups/aes.js"></script>
+    <script src="../../js/AES.js"></script>
+    <script src="../../js/personal/personsl_Plug-in.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/head/addhtml.js?t=20180208"></script>
+    <script src="../../js/personal/personalBase.js?t=20180208"></script>
+    <script src="../../js/personal/personalHome.js?t=20180202"></script>
+</head>
+
+<body>
+    <header class="header" id="head3"></header>
+    <section class="personal clearfix">
+        <div class="w">
+            <div class="personal_nav">
+                <ul>
+                    <li>
+                        <a href="/page/personal/personalHome.html" style="color:#ff7e23">个人首页</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalAddress.html">我的收获地址管理</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalOrder.html">我的全部订单</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalBeans.html">我的味豆</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCommodity.html">收藏的商品</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalShop.html">关注的店铺</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCoupon.html">我的优惠券</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalSign.html">我的签到</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalData.html">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalVip.html">会员中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="personal_m">
+                <div class="m_user">
+                    <div class="m_userInOf">
+                        <div class="m_userInOf_img">
+                            <img src="../../images/index_Avatar.png" alt="">
+                        </div>
+                        <h4 class="m_userInOf_name">----</h4>
+                        <div class="m_userInOf_beans">
+                            <i style="background-image:url('/images/beans_icon.png')"></i>
+                            <span>当前味豆：
+                                <em>---</em>
+                            </span>
+                        </div>
+                        <div class="m_userInOf_address">
+                            <a href="personalAddress.html" class="address">我的收获地址</a>
+                        </div>
+                        <div class="m_userInOf_discount">
+                            <a href="personalCoupon.html">我的优惠</a>
+                        </div>
+                    </div>
+                    <div class="m_userInOf_order">
+                        <table>
+                            <tr>
+                                <td class="order_fk">
+                                    <p>
+                                        <a href="personalOrder.html?inde=2">
+                                            <span>待付款
+                                                <em>-</em>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="order_fh">
+                                    <p>
+                                        <a href="personalOrder.html?inde=3">
+                                            <span>待发货
+                                                <em>-</em>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="order_shu">
+                                    <p>
+                                        <a href="personalOrder.html?inde=4">
+                                            <span>待收货
+                                                <em>-</em>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="order_pj">
+                                    <p>
+                                        <a href="personalOrder.html?inde=5">
+                                            <span>待评价
+                                                <em>-</em>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </td>
+                                <td class="order_sh">
+                                    <p>
+                                        <a href="personalOrder.html?inde=6">
+                                            <span>售后
+                                                <em>-</em>
+                                            </span>
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="m_userOrder">
+                    <div class="uesrOrde_title clearfix">
+                        <h5>我的订单</h5>
+                        <a href="personalOrder.html">查看全部订单</a>
+                    </div>
+                    <div class="uesrOrde_details">
+                        <table>
+                            <tr class="uesrOrde_details_item">
+                                <td class="userOrder_img">
+                                    <div>
+                                        <a href="">
+                                            <img src="" alt="">
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="userOrder_adderssName">
+                                    <div>---</div>
+                                </td>
+                                <td class="userOrder_pay">
+                                    <span>
+                                            ￥----
+                                            <br />
+                                            支付方式
+                                    </span>
+                                </td>
+                                <td class="userOrder_time">
+                                    <span>
+                                        ---------
+                                        <br />
+                                        ------
+                                    </span>
+                                </td>
+                                <td class="userOrder_C">
+
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- <ul>
+                            <li class="uesrOrde_details_item">
+                                <div class="uesrOrde_details_img clearfix">
+                                    <div>
+                                        <ul class="details_img clearfix">
+                                            <li>
+                                                <a href="">
+                                                    <img src="/images/product/57fc6ae7Nafc10cee.png" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="ordetails_img details_img clearfix">
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ordetails_description">
+                                    <p>描述：
+                                    </p>
+                                </div>
+                                <div class="ordetails_description_time">
+                                    <p>
+                                        <em>2018年12月20日</em>
+                                        <em>15：20：60</em>
+                                    </p>
+                                </div>
+                                <div class="ordetails_pay">
+                                    <div>
+                                        <p>￥
+                                            <em>---</em>
+                                        </p>
+                                        <p>---</p>
+                                    </div>
+                                </div>
+                                <div class="ordetails_number">
+                                    <div>
+                                        <p>--------</p>
+                                        <a href="javascript:;">---</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+            <div class="personal_right">
+                <div class="personal_userLev">
+                    <h3>会员等级</h3>
+                    <div class="personal_userLevImg">
+                        <a href="/page/personal/personalVip.html">
+                            <img src="" alt="">
+                        </a>
+                    </div>
+                    <div class="personal_userLevStrip">
+                        <div class="sp_userLevStrip_left" style="background-image:url('/images/level_1_icon.png')"></div>
+                        <div class="personal_userLevStrip_m">
+                            <div id="LevStrip" class="userLevStrip" style="width:0"></div>
+                        </div>
+                        <div class="sp_userLevStrip_right" style="background-image:url('/images/level_2_icon.png')"></div>
+                    </div>
+                    <div class="personal_userLevNum">
+                        <p>
+                            还差
+                            <em>--</em>
+                            元升级
+                        </p>
+                    </div>
+                </div>
+                <div class="personal_signIn">
+                    <h3>签到领味豆</h3>
+                    <div class="signIn_box">
+                        <a href="javascript:;">
+                            <!-- <img src="/images/signIn.png" alt=""> -->
+                        </a>
+                    </div>
+                    <div class="personal_signIn_text">
+                        <p>
+                            已经连续签到
+                            <em>--</em>
+                            天
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    </script>
+
+    <footer class="footer" id="footer">
+
+    </footer>
+    <div class="alertSignIn" style="position:fixed;top:0;left:0;bottom:0;right:0;background-color:rgba(0, 0, 0, .6);width:100%;height:100%;z-index:9999; display:none;">
+        <div class="" style="position:absolute;width:auto;height:0;top:50%;left:50%;transform:translate(-50%,-50%)">
+            <img style="height:100%;width:auto;display:block;" src="/images/signIn_success.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

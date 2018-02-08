@@ -1,0 +1,412 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+      /* 防止点击闪烁 */
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    /* 缩放网页，文字大小不变 */
+    -webkit-text-size-adjust:none;
+    vertical-align: baseline;
+}
+body ,html{
+    height: 100%;
+}
+body {
+    background: #fff;
+    color: #555;
+    font-family: Verdana, Arial, Helvetica, Microsoft YaHei, '微软雅黑', sans-serif;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+td,
+th,
+caption {
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+
+
+/* a:hover{text-decoration:underline;} */
+
+img {
+    width: 100%;
+    height: auto;
+    border: none;
+    display: block
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+
+/* css common */
+
+.atv_cr{
+    color: #f29a01 !important;
+}
+
+.float_r{
+    float:right !important;
+}
+
+.mr0 {
+    margin-right: 0 !important;
+}
+
+.clearfix::after{
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 定义字体 */
+
+@font-face {
+    font-family: 'FZCY';
+    src: url('../../font/FZCY.ttf');
+}
+@font-face {
+    font-family: 'FZLTHT';
+    src: url('../../font/FZLTHT.OTF');
+}
+@font-face {
+    font-family: 'STXIHEI';
+    src: url('../../font/STXIHEI.TTF');
+}
+
+
+.mhome {
+    padding: 0;
+    width:100%;
+    margin: 0 auto;
+    position: relative;
+        overflow: hidden;
+}
+
+/*页面头部*/
+.header{
+	width:100%;
+	height:1.413333rem;
+	background-color: #ff7f26;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+.header_logo{
+    text-indent: -9999px;
+    font-size:0px;
+    float: left;
+    margin-left:0.32rem;
+    margin-top:0.253333rem;
+}
+.logo{
+    display: block;
+}
+.logo a{
+    display: block;
+    width: 0.986667rem;
+    height: 100%;
+}
+.header_title{
+    margin-left: .533333rem;
+    float:left;
+}
+.header_title h2{
+font-size: 14px;
+line-height: 1.413333rem;
+color: #fff;
+}
+@media (min-width: 750px) {
+    .header_title h2{
+        font-size: 0.28125rem;
+    }
+}
+.header_link{
+    width: 1.609375rem;
+    height: 0.546875rem;
+    position: absolute;
+    right:0.3125rem;
+    background-color: #fff;
+    top:0;
+    bottom:0;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+.header_link a{
+    display: block;
+    line-height: 0.546875rem;
+    height: 100%;
+    font-size: 12px;
+    color:#ff7f26;
+}
+@media (min-width: 750px) {
+    .header_link a{
+        font-size: 0.21875rem;
+    }
+}
+
+
+ /*banner*/
+.section__banner{
+    width:100%;
+    /* background-color: #ffa; */
+    overflow: hidden;
+    position: relative;
+    
+}
+/* .section__banner::after{
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 31%;
+} */
+.section__banner ul{
+        position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.section__banner li{
+   position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.section__banner li:first-child{
+    z-index: 1;
+}
+.section__banner li img{
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.banner__ol{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.banner__ol span{
+    width: 5px;
+    height:5px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border:1px solid #ff7f26;
+    float:left;
+    cursor: pointer;
+}
+.banner__ol span.atv_ol{
+    background-color: #ff7f26;
+}
+/*导航*/
+nav{
+    width:94%;
+   padding: 0 3%;
+   background-color: #fff;
+}
+.nav_ul li{
+    float:left;
+    height: 1.046875rem;
+    line-height: 1.046875rem;
+
+} 
+.nav_ul li a{
+    display: block;
+    font-size: 16px;
+    height: 1.046875rem;
+    line-height: 1.046875rem;
+    padding:0 0.234375rem;
+    color:#686868;
+}
+@media (min-width: 750px) {
+   .nav_ul li a{
+        font-size: 0.375rem;
+    }
+}
+
+
+
+/* 商品块 */
+.block_mid{
+    padding: 1% 2%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.block_mid_item{
+    width: 48%;
+    height: 5.6rem;
+    margin: 1% 1%;
+    background-color: #fff;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2%;
+}
+.block__item_img{
+    width: 100%;
+    height: 3.333333rem;
+    position: relative;
+}
+.block__item_img img{
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.block__item_text{
+    text-align: center;
+}
+.block_item_text-p{
+    margin-top: 0.1rem;
+    font-size: 14px;
+    font-size: 0.32rem;
+    text-align: justify;
+}
+.block_item_text-price{
+    text-align: center;
+    color: red;
+    font-size: 12px;
+    line-height: 36px;
+    font-size: 0.26rem;
+    line-height: 0.853333rem
+}
+
+/* 副导航 */
+.nav_deputy_imd{
+    width: 100%;
+}
+.nav_deputy_imd li{
+    float: left;
+    width: 16.66%;
+    text-align: center;
+    background-color: #fff;
+}
+.nav_deputy_imd a{
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+@media (max-width: 600px) {
+    .nav_deputy_imd a{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.3rem;
+}
+}
+.nav_deputy_imd li.atv{
+    background-color: #ff7f26;
+}
+.nav_deputy_imd li.atv a{
+    color: #fff;
+}
+
+/* 底部 */
+
+.footer{
+    width: 100%;
+    margin-top: 0.78125rem;
+    border-top: 1px solid #dddddd; 
+}
+.footer_content{
+    padding:0.546875rem 0 0.3125rem;
+    text-align: center;
+}
+.footer_content p{
+    color: #a9a9a9;
+    font-size: 0.28125rem;
+    line-height:0.390625rem;
+}

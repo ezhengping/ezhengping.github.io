@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人 - 订单详情</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/personalBase.css?t=20180208">
+    <link rel="stylesheet" type="text/css" href="../../css/personalOrder.css?t=20180202">
+    <link rel="stylesheet" href="../../css/page_ui.css">
+
+    <script src="../../js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/CryptoJS/rollups/aes.js"></script>
+    <script src="../../js/CryptoJS/rollups/hmac-md5.js"></script>
+    <script src="../../js/AES.js"></script>
+    <script src="../../js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/head/addhtml.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/ui/jquery.pagination.min.js"></script>
+    <script src="../../js/personal/personalBase.js?t=20180208"></script>
+    <script src="../../js/personal/personalOrder.js?t=20180208"></script>
+</head>
+
+<body>
+    <header class="header" id="head3"></header>
+    <section class="personal clearfix">
+        <div class="w">
+            <div class="personal_nav">
+                <ul>
+                    <li>
+                        <a href="/page/personal/personalHome.html">个人首页</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalAddress.html">我的收获地址管理</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalOrder.html" style="color:#ff7e23">我的全部订单</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalBeans.html">我的味豆</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCommodity.html">收藏的商品</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalShop.html">关注的店铺</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalCoupon.html">我的优惠券</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalSign.html">我的签到</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalData.html">个人资料</a>
+                    </li>
+                    <li>
+                        <a href="/page/personal/personalVip.html">会员中心</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="personal_order">
+                <a name="main_href"></a>
+                <div class="personal_order_title personal_title">
+                    <h4>订单管理</h4>
+                </div>
+                <div class="po_title">
+                    <div class="po_title_item order_all">全部订单
+                        <!-- <i>-</i> -->
+                    </div>
+
+                    <div class="po_title_item order_fk">待付款
+                        <i>-</i>
+                    </div>
+                    <div class="po_title_item order_fh">待发货
+                        <i>-</i>
+                    </div>
+                    <div class="po_title_item order_shu">待收货
+                        <i>-</i>
+                    </div>
+                    <div class="po_title_item order_pj">待评价
+                        <i>-</i>
+                    </div>
+                    <div class="po_title_item order_sh">退款
+                        <i>-</i>
+                    </div>
+                </div>
+                <div class="O_title">
+                    <table>
+                        <tr>
+                            <td>
+                                <div>订单详情</div>
+                            </td>
+                            <td width="160">
+                                <div>金额</div>
+                            </td>
+                            <td width="160">
+                                <div>交易</div>
+                            </td>
+                            <td>
+                                <div>交易操作</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="order_details clearfix">
+                    <div class="order_details_item clearfix">
+                        <div class="od_title">
+                            <time>---</time>
+                            <span>订单编号：
+                                <em>---</em>
+                            </span>
+                            <a href="javascript:;" class="Del_order_item" style="background-image:url('/images/Del_icon_L.png')"></a>
+                        </div>
+                        <div class="od_item clearfix">
+
+                        </div>
+                        <div class="od_billing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page_od" id="page_od" style="float:right; margin-top:20px">
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer" id="footer">
+
+    </footer>
+
+
+</body>
+
+</html>

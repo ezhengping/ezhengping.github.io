@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>淘味网 - 入驻选择</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="Bookmark" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/base.css?t=20180202">
+    <link rel="stylesheet" href="/css/entryoptions.css">
+    <script src="/js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/base.js?t=20180208"></script>
+    <script src="/js/personal/personalBase.js?t=20180208"></script>
+    <script src="/js/layer/layer.js"></script>
+    <!-- <script type="text/javascript" src="/js/settledfill.js?t=20180208"></script> -->
+    <script type="text/javascript" src="/js/from/fillbase.js?t=20180208"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header_mid">
+            <div class="header_logo">
+                <h1 class="header_logo_title">淘味网
+                    <a class="header_logo_link" href="/index.html">
+                        淘味网
+                    </a>
+                </h1>
+            </div>
+            <div class="header_title">
+                <h2>
+                    商家平台
+                </h2>
+            </div>
+            <div class="header_icenter">
+                <a href="/page/login/login.html" title="" class="header_icenter_info">前往登录</a>
+                <a href="javascript:;" title="" class="header_icenter_out" onclick="logout()">
+                    <img src="/images/outlogin_hi.png" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <section class="section">
+        <div class="section_mid">
+            <div class="section_mid__left">
+                <h3 class="section_title">商家入驻</h3>
+                <h4 class="section_bewrite">
+                    适合个人、个体户入驻、提供身份证即刻入驻
+                </h4>
+                <a class="section_button" href="/page/fillform/settledfill.html">马上入驻</a>
+                <!-- 点击这个按钮进入到 shopfill.html -->
+            </div>
+            <div class="section_mid__right">
+                <h3 class="section_title">企业入驻</h3>
+                <h4 class="section_bewrite">
+                    适合公司/企业入驻，提供营业执照等相关资料即刻入驻
+                </h4>
+                <a class="section_button" id="enterprise" href="javascript:;">马上入驻</a>
+                <div class="input_radio">
+                    <div class="input">
+                        <input class="radio" type="radio" name="storeType" id="radio_one" value="Q">
+                        <label for="radio_one" class="label">旗舰店</label>
+                    </div>
+                    <div class="input">
+                        <input class="radio" type="radio" name="storeType" id="radio_two" value="Y">
+                        <label for="radio_two" class="label">专营店</label>
+                    </div>
+                    <div class="input">
+                        <input class="radio" type="radio" name="storeType" id="radio_three" value="M">
+                        <label for="radio_three" class="label">专卖店</label>
+                    </div>
+                </div>
+                <p class="section_legend">店铺类型说明</p>
+                <script type="text/javascript">
+                    (function () {
+                        var a = $('input.radio[name=storeType]');
+                        var val = null;
+                        var enterprise = $('#enterprise');
+                        $.each(a, function (index, obj) {
+                            if ($(obj).prop('checked')) {
+                                val = $(obj).val()
+                                return;
+                            }
+                        })
+                        a.click(function () {
+                            $.each(a, function (index, obj) {
+                                if ($(obj).prop('checked')) {
+                                    val = $(obj).val()
+                                    return;
+                                }
+                            })
+                        })
+                        enterprise.click(function () {
+                            if (val == null || val == 'underline') {
+                                alert('请选择店铺类型');
+                            } else {
+                                ajaxGetSelectCompanyType(function (data) {
+                                    switch (data.result) {
+                                        case 3:
+                                            // layer.open({
+                                            //     titel: '温馨提醒',
+                                            //     content: '您已经认证通过，无需再次验证'
+                                            // })
+                                            window.location.href ="/page/fillform/enterAudit_by.html";
+                                            break;
+                                        case 4:
+                                            ifEnterLocalData(val);
+                                            window.location.href ="/page/fillform/enterprisesettledfill.html";
+                                            break;
+                                        case 5:
+                                            localStorage.setItem('enterprise', JSON.stringify(data.itemInfoList))
+                                            window.location.href ="/page/fillform/enterAudit_waiting.html";
+                                            // window.location.href ="/page/fillform/enterprisesettledfill.html";
+                                            break;
+                                        case 6:
+                                            if (getParam('result') == 6) {
+                                                localStorage.setItem('enterprise', JSON.stringify(data.itemInfoList))
+                                                ifEnterLocalData(val);
+                                                window.location.href ="/page/fillform/enterprisesettledfill.html?result=6";
+                                            }else{
+                                                localStorage.setItem('enterprise', JSON.stringify(data.itemInfoList))
+                                                window.location.href ="/page/fillform/enterAudit_reject.html";
+                                            }
+                                            break;
+                                        default:
+                                            ifEnterLocalData(val)
+                                            window.location.href =
+                                                "/page/fillform/enterprisesettledfill.html";
+                                            break;
+                                    }
+                                })
+                            }
+                        })
+                    })()
+
+                    // 判断企业入驻是否存在数据
+                    function ifEnterLocalData(val) {
+                        if (localStorage.getItem('enterprise')) {
+                            var data = JSON.parse(localStorage.getItem(
+                                'enterprise'));
+                            data['storeType'] = val;
+                            localStorage.setItem('enterprise', JSON.stringify(
+                                data));
+                        } else {
+                            var data = {};
+                            data['storeType'] = val;
+                            localStorage.setItem('enterprise', JSON.stringify(
+                                data));
+                            //在这里添加ajax请求并且保存企业店铺数据
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   登录模块
+ */
+
+
+/*登录页面css*/
+
+.banner{
+    height: 480px;
+    background: no-repeat center;
+}
+
+.banner_mid{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.login{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 350px;
+    height: 430px;
+    background-color: #fff;
+}
+.login__Tab{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 24px;
+    line-height: 32px;
+    font-size: 18px;
+    margin-top: 56px;
+}
+
+
+
+.phone_login{
+    display:inline-block;
+    float: left;
+    font-size: 18px;
+    
+}
+.uesr_login{
+    display:inline-block;
+    float: right
+
+}
+
+.form_way_atv{
+    color: #ff7f26;
+}
+
+.phone_form,.code_form,.username_form,.password_form{
+    width: 298px;
+    height: 44px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    position: relative;
+    margin-top: 38px;
+}
+.code_form,.password_form{
+    margin-top: 30px;
+
+}
+
+.phone_form span,.code_form span,.username_form span,.password_form span{
+    display: block;
+    float: left;
+    height: 44px;
+    width: 44px;
+    background:#eeeeee url('/images/login_user.png') no-repeat center;
+    border-right: 1px solid #d3d3d3;
+}
+.code_form span,.password_form span{
+    background-image: url('/images/login_code.png');
+}
+.phone_form input,.code_form input,.username_form input,.password_form input{
+    float: left;
+    border: 0;
+    height: 100%;
+    font-size: 16px;
+    padding-left: 14px;
+}
+.code_form input{
+    width: 134px;
+}
+.phone_form a,.username_form a{
+    position: absolute;
+    width:18px;
+    height:18px;
+    top: 50%;
+    right: 12px;
+    transform: translate(0,-50%);
+    background: url('/images/login_shut.png') no-repeat center;
+}
+.code_form a{
+    position: absolute;
+    text-align: center;
+    width:105px;
+    height:100%;
+    line-height:44px;
+    right: 0;
+    top: 0;
+    background-color: #ff7f26;
+    color: #fff;
+    font-size: 16px;
+
+}
+.submit{
+    display: block;
+    width: 300px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff7f26;
+    margin: 0 auto;
+    margin-top: 68px;
+}
+
+.phone_form i,.username_form i{
+    position: absolute;
+    top: -18px;
+    font-size: 12px;
+    line-height: 12px;
+    font-style: normal;
+     color:#ff7f26;
+}
+.code_form input.code_btn{
+    width: 105px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}

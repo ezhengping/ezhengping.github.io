@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘味网对公转账</title>
+    <!-- <link rel="stylesheet" href="/css/base.css?t=20180202"> -->
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?t=20180202">
+    <link rel="stylesheet" type="text/css" href="../../css/snacksbase.css?t=20180202">
+    <link rel="stylesheet" href="../../css/weChatPay.css">
+
+
+    <script src="../../js/path_config.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../../js/base.js?t=20180208"></script>
+    <script type="text/javascript" src="../../js/head/addhtml.js?t=20180208"></script>
+    <script src="../../js/cart/publicPay.js"></script>
+    <base target="_blank">
+</head>
+
+<style>
+    .table_box {
+        width: 600px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-top: 30px;
+        /* border: 1px solid #666; */
+        font-size: 16px
+    }
+
+    .table_box table,
+    .public_I {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: 1px solid rgba(253, 126, 38, .6);
+    }
+
+    .table_box table td,
+    .public_I table td {
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .table_box table tr td:first-of-type,
+    .public_I table tr td:first-of-type {
+        text-align: right;
+        width: 24%;
+        padding-right: 20px;
+        border-right: 1px solid rgba(253, 126, 38, .6);
+    }
+
+    .table_box table tr:first-of-type td {
+        text-align: center;
+        line-height: 45px;
+        border-bottom: 1px solid rgba(253, 126, 38, .6);
+    }
+
+    .address tr:nth-child(even),
+    .public_I tr:nth-child(even) {
+        background-color: #fff6f6
+    }
+    .public_I tr:last-of-type{
+        border-top:1px solid rgba(253, 126, 38, .6);
+
+    }
+    .public_I tr:last-of-type td{
+        text-align: center !important;
+        padding:0 !important;    }
+</style>
+
+<body>
+    <header class="header" id="head3">
+
+    </header>
+    <section class="oInformation">
+        <div class="oInformation_mid">
+            <div class="oI_text">
+                <span>订单提交成功,请尽快付款 |</span>
+                <span class="oI_number">订单号:
+                    <em>------------</em>
+                </span>
+            </div>
+            <div class="pay_box">
+                <h4>
+                    对公转账
+                </h4>
+                <p class="pic">
+                    应付金额
+                    <em>-----</em>元
+                </p>
+                <div class="table_box">
+                    <table class="address">
+                        <tr>
+                            <td colspan=2>查看收获地址</td>
+                        </tr>
+                        <tr>
+                            <td>收获人:</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>收获地区</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>收获详细地址</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>收获人电话</td>
+                            <td>---</td>
+                        </tr>
+                    </table>
+
+                    <table class="public_I">
+                        <tr>
+                            <td colspan=2>联系公司</td>
+                        </tr>
+                        <tr>
+                            <td>户名:</td>
+                            <td>淘味网络技术（武汉）有限公司</td>
+                        </tr>
+                        <tr>
+                            <td>账号:</td>
+                            <td>3202105809100124068</td>
+                        </tr>
+                        <tr>
+                            <td>开户行:</td>
+                            <td>工行武汉软件园支行</td>
+                        </tr>
+                        <tr>
+                            <td>联系人</td>
+                            <td>朱淑君</td>
+                        </tr>
+                        <tr>
+                            <td>联系电话</td>
+                            <td>18671956888</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

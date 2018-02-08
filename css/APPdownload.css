@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   APP下载模块
+ */
+
+.section__download {
+    width: 100%;
+    height: 1000px;
+    background: url('/images/APP_bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.section__download_mid {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.section__download_mid_left {
+    width: 35%;
+    height: 540px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.section__download_mid_left_title {
+    font-weight: bold;
+    font-size: 38px;
+    height: 68px;
+    line-height: 68px;
+    border-bottom: 1px solid #fff;
+}
+
+.section__download_mid_left_img {
+    width: 315px;
+    height: 315px;
+    background: url('/images/APP_QR.png') no-repeat center;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: 46px auto 10px;
+}
+
+.section__download_mid_left_subtitle {
+    height: 60px;
+    line-height: 60px;
+    font-size: 32px;
+}
+
+.section__download_mid_right {
+    width: 432px;
+    height: 778px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: url('/images/APPdow_phone.png') no-repeat center;
+}

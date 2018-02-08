@@ -1,0 +1,237 @@
+.personal_address {
+    float: left;
+    margin-left: 42px;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+.personal_address_title {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #dfe3e6;
+    background-color: #f3fbfe;
+}
+.personal_address_title h4{
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+.add_address{
+    float: right;
+    line-height: 50px;
+    height: 50px;
+}
+.add_address h5{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    padding:6px 10px;
+    cursor: pointer;
+    background-color: #ff7e23;
+    color:#fff;
+    border-radius: 4px;
+}
+
+.address_details_item {
+    width: 100%;
+    height: 220px;
+    padding:12px;
+    box-sizing: border-box;
+    border: 1px solid #e3e6e7;
+    margin-top: 10px;
+}
+.address_details_title{
+    width: 100%;
+    line-height: 30px;
+    font-size: 14px;
+}
+.address_details_title h5{
+    float: left;
+    color:#505050;
+}
+.address_details_title h5 em{
+    font-weight: 600
+}
+.address_details_title h5 i {
+    display: inline-block;
+    padding:4px 6px;
+    margin-left: 10px;
+    border-radius: 4px;
+    line-height: 12px;
+    font-style: normal;
+    font-size: 12px;
+    color:#fff;
+    background-color: #ff7e23;
+}
+.address_details_title a{
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: url('/images/delAddress_icon.png') no-repeat center;
+}
+.address_details{
+    width: 100%;
+    padding-top: 10px;
+    padding-left:10px;
+    box-sizing: border-box;
+    position: relative;
+}
+.address_details table tr td{
+    font-size: 14px;
+    line-height: 30px;
+}
+.address_details table tr td:first-of-type{
+    text-align: right;
+    color: #9c9c9c;
+}
+.address_details table tr td:last-of-type{
+    text-align: left;
+    color: #525252;
+    display: block;
+}
+.default_address{
+    position: absolute;
+    right: 20px;
+    bottom:0;
+}
+.default_address a{
+    font-size: 14px;
+
+}
+.default_address a:first-of-type.setDefult{
+    color: #ff7e23;
+    margin-right: 20px;
+}
+.beenSetDefult{
+    color: #666;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+
+/* 收货地址弹窗 */
+.new_address{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+.iframe_box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height:540px;
+    margin: auto;
+    border: 6px solid #999;
+}
+.alert_Masking{
+    background-color: rgba(0, 0, 0, .3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.iframe_title{
+    background-color: #e6e6e6;
+    padding: 0 20px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.iframe_title h3{
+    display:inline-block;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+    vertical-align: center;
+}
+.iframe_title span{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 40px;
+    height: 14px;
+    float: right;
+    vertical-align: center;
+    cursor: pointer;
+}
+.Del_address{
+    display: none;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 20px;
+    color: #4c8bf5;
+}
+.Del_address span{
+    cursor: pointer;
+}
+.default_address{
+    position: absolute;
+    right:20px;
+}
+.default_address span{
+    display: inline-block;
+    line-height: 20px;
+    padding:2px 6px;
+    color:#999;
+}
+
+.set_default_address{
+    position: absolute;
+    right:20px;
+    display: none;
+}
+.set_default_address span{
+    display: inline-block;
+    line-height: 20px;
+    padding:2px 6px;
+    background-color: #ff7f26;
+    color:#fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.select_address li:hover .Del_address{
+    display: block;
+}
+.select_address li:hover .set_default_address{
+    display: block;
+}
+/* /收获地址结束 */
+
+
+
+
+/* 收获地址为空 */
+.address_null{
+    width: 100%;
+    height: 600px;
+    margin-top:30px;
+    border: 1px solid #dfe3e6;
+    text-align: center;
+    position: relative;
+}
+.address_null>div{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:0;
+    right: 0;
+    margin: auto;
+    line-height: 40px;
+}
+.btn_text{
+    font-size: 14px;
+    line-height: 40px;
+    color:#4c8bf5;
+}

@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+
+/**
+ * @created :   2017/11/04
+ * @author  :   ke.zhengping
+ * @version :   v1.0
+ * @desc    :   休闲零食模块
+ */
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* 休闲零食第一部分 */
+
+.section__nut_title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position:relative;
+}
+.title_text{
+	/* position: absolute; */
+    width: 100%;
+    /* top: 0; */
+    font-size: 30px;
+    line-height: 30px;
+    height:30px;
+    color:#333
+}
+
+
+.section__nut_title_img {
+    display: inline-block;
+    height: auto;
+}
+
+
+/* 商品列表 */
+
+.section__nut_foodlist_ul {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section__nut_foodlist_item {
+    width: 232px;
+    height: 380px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    float: left;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding:0 10px;
+}
+
+.section__nut_foodlist_item_img {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 15px;
+    overflow: hidden;
+}
+.section__nut_foodlist_item:nth-child(5n){
+	margin-right:0;
+}
+
+.section__nut_foodlist_item_img_goods {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:20px;
+    width:100%;
+    height:auto;
+    margin: auto;
+}
+
+.section__nut_foodlist_item_active_img {
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.section__nut_foodlist_item_active {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: top 0.3s ease-out;
+}
+
+.section__nut_foodlist_item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+}
+
+.section__nut_foodlist_item:hover .section__nut_foodlist_item_active {
+    top: 0;
+}
+
+.section__nut_foodlist_item_active p {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.section__nut_foodlist_item_bewrite {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    height: 40px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    line-height: 20px;
+    margin-top: 18px;
+    /* margin-left: 20px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.section__nut_foodlist_item_nowprice,.section__nut_foodlist_item_nowsales{
+    /* display: inline-block; */
+    float: left;
+    margin-left:10px;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 20px;
+    color: #ff1512;
+    max-width: 50%;
+    white-space:nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	 -o-text-overflow:ellipsis;
+}
+.section__nut_foodlist_item_nowsales{
+    float: right;
+    margin-right:20px;
+    margin-left:0px;
+    color: #999
+}
+/* 搜索分类 */
+.section_product_box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    background-color: #fff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+
+}
+.section_product_box .sorts .sort{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.section_product_box .sorts .sort a{
+    position: relative;
+    float: left;
+    padding:0 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+.section_product_box .sorts .sort a:hover{
+    /* border-color:#ff3355; */
+    color:#ff3355;
+    z-index: 1;
+    /* background-color: #f4f4f4; */
+}
+.section_product_box .sorts .sort a.productAtv{
+    border-color:#ff3355;
+    color:#ff3355;
+    z-index: 3;
+    /* background-color: #f4f4f4; */
+}
+.icon_price_p{
+    display: inline-block;
+    width: 16px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left:6px;
+}
+
+.float_right{
+    float:right;
+    text-align: right;
+    margin-right: 10px;
+    margin-left:0;
+    color: #969696 !important;
+}
+.section__nut_foodlist_item_origprice {
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    text-align: center;
+    color: #969696;
+    margin-top: 16px;
+}
+.vicenav2{
+    background-color: #ff7f26;
+}
+.vicenav__mid_ul_item_active a{
+    color: #ffa96e;
+}
+
+
+/*底部增加留白*/
+
+.footer {
+    margin-top: 120px;
+}
+
+
+/*第三套分页属性*/
+.section__content_controls{
+    text-align: center;
+    margin-top: 68px;
+}
+.ui-pagination-container {
+    height: 100%
+}
+
+.ui-pagination-container .ui-pagination-page-item {
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    color: #3e3e3e;
+    overflow: hidden;
+    font-size: 12px;
+    margin-right: 10px;
+    border-color:#ddd;
+    padding:8px 6px;
+    border: 1px solid #b5b5b5;
+}
+
+.ui-pagination-container .ui-pagination-page-item:hover {
+    border-color: #f29a01;
+    color: #f29a01;
+    text-decoration: none;
+}
+
+.ui-pagination-container .ui-pagination-page-item.active {
+    background: #f29a01;
+    border-color:rgba(0,0,0,0);
+    color: #fff;
+    cursor: default;
+}
+
+
+.foodlist_null{
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+
+
+/* 商品列表导航重写 */
+
+.vicenav__mid .vicenav__mid_ul_item a{
+    color:#fff;
+}
+
+.vicenav__mid .vicenav__mid_ul_item_active{
+    background-color: #eee;
+}
+.vicenav__mid .vicenav__mid_ul_item_active a{
+    color:#555;
+
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-24 14:25:14
+ * @version $Id$
+ */
+a,
+input,
+button {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        /*阴影*/
+        -webkit-appearance: none;
+        /*ios下圆角*/
+        border: none;
+        outline: none;
+    }
+
+
+body{
+	background-color: #eef0ef;
+}
+.login::before{
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.login{
+	margin-top:  1.413333rem;
+}
+.login p{
+	display: inline-block;
+	font-size: 0.5rem;
+	line-height: 1.5rem;
+	float: left;
+	margin-left:0.6rem;
+	color: #5a5a5a;
+
+}
+.login input{
+	display: inline-block;
+	font-size:0.5rem;
+	height:1.5rem;
+	float: right;
+	width: 6.2rem;
+	color: #5a5a5a;
+}
+
+.login_mid{
+	width: 9.4rem;
+	font-size: 0;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: 2rem;
+}
+.phone,.code{
+	position: relative;
+}
+.phone{
+	border-bottom: 1px solid #cbcbcb;
+}
+.phone_button{
+	position: absolute;
+	width: 0.6rem;
+	height: 0.6rem;
+	right: 0.266667rem;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	background-color: #233;
+	background:url('/images/shutdown.png')no-repeat center/contain;
+}
+.login .code_button{
+	position: absolute;
+	width: 3rem;
+	font-size: 0.4rem;
+	background-color:#fff;
+	border: 1px solid #909090; 
+	height: 66%;
+	right: 0.266667rem;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.submit{
+	margin-top: 1.2rem;
+	text-align: center;
+}
+.submit a{
+	display: inline-block;
+	width: 6.266667rem;
+	height: 1rem;
+	background-color: #ff7f26;
+	font-size: 0.5rem;
+	color: #fff;
+	line-height: 1rem;
+}

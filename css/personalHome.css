@@ -1,0 +1,467 @@
+.personal_right {
+    width: 210px;
+    float: right;
+}
+
+.personal_userLev {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    border: 1px solid #dce3e6;
+}
+
+.personal_userLev h3 {
+    font-size: 14px;
+    color: #242829;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f3fbfe;
+}
+
+.personal_userLevImg {
+    width: 100%;
+    height: 130px;
+    position: relative;
+}
+
+.personal_userLevImg img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 70%;
+    width: auto;
+}
+
+.personal_userLevStrip {
+    text-align: center;
+    font-size: 0;
+}
+
+.personal_userLevStrip>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sp_userLevStrip_left,
+.sp_userLevStrip_right{
+    width: 16px;
+    height: 16px;
+    margin:0 4px;
+    background: no-repeat center;
+    background-size:cover;
+}
+
+.personal_userLevStrip_m {
+    width: 145px;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    /* background-color: #e7e7e7; */
+    box-shadow: inset 0 1px 1px 2px#ddd;
+}
+
+.userLevStrip {
+    background-color: #fcd14f;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px 2px rgba(255, 203, 49, 0.753);
+}
+
+.personal_userLevNum {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.personal_userLevNum p {
+    font-size: 12px;
+}
+
+.personal_signIn {
+    margin-top: 10px;
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    border: 1px solid #dce3e6
+}
+
+.personal_signIn h3 {
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    font-size: 14px;
+    color: #242829;
+    background-color: #ffedd5;
+}
+
+.signIn_box {
+    width: 100%;
+    height: 75px;
+    margin-top: 36px;
+    position: relative;
+}
+
+.signIn_box img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+    /*修复周围被点击*/
+}
+
+.personal_signIn_text {
+    text-align: center;
+    margin-top: 46px;
+}
+
+.personal_signIn_text p {
+    font-size: 14px;
+    color: #242829;
+}
+
+
+/* 个人中间区域 */
+
+.personal_m {
+    box-sizing: border-box;
+    width: 780px;
+    float: left;
+    margin-left: 42px;
+}
+
+.m_user {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+}
+
+.m_userInOf {
+    width: 100%;
+    height: 78px;
+    box-sizing: border-box;
+    border: 1px solid #dce3e6;
+    border-bottom: 0;
+    line-height: 78px;
+    background-color: #f3fbfe;
+}
+
+.m_userInOf_img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    overflow: hidden;
+    margin-left: 24px;
+    margin-top: 8px;
+    position: relative;
+}
+
+.m_userInOf_img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position:absolute;
+    top:0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    margin:auto;
+}
+
+.m_userInOf_name {
+    font-size: 14px;
+    color: #52575a;
+    line-height: 78px;
+    margin-left: 14px;
+    float: left;
+    width: 156px;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.m_userInOf_beans {
+    line-height: 78px;
+    width: 216px;
+    float: left;
+    font-size: 0;
+}
+
+.m_userInOf_beans i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat center/cover;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #525657;
+}
+
+.m_userInOf_beans span {
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.m_userInOf_beans em {
+    display: inline-block;
+    width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.m_userInOf_address {
+    font-size: 14px;
+    line-height: 78px;
+    height: 78px;
+    float: left;
+    margin-left: 10px;
+}
+
+.m_userInOf_address a {
+    vertical-align: middle;
+}
+
+.m_userInOf_discount {
+    line-height: 78px;
+    height: 78px;
+    float: left;
+    margin-left: 80px;
+}
+
+.m_userInOf_discount a {
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.m_userInOf_order {
+    box-sizing: border-box;
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    border: 1px solid #dce3e6;
+}
+
+.m_userInOf_order table {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.m_userInOf_order table td {
+    text-align: center;
+    line-height: 68px;
+    height: 68px;
+}
+
+.m_userInOf_order table td p {
+    height: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #dfe3e4;
+}
+.m_userInOf_order table td span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.m_userInOf_order table td:last-of-type p {
+    border-right: none;
+}
+
+.m_userInOf_order table td em {
+    color: #ff0035;
+    padding: 0 4px;
+    font-weight:normal;
+}
+
+
+/* 个人订单详情 */
+
+.m_userOrder {
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+}
+
+.uesrOrde_title {
+    width: 100%;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.uesrOrde_title h5 {
+    float: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    /* font-size: 14px; */
+}
+
+.uesrOrde_title a {
+    float: right;
+    font-size: 14px;
+    display: block;
+    line-height: 28px;
+}
+
+
+
+.uesrOrde_details {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.uesrOrde_details table{
+    width: 100%;
+}
+.uesrOrde_details_item {
+    border-bottom: 1px dashed #e2e2e2;
+}
+.uesrOrde_details_item:last-of-type{
+    border: none;
+}
+.uesrOrde_details_item td{
+    height: 140px;
+}
+.uesrOrde_details_item td:first-of-type{
+    width: 210px;
+    padding-left: 10px;
+}
+
+.userOrder_img{
+    height: 100%;
+}
+.userOrder_img div{
+    height: 60px;
+
+}
+.userOrder_img div a{
+    display: block;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.userOrder_img div img{
+    height: 100%;
+}
+.userOrder_adderssName{
+    font-size: 12px;
+    text-align: center;
+}
+.userOrder_pay,.userOrder_time{
+    font-size: 12px;
+    text-align: center;
+}
+.userOrder_pay span em,.userOrder_time span em{
+    font-weight: 600;
+}
+.userOrder_time{
+    /* width: 100px; */
+}
+.ordertails_number{
+    text-align: center;
+}
+
+
+.uesrOrde_details_img ul,
+.uesrOrde_details_img li {
+    float: left;
+}
+
+.details_img li {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.details_img li img {
+    height: 100%;
+    width: auto;
+}
+
+.ordetails_description {
+    width: 100px;
+    height: 100%;
+    line-height: 140px;
+    /* margin-left: 15px; */
+    /* margin-right: 15px; */
+    text-align: center;
+    /* padding-left: 30px; */
+    font-size: 12px;
+}
+.ordetails_description_time{
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    display: table;
+    font-size: 12px;
+}
+
+.ordetails_description_time{
+    display: table-cell;
+}
+
+.ordetails_description p {
+    vertical-align: middle;
+    /* text-align: left; */
+    overflow: hidden;
+    text-overflow : ellipsis; 
+    white-space : nowrap; 
+}
+
+.ordetails_description p em {
+    display: inline-block;
+    width: 150px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ordetails_pay {
+    display: table;
+    width: 150px;
+    height: 100%;
+    text-align: center;
+}
+
+.ordetails_pay div {
+    font-size: 16px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ordetails_number {
+    display: table;
+    width: 158px;
+    height: 100%;
+    text-align: center;
+}
+
+.ordetails_number>div {
+    font-size: 14px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ordetails_number div a{
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 4px 0;
+    background-color: #ff7e23;
+    color: #fff;
+    border-radius: 2px;
+}

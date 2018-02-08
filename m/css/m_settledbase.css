@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-11-25 09:23:16
+ * @version $Id$
+ */
+
+body {
+    background-color: #eff1f0;
+}
+
+td {
+    padding: 0;
+}
+
+input,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /*阴影*/
+    -webkit-appearance: none;    /*会隐藏单选按钮*/
+    /*ios下圆角*/
+    border: none;
+    outline: none;
+}
+
+.bgcor {
+    background-color: #eff1f0;
+}
+
+.cor_red {
+    color: red;
+}
+
+.section_form {
+    margin-top: 1.413333rem;
+    background-color: #fff;
+}
+
+.section_form table {
+    width: 9.4rem;
+    margin: 0 auto;
+}
+
+.section_form table tr {
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.section_form tr:last-of-type {
+    border-bottom: 0;
+}
+
+.section_form table td:first-of-type {
+    width: 3rem;
+}
+
+.section_form table td:last-of-type {
+    padding-left: 0.5rem;
+}
+
+.section_form table td {
+    vertical-align: middle;
+    height: 1.2rem;
+    font-size: 0.4rem;
+    position: relative;
+}
+
+.section_form table td input {
+    width: 100%;
+    height: 1.2rem;
+    font-size: 0.4rem;
+}
+
+.section_form table td i {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0.5rem;
+    top: 50%;
+    margin-top: -0.1rem;
+    border: 0.2rem solid #d1d1d1;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.formImg {
+    border-top: 1px solid #c3c3c3;
+}
+
+.formImg tbody tr {
+    border-bottom: 0;
+}
+
+.formImg td {
+    width: 50%;
+    font-size: 20px;
+}
+
+.formImg tbody tr:nth-child(even) td div {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.133333rem;
+    padding: 0.266667rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 0.1rem;
+}
+
+.formImg tbody td div img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    height: auto;
+}
+
+.formImg tbody td div input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.formImg tbody tr:last-of-type{
+
+}
+.formImg tbody tr:last-of-type td {
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+    padding: 0;
+}
+
+.formImg tbody tr:last-of-type td input:checked {
+	background-image: url('/images/read_protocol_atv.png')
+}
+.formImg tbody tr:last-of-type td input {
+	background: url('/images/read_protocol_noatv.png') no-repeat center/contain;
+    opacity: 1;
+    width: 0.3rem;
+    height: 0.3rem;
+}
+
+.form_button {
+    display: block;
+    border-radius: 5px;
+    width: 6rem;
+    height: 1rem;
+    font-size: 0.48rem;
+    line-height: 1rem;
+    color: #fff;
+    background-color: #ff7f26;
+    text-align: center;
+    margin: 0.533333rem auto;
+}
